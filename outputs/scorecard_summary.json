@@ -1,0 +1,35 @@
+{
+  "base_score": 600,
+  "base_odds": 50,
+  "pdo": 20,
+  "factor": 28.85390081777927,
+  "offset": 487.1228762045055,
+  "n_features": 13,
+  "band_edges": [
+    500,
+    520,
+    540,
+    560,
+    580,
+    600,
+    620,
+    640
+  ],
+  "band_edges_fit_on": "train score 1st-99th percentile",
+  "max_abs_score_vs_points_difference": 2.2737367544323206e-13,
+  "spearman_score_vs_p_validation": -0.9999999999999998,
+  "non_monotonic_bands_validation": [],
+  "score_range_validation": [
+    462.7894678790619,
+    655.1372310549709
+  ],
+  "optbinning_crosscheck": {
+    "ran": true,
+    "comparable": true,
+    "rows_compared": 92,
+    "max_abs_point_difference": 1.4210854715202004e-14,
+    "note": "optbinning.Scorecard fitted on train with the same binning settings and metric_missing='empirical'; small differences come from solver tolerance."
+  },
+  "non_monotonic_bands_test": [],
+  "spearman_score_vs_p_test": -0.9999999999999998
+}

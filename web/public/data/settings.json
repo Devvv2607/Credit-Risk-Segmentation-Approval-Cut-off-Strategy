@@ -1,0 +1,44 @@
+{
+  "seed": 42,
+  "split": {
+    "train": 0.6,
+    "validation": 0.2,
+    "test": 0.2,
+    "max_rate_gap_pp": 0.2
+  },
+  "min_segment_size": 1000,
+  "binning": {
+    "iv_min": 0.02,
+    "iv_leak_flag": 0.5,
+    "corr_max": 0.7,
+    "max_features": 15,
+    "min_bin_size": 0.05,
+    "max_n_bins": 8
+  },
+  "protected_attributes": [
+    "CODE_GENDER",
+    "NAME_FAMILY_STATUS"
+  ],
+  "cutoff": {
+    "step": 5,
+    "rule": "highest-profit cut-off whose payment-difficulty rate among approved <= max_difficulty_rate",
+    "max_difficulty_rate": 0.06
+  },
+  "scorecard": {
+    "base_score": 600,
+    "base_odds": 50,
+    "pdo": 20
+  },
+  "candidates_evaluated": 134,
+  "selected_by_binning": 15,
+  "woe_convention": "WoE = ln(%good / %bad); positive = safer than average",
+  "sign_check": {
+    "feature": "EXT_SOURCE_3",
+    "riskiest_bin": "(-inf, 0.19)",
+    "bad_rate": 0.21105055440706635,
+    "woe": -1.1138774479377669,
+    "library_matches_convention": true
+  },
+  "leak_flags": [],
+  "python_version": "3.11"
+}

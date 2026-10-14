@@ -1,0 +1,849 @@
+{
+  "woe_convention": "WoE = ln(%good / %bad); positive = safer than average",
+  "sign_check": {
+    "feature": "EXT_SOURCE_3",
+    "riskiest_bin": "(-inf, 0.19)",
+    "bad_rate": 0.21105055440706635,
+    "woe": -1.1138774479377669,
+    "library_matches_convention": true
+  },
+  "fit_split": "train",
+  "fit_n": 184506,
+  "candidates_evaluated": 134,
+  "protected_attributes_excluded": [
+    "CODE_GENDER",
+    "NAME_FAMILY_STATUS"
+  ],
+  "thresholds": {
+    "iv_min": 0.02,
+    "iv_leak_flag": 0.5,
+    "corr_max": 0.7,
+    "max_features": 15,
+    "min_bin_size": 0.05,
+    "max_n_bins": 8
+  },
+  "leak_flags": [],
+  "selected": [
+    "EXT_SOURCE_3",
+    "EXT_SOURCE_2",
+    "EXT_SOURCE_1",
+    "years_employed",
+    "bureau_debt_to_credit",
+    "age_years",
+    "OCCUPATION_TYPE",
+    "ORGANIZATION_TYPE",
+    "credit_to_goods",
+    "prev_refusal_rate",
+    "NAME_INCOME_TYPE",
+    "REGION_RATING_CLIENT_W_CITY",
+    "AMT_GOODS_PRICE",
+    "NAME_EDUCATION_TYPE",
+    "DAYS_LAST_PHONE_CHANGE"
+  ],
+  "decisions": [
+    {
+      "feature": "EXT_SOURCE_3",
+      "iv": 0.3283608373448876,
+      "decision": "selected",
+      "reason": "IV above threshold, not highly correlated with a stronger feature"
+    },
+    {
+      "feature": "EXT_SOURCE_2",
+      "iv": 0.31797310518067967,
+      "decision": "selected",
+      "reason": "IV above threshold, not highly correlated with a stronger feature"
+    },
+    {
+      "feature": "EXT_SOURCE_1",
+      "iv": 0.14591800152808376,
+      "decision": "selected",
+      "reason": "IV above threshold, not highly correlated with a stronger feature"
+    },
+    {
+      "feature": "years_employed",
+      "iv": 0.11703815853778554,
+      "decision": "selected",
+      "reason": "IV above threshold, not highly correlated with a stronger feature"
+    },
+    {
+      "feature": "bureau_debt_to_credit",
+      "iv": 0.10640975523058323,
+      "decision": "selected",
+      "reason": "IV above threshold, not highly correlated with a stronger feature"
+    },
+    {
+      "feature": "employed_to_age",
+      "iv": 0.09497010300778044,
+      "decision": "dropped",
+      "reason": "|corr| 0.96 with years_employed (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "age_years",
+      "iv": 0.08669738345828099,
+      "decision": "selected",
+      "reason": "IV above threshold, not highly correlated with a stronger feature"
+    },
+    {
+      "feature": "OCCUPATION_TYPE",
+      "iv": 0.07677440677405763,
+      "decision": "selected",
+      "reason": "IV above threshold, not highly correlated with a stronger feature"
+    },
+    {
+      "feature": "ORGANIZATION_TYPE",
+      "iv": 0.07393188874858046,
+      "decision": "selected",
+      "reason": "IV above threshold, not highly correlated with a stronger feature"
+    },
+    {
+      "feature": "credit_to_goods",
+      "iv": 0.07301739900695886,
+      "decision": "selected",
+      "reason": "IV above threshold, not highly correlated with a stronger feature"
+    },
+    {
+      "feature": "prev_refusal_rate",
+      "iv": 0.0684898569596502,
+      "decision": "selected",
+      "reason": "IV above threshold, not highly correlated with a stronger feature"
+    },
+    {
+      "feature": "NAME_INCOME_TYPE",
+      "iv": 0.054780914108860615,
+      "decision": "selected",
+      "reason": "IV above threshold, not highly correlated with a stronger feature"
+    },
+    {
+      "feature": "REGION_RATING_CLIENT_W_CITY",
+      "iv": 0.05375041923930251,
+      "decision": "selected",
+      "reason": "IV above threshold, not highly correlated with a stronger feature"
+    },
+    {
+      "feature": "prev_refused_count",
+      "iv": 0.052513311774230576,
+      "decision": "dropped",
+      "reason": "|corr| 0.83 with prev_refusal_rate (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "AMT_GOODS_PRICE",
+      "iv": 0.051849339371028556,
+      "decision": "selected",
+      "reason": "IV above threshold, not highly correlated with a stronger feature"
+    },
+    {
+      "feature": "REGION_RATING_CLIENT",
+      "iv": 0.05065169485610078,
+      "decision": "dropped",
+      "reason": "|corr| 0.95 with REGION_RATING_CLIENT_W_CITY (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "NAME_EDUCATION_TYPE",
+      "iv": 0.04705217966550636,
+      "decision": "selected",
+      "reason": "IV above threshold, not highly correlated with a stronger feature"
+    },
+    {
+      "feature": "DAYS_LAST_PHONE_CHANGE",
+      "iv": 0.04524889984654416,
+      "decision": "selected",
+      "reason": "IV above threshold, not highly correlated with a stronger feature"
+    },
+    {
+      "feature": "DAYS_ID_PUBLISH",
+      "iv": 0.0385630280371988,
+      "decision": "dropped",
+      "reason": "passed filters but outside top 15 by IV"
+    },
+    {
+      "feature": "FLOORSMAX_AVG",
+      "iv": 0.03573517427955131,
+      "decision": "dropped",
+      "reason": "passed filters but outside top 15 by IV"
+    },
+    {
+      "feature": "FLOORSMAX_MEDI",
+      "iv": 0.03539382817493754,
+      "decision": "dropped",
+      "reason": "|corr| 1.00 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "FLOORSMAX_MODE",
+      "iv": 0.03448016962575674,
+      "decision": "dropped",
+      "reason": "|corr| 0.98 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "TOTALAREA_MODE",
+      "iv": 0.03412549504557535,
+      "decision": "dropped",
+      "reason": "|corr| 0.89 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "flag_days_employed_anomaly",
+      "iv": 0.032678108040651146,
+      "decision": "dropped",
+      "reason": "|corr| 0.78 with NAME_INCOME_TYPE (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "FLAG_EMP_PHONE",
+      "iv": 0.03264181357772406,
+      "decision": "dropped",
+      "reason": "|corr| 0.78 with NAME_INCOME_TYPE (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "AMT_CREDIT",
+      "iv": 0.03257463032858228,
+      "decision": "dropped",
+      "reason": "|corr| 0.92 with AMT_GOODS_PRICE (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "REG_CITY_NOT_WORK_CITY",
+      "iv": 0.032496323264451205,
+      "decision": "dropped",
+      "reason": "passed filters but outside top 15 by IV"
+    },
+    {
+      "feature": "LIVINGAREA_AVG",
+      "iv": 0.03226037065845924,
+      "decision": "dropped",
+      "reason": "|corr| 0.88 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "REGION_POPULATION_RELATIVE",
+      "iv": 0.03220938082454953,
+      "decision": "dropped",
+      "reason": "passed filters but outside top 15 by IV"
+    },
+    {
+      "feature": "LIVINGAREA_MEDI",
+      "iv": 0.031981336768469176,
+      "decision": "dropped",
+      "reason": "|corr| 0.88 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "ELEVATORS_AVG",
+      "iv": 0.030873331181636397,
+      "decision": "dropped",
+      "reason": "|corr| 0.90 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "APARTMENTS_AVG",
+      "iv": 0.030846019589555733,
+      "decision": "dropped",
+      "reason": "|corr| 0.88 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "APARTMENTS_MEDI",
+      "iv": 0.030790398353251834,
+      "decision": "dropped",
+      "reason": "|corr| 0.88 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "LIVINGAREA_MODE",
+      "iv": 0.030624876487346422,
+      "decision": "dropped",
+      "reason": "|corr| 0.86 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "ELEVATORS_MEDI",
+      "iv": 0.030440662196100372,
+      "decision": "dropped",
+      "reason": "|corr| 0.90 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "APARTMENTS_MODE",
+      "iv": 0.029938689046103105,
+      "decision": "dropped",
+      "reason": "|corr| 0.87 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "ELEVATORS_MODE",
+      "iv": 0.029171928966796698,
+      "decision": "dropped",
+      "reason": "|corr| 0.88 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "FLAG_DOCUMENT_3",
+      "iv": 0.02812780834654511,
+      "decision": "dropped",
+      "reason": "passed filters but outside top 15 by IV"
+    },
+    {
+      "feature": "DAYS_REGISTRATION",
+      "iv": 0.02808661022445938,
+      "decision": "dropped",
+      "reason": "passed filters but outside top 15 by IV"
+    },
+    {
+      "feature": "YEARS_BEGINEXPLUATATION_MODE",
+      "iv": 0.027678632487550172,
+      "decision": "dropped",
+      "reason": "|corr| 0.81 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "YEARS_BEGINEXPLUATATION_MEDI",
+      "iv": 0.027564737214619762,
+      "decision": "dropped",
+      "reason": "|corr| 0.81 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "YEARS_BEGINEXPLUATATION_AVG",
+      "iv": 0.027439995416316046,
+      "decision": "dropped",
+      "reason": "|corr| 0.81 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "ENTRANCES_AVG",
+      "iv": 0.025177599751201887,
+      "decision": "dropped",
+      "reason": "|corr| 0.74 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "ENTRANCES_MEDI",
+      "iv": 0.024868481658266342,
+      "decision": "dropped",
+      "reason": "|corr| 0.74 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "bureau_active_count",
+      "iv": 0.0248599634593389,
+      "decision": "dropped",
+      "reason": "passed filters but outside top 15 by IV"
+    },
+    {
+      "feature": "ENTRANCES_MODE",
+      "iv": 0.023851386415673616,
+      "decision": "dropped",
+      "reason": "|corr| 0.74 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "WALLSMATERIAL_MODE",
+      "iv": 0.023392155762579275,
+      "decision": "dropped",
+      "reason": "|corr| 0.78 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "REG_CITY_NOT_LIVE_CITY",
+      "iv": 0.023312540169235448,
+      "decision": "dropped",
+      "reason": "passed filters but outside top 15 by IV"
+    },
+    {
+      "feature": "OWN_CAR_AGE",
+      "iv": 0.022882201383267384,
+      "decision": "dropped",
+      "reason": "passed filters but outside top 15 by IV"
+    },
+    {
+      "feature": "EMERGENCYSTATE_MODE",
+      "iv": 0.021576374271470578,
+      "decision": "dropped",
+      "reason": "|corr| 0.73 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "NONLIVINGAREA_AVG",
+      "iv": 0.021212026120019913,
+      "decision": "dropped",
+      "reason": "|corr| 0.74 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "NONLIVINGAREA_MEDI",
+      "iv": 0.0210081442956168,
+      "decision": "dropped",
+      "reason": "|corr| 0.73 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "NONLIVINGAREA_MODE",
+      "iv": 0.020852584450005436,
+      "decision": "dropped",
+      "reason": "|corr| 0.73 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+    },
+    {
+      "feature": "BASEMENTAREA_AVG",
+      "iv": 0.019747953305956776,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "HOUSETYPE_MODE",
+      "iv": 0.01971394276623193,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "BASEMENTAREA_MEDI",
+      "iv": 0.019566703460260168,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "AMT_REQ_CREDIT_BUREAU_YEAR",
+      "iv": 0.01928694705156417,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "BASEMENTAREA_MODE",
+      "iv": 0.018880666905355094,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLOORSMIN_AVG",
+      "iv": 0.017405465974484693,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLOORSMIN_MEDI",
+      "iv": 0.017382650803450153,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLOORSMIN_MODE",
+      "iv": 0.016939224493880647,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "AMT_REQ_CREDIT_BUREAU_QRT",
+      "iv": 0.01677400098183833,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "LIVINGAPARTMENTS_AVG",
+      "iv": 0.016211042474780404,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "LIVINGAPARTMENTS_MEDI",
+      "iv": 0.016157421518261647,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "NAME_HOUSING_TYPE",
+      "iv": 0.016089427997122967,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "YEARS_BUILD_MODE",
+      "iv": 0.016004839775936364,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "AMT_REQ_CREDIT_BUREAU_MON",
+      "iv": 0.015714951750867512,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "YEARS_BUILD_MEDI",
+      "iv": 0.01567806521243626,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "YEARS_BUILD_AVG",
+      "iv": 0.015586492506890611,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "LIVINGAPARTMENTS_MODE",
+      "iv": 0.015439803150629797,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "AMT_REQ_CREDIT_BUREAU_DAY",
+      "iv": 0.015395354421931495,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "AMT_REQ_CREDIT_BUREAU_HOUR",
+      "iv": 0.015395354421931495,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "AMT_REQ_CREDIT_BUREAU_WEEK",
+      "iv": 0.015395354421931495,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "bureau_credit_count",
+      "iv": 0.01479188492041886,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "AMT_ANNUITY",
+      "iv": 0.014483076943477828,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "LANDAREA_MODE",
+      "iv": 0.01385844225335596,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "bureau_max_days_overdue",
+      "iv": 0.013791781163520166,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "bureau_max_overdue",
+      "iv": 0.013791781163520166,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "bureau_total_overdue",
+      "iv": 0.013791781163520166,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "has_bureau_history",
+      "iv": 0.013791781163520166,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "LANDAREA_MEDI",
+      "iv": 0.013681524478523222,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "LANDAREA_AVG",
+      "iv": 0.013641600940369644,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "LIVE_CITY_NOT_WORK_CITY",
+      "iv": 0.013488633589355268,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "NAME_CONTRACT_TYPE",
+      "iv": 0.01337936484013481,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "DEF_30_CNT_SOCIAL_CIRCLE",
+      "iv": 0.013227135913641072,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "COMMONAREA_AVG",
+      "iv": 0.012645782319764045,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "COMMONAREA_MEDI",
+      "iv": 0.012535933327246514,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLAG_DOCUMENT_6",
+      "iv": 0.01246013881433468,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "COMMONAREA_MODE",
+      "iv": 0.012155045110895135,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "DEF_60_CNT_SOCIAL_CIRCLE",
+      "iv": 0.01171381581512233,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "AMT_INCOME_TOTAL",
+      "iv": 0.011178939969532734,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FONDKAPREMONT_MODE",
+      "iv": 0.011163106297890638,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "HOUR_APPR_PROCESS_START",
+      "iv": 0.010872910304873307,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "prev_app_count",
+      "iv": 0.010348952313156336,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "NONLIVINGAPARTMENTS_AVG",
+      "iv": 0.01026263253861083,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "NONLIVINGAPARTMENTS_MEDI",
+      "iv": 0.010135375065655022,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLAG_WORK_PHONE",
+      "iv": 0.009998021376095699,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "NONLIVINGAPARTMENTS_MODE",
+      "iv": 0.009966630708438486,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLAG_PHONE",
+      "iv": 0.007874109178358086,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "annuity_to_income",
+      "iv": 0.006966778842134961,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLAG_OWN_CAR",
+      "iv": 0.006372834494113784,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "CNT_CHILDREN",
+      "iv": 0.005591596714578569,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "has_previous_application",
+      "iv": 0.005006958708251019,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "credit_to_income",
+      "iv": 0.003722664861887367,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "CNT_FAM_MEMBERS",
+      "iv": 0.0029841459623789757,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "OBS_30_CNT_SOCIAL_CIRCLE",
+      "iv": 0.002979546062007233,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "OBS_60_CNT_SOCIAL_CIRCLE",
+      "iv": 0.002890011403283602,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "NAME_TYPE_SUITE",
+      "iv": 0.002118061622398102,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLAG_DOCUMENT_8",
+      "iv": 0.0010241349506010732,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "REG_REGION_NOT_WORK_REGION",
+      "iv": 0.0006255324202275921,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "WEEKDAY_APPR_PROCESS_START",
+      "iv": 0.0006006868148305558,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLAG_OWN_REALTY",
+      "iv": 0.00039352788746613553,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLAG_EMAIL",
+      "iv": 1.9883132600258374e-06,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLAG_CONT_MOBILE",
+      "iv": 0.0,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLAG_DOCUMENT_10",
+      "iv": 0.0,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLAG_DOCUMENT_11",
+      "iv": 0.0,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLAG_DOCUMENT_12",
+      "iv": 0.0,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLAG_DOCUMENT_13",
+      "iv": 0.0,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLAG_DOCUMENT_14",
+      "iv": 0.0,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLAG_DOCUMENT_15",
+      "iv": 0.0,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLAG_DOCUMENT_16",
+      "iv": 0.0,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLAG_DOCUMENT_17",
+      "iv": 0.0,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLAG_DOCUMENT_18",
+      "iv": 0.0,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLAG_DOCUMENT_19",
+      "iv": 0.0,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLAG_DOCUMENT_2",
+      "iv": 0.0,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLAG_DOCUMENT_20",
+      "iv": 0.0,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLAG_DOCUMENT_21",
+      "iv": 0.0,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLAG_DOCUMENT_4",
+      "iv": 0.0,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLAG_DOCUMENT_5",
+      "iv": 0.0,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLAG_DOCUMENT_7",
+      "iv": 0.0,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLAG_DOCUMENT_9",
+      "iv": 0.0,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "FLAG_MOBIL",
+      "iv": 0.0,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "LIVE_REGION_NOT_WORK_REGION",
+      "iv": 0.0,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    },
+    {
+      "feature": "REG_REGION_NOT_LIVE_REGION",
+      "iv": 0.0,
+      "decision": "dropped",
+      "reason": "IV below 0.02"
+    }
+  ]
+}

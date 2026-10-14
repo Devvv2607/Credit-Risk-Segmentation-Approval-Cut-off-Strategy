@@ -1,0 +1,1208 @@
+[
+  {
+    "feature": "EXT_SOURCE_3",
+    "dtype": "numerical",
+    "iv": 0.3283608373,
+    "n_bins": 9,
+    "leak_flag": false,
+    "decision": "selected",
+    "reason": "IV above threshold, not highly correlated with a stronger feature"
+  },
+  {
+    "feature": "EXT_SOURCE_2",
+    "dtype": "numerical",
+    "iv": 0.3179731052,
+    "n_bins": 9,
+    "leak_flag": false,
+    "decision": "selected",
+    "reason": "IV above threshold, not highly correlated with a stronger feature"
+  },
+  {
+    "feature": "EXT_SOURCE_1",
+    "dtype": "numerical",
+    "iv": 0.1459180015,
+    "n_bins": 7,
+    "leak_flag": false,
+    "decision": "selected",
+    "reason": "IV above threshold, not highly correlated with a stronger feature"
+  },
+  {
+    "feature": "years_employed",
+    "dtype": "numerical",
+    "iv": 0.1170381585,
+    "n_bins": 9,
+    "leak_flag": false,
+    "decision": "selected",
+    "reason": "IV above threshold, not highly correlated with a stronger feature"
+  },
+  {
+    "feature": "bureau_debt_to_credit",
+    "dtype": "numerical",
+    "iv": 0.1064097552,
+    "n_bins": 9,
+    "leak_flag": false,
+    "decision": "selected",
+    "reason": "IV above threshold, not highly correlated with a stronger feature"
+  },
+  {
+    "feature": "employed_to_age",
+    "dtype": "numerical",
+    "iv": 0.09497010301,
+    "n_bins": 9,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 0.96 with years_employed (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "age_years",
+    "dtype": "numerical",
+    "iv": 0.08669738346,
+    "n_bins": 8,
+    "leak_flag": false,
+    "decision": "selected",
+    "reason": "IV above threshold, not highly correlated with a stronger feature"
+  },
+  {
+    "feature": "OCCUPATION_TYPE",
+    "dtype": "categorical",
+    "iv": 0.07677440677,
+    "n_bins": 6,
+    "leak_flag": false,
+    "decision": "selected",
+    "reason": "IV above threshold, not highly correlated with a stronger feature"
+  },
+  {
+    "feature": "ORGANIZATION_TYPE",
+    "dtype": "categorical",
+    "iv": 0.07393188875,
+    "n_bins": 9,
+    "leak_flag": false,
+    "decision": "selected",
+    "reason": "IV above threshold, not highly correlated with a stronger feature"
+  },
+  {
+    "feature": "credit_to_goods",
+    "dtype": "numerical",
+    "iv": 0.07301739901,
+    "n_bins": 7,
+    "leak_flag": false,
+    "decision": "selected",
+    "reason": "IV above threshold, not highly correlated with a stronger feature"
+  },
+  {
+    "feature": "prev_refusal_rate",
+    "dtype": "numerical",
+    "iv": 0.06848985696,
+    "n_bins": 7,
+    "leak_flag": false,
+    "decision": "selected",
+    "reason": "IV above threshold, not highly correlated with a stronger feature"
+  },
+  {
+    "feature": "NAME_INCOME_TYPE",
+    "dtype": "categorical",
+    "iv": 0.05478091411,
+    "n_bins": 4,
+    "leak_flag": false,
+    "decision": "selected",
+    "reason": "IV above threshold, not highly correlated with a stronger feature"
+  },
+  {
+    "feature": "REGION_RATING_CLIENT_W_CITY",
+    "dtype": "numerical",
+    "iv": 0.05375041924,
+    "n_bins": 3,
+    "leak_flag": false,
+    "decision": "selected",
+    "reason": "IV above threshold, not highly correlated with a stronger feature"
+  },
+  {
+    "feature": "prev_refused_count",
+    "dtype": "numerical",
+    "iv": 0.05251331177,
+    "n_bins": 4,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 0.83 with prev_refusal_rate (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "AMT_GOODS_PRICE",
+    "dtype": "numerical",
+    "iv": 0.05184933937,
+    "n_bins": 6,
+    "leak_flag": false,
+    "decision": "selected",
+    "reason": "IV above threshold, not highly correlated with a stronger feature"
+  },
+  {
+    "feature": "REGION_RATING_CLIENT",
+    "dtype": "numerical",
+    "iv": 0.05065169486,
+    "n_bins": 3,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 0.95 with REGION_RATING_CLIENT_W_CITY (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "NAME_EDUCATION_TYPE",
+    "dtype": "categorical",
+    "iv": 0.04705217967,
+    "n_bins": 2,
+    "leak_flag": false,
+    "decision": "selected",
+    "reason": "IV above threshold, not highly correlated with a stronger feature"
+  },
+  {
+    "feature": "DAYS_LAST_PHONE_CHANGE",
+    "dtype": "numerical",
+    "iv": 0.04524889985,
+    "n_bins": 9,
+    "leak_flag": false,
+    "decision": "selected",
+    "reason": "IV above threshold, not highly correlated with a stronger feature"
+  },
+  {
+    "feature": "DAYS_ID_PUBLISH",
+    "dtype": "numerical",
+    "iv": 0.03856302804,
+    "n_bins": 8,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "passed filters but outside top 15 by IV"
+  },
+  {
+    "feature": "FLOORSMAX_AVG",
+    "dtype": "numerical",
+    "iv": 0.03573517428,
+    "n_bins": 5,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "passed filters but outside top 15 by IV"
+  },
+  {
+    "feature": "FLOORSMAX_MEDI",
+    "dtype": "numerical",
+    "iv": 0.03539382817,
+    "n_bins": 5,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 1.00 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "FLOORSMAX_MODE",
+    "dtype": "numerical",
+    "iv": 0.03448016963,
+    "n_bins": 5,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 0.98 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "TOTALAREA_MODE",
+    "dtype": "numerical",
+    "iv": 0.03412549505,
+    "n_bins": 7,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 0.89 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "flag_days_employed_anomaly",
+    "dtype": "numerical",
+    "iv": 0.03267810804,
+    "n_bins": 2,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 0.78 with NAME_INCOME_TYPE (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "FLAG_EMP_PHONE",
+    "dtype": "numerical",
+    "iv": 0.03264181358,
+    "n_bins": 2,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 0.78 with NAME_INCOME_TYPE (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "AMT_CREDIT",
+    "dtype": "numerical",
+    "iv": 0.03257463033,
+    "n_bins": 5,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 0.92 with AMT_GOODS_PRICE (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "REG_CITY_NOT_WORK_CITY",
+    "dtype": "numerical",
+    "iv": 0.03249632326,
+    "n_bins": 2,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "passed filters but outside top 15 by IV"
+  },
+  {
+    "feature": "LIVINGAREA_AVG",
+    "dtype": "numerical",
+    "iv": 0.03226037066,
+    "n_bins": 7,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 0.88 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "REGION_POPULATION_RELATIVE",
+    "dtype": "numerical",
+    "iv": 0.03220938082,
+    "n_bins": 6,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "passed filters but outside top 15 by IV"
+  },
+  {
+    "feature": "LIVINGAREA_MEDI",
+    "dtype": "numerical",
+    "iv": 0.03198133677,
+    "n_bins": 7,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 0.88 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "ELEVATORS_AVG",
+    "dtype": "numerical",
+    "iv": 0.03087333118,
+    "n_bins": 5,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 0.90 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "APARTMENTS_AVG",
+    "dtype": "numerical",
+    "iv": 0.03084601959,
+    "n_bins": 5,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 0.88 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "APARTMENTS_MEDI",
+    "dtype": "numerical",
+    "iv": 0.03079039835,
+    "n_bins": 6,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 0.88 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "LIVINGAREA_MODE",
+    "dtype": "numerical",
+    "iv": 0.03062487649,
+    "n_bins": 7,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 0.86 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "ELEVATORS_MEDI",
+    "dtype": "numerical",
+    "iv": 0.0304406622,
+    "n_bins": 5,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 0.90 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "APARTMENTS_MODE",
+    "dtype": "numerical",
+    "iv": 0.02993868905,
+    "n_bins": 5,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 0.87 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "ELEVATORS_MODE",
+    "dtype": "numerical",
+    "iv": 0.02917192897,
+    "n_bins": 4,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 0.88 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "FLAG_DOCUMENT_3",
+    "dtype": "numerical",
+    "iv": 0.02812780835,
+    "n_bins": 2,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "passed filters but outside top 15 by IV"
+  },
+  {
+    "feature": "DAYS_REGISTRATION",
+    "dtype": "numerical",
+    "iv": 0.02808661022,
+    "n_bins": 8,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "passed filters but outside top 15 by IV"
+  },
+  {
+    "feature": "YEARS_BEGINEXPLUATATION_MODE",
+    "dtype": "numerical",
+    "iv": 0.02767863249,
+    "n_bins": 7,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 0.81 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "YEARS_BEGINEXPLUATATION_MEDI",
+    "dtype": "numerical",
+    "iv": 0.02756473721,
+    "n_bins": 7,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 0.81 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "YEARS_BEGINEXPLUATATION_AVG",
+    "dtype": "numerical",
+    "iv": 0.02743999542,
+    "n_bins": 7,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 0.81 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "ENTRANCES_AVG",
+    "dtype": "numerical",
+    "iv": 0.02517759975,
+    "n_bins": 6,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 0.74 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "ENTRANCES_MEDI",
+    "dtype": "numerical",
+    "iv": 0.02486848166,
+    "n_bins": 6,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 0.74 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "bureau_active_count",
+    "dtype": "numerical",
+    "iv": 0.02485996346,
+    "n_bins": 4,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "passed filters but outside top 15 by IV"
+  },
+  {
+    "feature": "ENTRANCES_MODE",
+    "dtype": "numerical",
+    "iv": 0.02385138642,
+    "n_bins": 6,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 0.74 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "WALLSMATERIAL_MODE",
+    "dtype": "categorical",
+    "iv": 0.02339215576,
+    "n_bins": 3,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 0.78 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "REG_CITY_NOT_LIVE_CITY",
+    "dtype": "numerical",
+    "iv": 0.02331254017,
+    "n_bins": 2,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "passed filters but outside top 15 by IV"
+  },
+  {
+    "feature": "OWN_CAR_AGE",
+    "dtype": "numerical",
+    "iv": 0.02288220138,
+    "n_bins": 5,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "passed filters but outside top 15 by IV"
+  },
+  {
+    "feature": "EMERGENCYSTATE_MODE",
+    "dtype": "categorical",
+    "iv": 0.02157637427,
+    "n_bins": 2,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 0.73 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "NONLIVINGAREA_AVG",
+    "dtype": "numerical",
+    "iv": 0.02121202612,
+    "n_bins": 4,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 0.74 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "NONLIVINGAREA_MEDI",
+    "dtype": "numerical",
+    "iv": 0.0210081443,
+    "n_bins": 4,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 0.73 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "NONLIVINGAREA_MODE",
+    "dtype": "numerical",
+    "iv": 0.02085258445,
+    "n_bins": 4,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "|corr| 0.73 with FLOORSMAX_AVG (higher IV) exceeds 0.7"
+  },
+  {
+    "feature": "BASEMENTAREA_AVG",
+    "dtype": "numerical",
+    "iv": 0.01974795331,
+    "n_bins": 6,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "HOUSETYPE_MODE",
+    "dtype": "categorical",
+    "iv": 0.01971394277,
+    "n_bins": 2,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "BASEMENTAREA_MEDI",
+    "dtype": "numerical",
+    "iv": 0.01956670346,
+    "n_bins": 5,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "AMT_REQ_CREDIT_BUREAU_YEAR",
+    "dtype": "numerical",
+    "iv": 0.01928694705,
+    "n_bins": 6,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "BASEMENTAREA_MODE",
+    "dtype": "numerical",
+    "iv": 0.01888066691,
+    "n_bins": 5,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLOORSMIN_AVG",
+    "dtype": "numerical",
+    "iv": 0.01740546597,
+    "n_bins": 4,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLOORSMIN_MEDI",
+    "dtype": "numerical",
+    "iv": 0.0173826508,
+    "n_bins": 4,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLOORSMIN_MODE",
+    "dtype": "numerical",
+    "iv": 0.01693922449,
+    "n_bins": 4,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "AMT_REQ_CREDIT_BUREAU_QRT",
+    "dtype": "numerical",
+    "iv": 0.01677400098,
+    "n_bins": 3,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "LIVINGAPARTMENTS_AVG",
+    "dtype": "numerical",
+    "iv": 0.01621104247,
+    "n_bins": 5,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "LIVINGAPARTMENTS_MEDI",
+    "dtype": "numerical",
+    "iv": 0.01615742152,
+    "n_bins": 5,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "NAME_HOUSING_TYPE",
+    "dtype": "categorical",
+    "iv": 0.016089428,
+    "n_bins": 2,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "YEARS_BUILD_MODE",
+    "dtype": "numerical",
+    "iv": 0.01600483978,
+    "n_bins": 4,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "AMT_REQ_CREDIT_BUREAU_MON",
+    "dtype": "numerical",
+    "iv": 0.01571495175,
+    "n_bins": 3,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "YEARS_BUILD_MEDI",
+    "dtype": "numerical",
+    "iv": 0.01567806521,
+    "n_bins": 5,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "YEARS_BUILD_AVG",
+    "dtype": "numerical",
+    "iv": 0.01558649251,
+    "n_bins": 5,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "LIVINGAPARTMENTS_MODE",
+    "dtype": "numerical",
+    "iv": 0.01543980315,
+    "n_bins": 5,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "AMT_REQ_CREDIT_BUREAU_DAY",
+    "dtype": "numerical",
+    "iv": 0.01539535442,
+    "n_bins": 2,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "AMT_REQ_CREDIT_BUREAU_HOUR",
+    "dtype": "numerical",
+    "iv": 0.01539535442,
+    "n_bins": 2,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "AMT_REQ_CREDIT_BUREAU_WEEK",
+    "dtype": "numerical",
+    "iv": 0.01539535442,
+    "n_bins": 2,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "bureau_credit_count",
+    "dtype": "numerical",
+    "iv": 0.01479188492,
+    "n_bins": 4,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "AMT_ANNUITY",
+    "dtype": "numerical",
+    "iv": 0.01448307694,
+    "n_bins": 5,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "LANDAREA_MODE",
+    "dtype": "numerical",
+    "iv": 0.01385844225,
+    "n_bins": 3,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "bureau_max_days_overdue",
+    "dtype": "numerical",
+    "iv": 0.01379178116,
+    "n_bins": 2,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "bureau_max_overdue",
+    "dtype": "numerical",
+    "iv": 0.01379178116,
+    "n_bins": 2,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "bureau_total_overdue",
+    "dtype": "numerical",
+    "iv": 0.01379178116,
+    "n_bins": 2,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "has_bureau_history",
+    "dtype": "numerical",
+    "iv": 0.01379178116,
+    "n_bins": 2,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "LANDAREA_MEDI",
+    "dtype": "numerical",
+    "iv": 0.01368152448,
+    "n_bins": 3,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "LANDAREA_AVG",
+    "dtype": "numerical",
+    "iv": 0.01364160094,
+    "n_bins": 3,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "LIVE_CITY_NOT_WORK_CITY",
+    "dtype": "numerical",
+    "iv": 0.01348863359,
+    "n_bins": 2,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "NAME_CONTRACT_TYPE",
+    "dtype": "categorical",
+    "iv": 0.01337936484,
+    "n_bins": 2,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "DEF_30_CNT_SOCIAL_CIRCLE",
+    "dtype": "numerical",
+    "iv": 0.01322713591,
+    "n_bins": 3,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "COMMONAREA_AVG",
+    "dtype": "numerical",
+    "iv": 0.01264578232,
+    "n_bins": 5,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "COMMONAREA_MEDI",
+    "dtype": "numerical",
+    "iv": 0.01253593333,
+    "n_bins": 5,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLAG_DOCUMENT_6",
+    "dtype": "numerical",
+    "iv": 0.01246013881,
+    "n_bins": 2,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "COMMONAREA_MODE",
+    "dtype": "numerical",
+    "iv": 0.01215504511,
+    "n_bins": 5,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "DEF_60_CNT_SOCIAL_CIRCLE",
+    "dtype": "numerical",
+    "iv": 0.01171381582,
+    "n_bins": 3,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "AMT_INCOME_TOTAL",
+    "dtype": "numerical",
+    "iv": 0.01117893997,
+    "n_bins": 5,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FONDKAPREMONT_MODE",
+    "dtype": "categorical",
+    "iv": 0.0111631063,
+    "n_bins": 3,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "HOUR_APPR_PROCESS_START",
+    "dtype": "numerical",
+    "iv": 0.0108729103,
+    "n_bins": 7,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "prev_app_count",
+    "dtype": "numerical",
+    "iv": 0.01034895231,
+    "n_bins": 6,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "NONLIVINGAPARTMENTS_AVG",
+    "dtype": "numerical",
+    "iv": 0.01026263254,
+    "n_bins": 3,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "NONLIVINGAPARTMENTS_MEDI",
+    "dtype": "numerical",
+    "iv": 0.01013537507,
+    "n_bins": 3,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLAG_WORK_PHONE",
+    "dtype": "numerical",
+    "iv": 0.009998021376,
+    "n_bins": 2,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "NONLIVINGAPARTMENTS_MODE",
+    "dtype": "numerical",
+    "iv": 0.009966630708,
+    "n_bins": 3,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLAG_PHONE",
+    "dtype": "numerical",
+    "iv": 0.007874109178,
+    "n_bins": 2,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "annuity_to_income",
+    "dtype": "numerical",
+    "iv": 0.006966778842,
+    "n_bins": 6,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLAG_OWN_CAR",
+    "dtype": "categorical",
+    "iv": 0.006372834494,
+    "n_bins": 2,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "CNT_CHILDREN",
+    "dtype": "numerical",
+    "iv": 0.005591596715,
+    "n_bins": 2,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "has_previous_application",
+    "dtype": "numerical",
+    "iv": 0.005006958708,
+    "n_bins": 2,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "credit_to_income",
+    "dtype": "numerical",
+    "iv": 0.003722664862,
+    "n_bins": 4,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "CNT_FAM_MEMBERS",
+    "dtype": "numerical",
+    "iv": 0.002984145962,
+    "n_bins": 3,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "OBS_30_CNT_SOCIAL_CIRCLE",
+    "dtype": "numerical",
+    "iv": 0.002979546062,
+    "n_bins": 6,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "OBS_60_CNT_SOCIAL_CIRCLE",
+    "dtype": "numerical",
+    "iv": 0.002890011403,
+    "n_bins": 6,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "NAME_TYPE_SUITE",
+    "dtype": "categorical",
+    "iv": 0.002118061622,
+    "n_bins": 3,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLAG_DOCUMENT_8",
+    "dtype": "numerical",
+    "iv": 0.001024134951,
+    "n_bins": 2,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "REG_REGION_NOT_WORK_REGION",
+    "dtype": "numerical",
+    "iv": 0.0006255324202,
+    "n_bins": 2,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "WEEKDAY_APPR_PROCESS_START",
+    "dtype": "categorical",
+    "iv": 0.0006006868148,
+    "n_bins": 7,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLAG_OWN_REALTY",
+    "dtype": "categorical",
+    "iv": 0.0003935278875,
+    "n_bins": 2,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLAG_EMAIL",
+    "dtype": "numerical",
+    "iv": 1.98831326e-06,
+    "n_bins": 2,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLAG_CONT_MOBILE",
+    "dtype": "numerical",
+    "iv": 0.0,
+    "n_bins": 1,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLAG_DOCUMENT_10",
+    "dtype": "numerical",
+    "iv": 0.0,
+    "n_bins": 1,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLAG_DOCUMENT_11",
+    "dtype": "numerical",
+    "iv": 0.0,
+    "n_bins": 1,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLAG_DOCUMENT_12",
+    "dtype": "numerical",
+    "iv": 0.0,
+    "n_bins": 1,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLAG_DOCUMENT_13",
+    "dtype": "numerical",
+    "iv": 0.0,
+    "n_bins": 1,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLAG_DOCUMENT_14",
+    "dtype": "numerical",
+    "iv": 0.0,
+    "n_bins": 1,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLAG_DOCUMENT_15",
+    "dtype": "numerical",
+    "iv": 0.0,
+    "n_bins": 1,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLAG_DOCUMENT_16",
+    "dtype": "numerical",
+    "iv": 0.0,
+    "n_bins": 1,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLAG_DOCUMENT_17",
+    "dtype": "numerical",
+    "iv": 0.0,
+    "n_bins": 1,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLAG_DOCUMENT_18",
+    "dtype": "numerical",
+    "iv": 0.0,
+    "n_bins": 1,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLAG_DOCUMENT_19",
+    "dtype": "numerical",
+    "iv": 0.0,
+    "n_bins": 1,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLAG_DOCUMENT_2",
+    "dtype": "numerical",
+    "iv": 0.0,
+    "n_bins": 1,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLAG_DOCUMENT_20",
+    "dtype": "numerical",
+    "iv": 0.0,
+    "n_bins": 1,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLAG_DOCUMENT_21",
+    "dtype": "numerical",
+    "iv": 0.0,
+    "n_bins": 1,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLAG_DOCUMENT_4",
+    "dtype": "numerical",
+    "iv": 0.0,
+    "n_bins": 1,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLAG_DOCUMENT_5",
+    "dtype": "numerical",
+    "iv": 0.0,
+    "n_bins": 1,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLAG_DOCUMENT_7",
+    "dtype": "numerical",
+    "iv": 0.0,
+    "n_bins": 1,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLAG_DOCUMENT_9",
+    "dtype": "numerical",
+    "iv": 0.0,
+    "n_bins": 1,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "FLAG_MOBIL",
+    "dtype": "numerical",
+    "iv": 0.0,
+    "n_bins": 1,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "LIVE_REGION_NOT_WORK_REGION",
+    "dtype": "numerical",
+    "iv": 0.0,
+    "n_bins": 1,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  },
+  {
+    "feature": "REG_REGION_NOT_LIVE_REGION",
+    "dtype": "numerical",
+    "iv": 0.0,
+    "n_bins": 1,
+    "leak_flag": false,
+    "decision": "dropped",
+    "reason": "IV below 0.02"
+  }
+]

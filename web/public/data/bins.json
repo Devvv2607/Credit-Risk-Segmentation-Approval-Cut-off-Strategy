@@ -1,0 +1,938 @@
+[
+  {
+    "feature": "EXT_SOURCE_3",
+    "bin_index": 0,
+    "bin": "(-inf, 0.19)",
+    "count": 10642,
+    "bad_rate": 0.2110505544,
+    "woe": -1.113877448,
+    "iv_contribution": 0.1128216937
+  },
+  {
+    "feature": "EXT_SOURCE_3",
+    "bin_index": 1,
+    "bin": "[0.19, 0.32)",
+    "count": 16539,
+    "bad_rate": 0.1390047766,
+    "woe": -0.6089013334,
+    "iv_contribution": 0.04286073383
+  },
+  {
+    "feature": "EXT_SOURCE_3",
+    "bin_index": 2,
+    "bin": "[0.32, 0.41)",
+    "count": 18602,
+    "bad_rate": 0.0993979142,
+    "woe": -0.2285495993,
+    "iv_contribution": 0.005796598609
+  },
+  {
+    "feature": "EXT_SOURCE_3",
+    "bin_index": 3,
+    "bin": "[0.41, 0.50)",
+    "count": 19776,
+    "bad_rate": 0.07357402913,
+    "woe": 0.1005600487,
+    "iv_contribution": 0.001039184705
+  },
+  {
+    "feature": "EXT_SOURCE_3",
+    "bin_index": 4,
+    "bin": "[0.50, 0.57)",
+    "count": 17987,
+    "bad_rate": 0.05882025908,
+    "woe": 0.3401658006,
+    "iv_contribution": 0.009790038498
+  },
+  {
+    "feature": "EXT_SOURCE_3",
+    "bin_index": 5,
+    "bin": "[0.57, 0.64)",
+    "count": 18854,
+    "bad_rate": 0.04837169831,
+    "woe": 0.5467776285,
+    "iv_contribution": 0.02436147668
+  },
+  {
+    "feature": "EXT_SOURCE_3",
+    "bin_index": 6,
+    "bin": "[0.64, 0.68)",
+    "count": 11873,
+    "bad_rate": 0.04244925461,
+    "woe": 0.6835873705,
+    "iv_contribution": 0.02269031057
+  },
+  {
+    "feature": "EXT_SOURCE_3",
+    "bin_index": 7,
+    "bin": "[0.68, inf)",
+    "count": 33673,
+    "bad_rate": 0.03427078074,
+    "woe": 0.9061083722,
+    "iv_contribution": 0.1035240492
+  },
+  {
+    "feature": "EXT_SOURCE_3",
+    "bin_index": 9,
+    "bin": "Missing",
+    "count": 36560,
+    "bad_rate": 0.09349015317,
+    "woe": -0.1607362181,
+    "iv_contribution": 0.005476751498
+  },
+  {
+    "feature": "EXT_SOURCE_2",
+    "bin_index": 0,
+    "bin": "(-inf, 0.14)",
+    "count": 9514,
+    "bad_rate": 0.2184149674,
+    "woe": -1.157554816,
+    "iv_contribution": 0.1107414247
+  },
+  {
+    "feature": "EXT_SOURCE_2",
+    "bin_index": 1,
+    "bin": "[0.14, 0.26)",
+    "count": 14258,
+    "bad_rate": 0.1410436246,
+    "woe": -0.6258330953,
+    "iv_contribution": 0.03930566484
+  },
+  {
+    "feature": "EXT_SOURCE_2",
+    "bin_index": 2,
+    "bin": "[0.26, 0.41)",
+    "count": 26305,
+    "bad_rate": 0.1095989356,
+    "woe": -0.3376376606,
+    "iv_contribution": 0.01872620362
+  },
+  {
+    "feature": "EXT_SOURCE_2",
+    "bin_index": 3,
+    "bin": "[0.41, 0.57)",
+    "count": 42263,
+    "bad_rate": 0.08030665121,
+    "woe": 0.00570585736,
+    "iv_contribution": 7.439654237e-06
+  },
+  {
+    "feature": "EXT_SOURCE_2",
+    "bin_index": 4,
+    "bin": "[0.57, 0.62)",
+    "count": 21626,
+    "bad_rate": 0.0655229816,
+    "woe": 0.2251040954,
+    "iv_contribution": 0.005406216326
+  },
+  {
+    "feature": "EXT_SOURCE_2",
+    "bin_index": 5,
+    "bin": "[0.62, 0.67)",
+    "count": 25238,
+    "bad_rate": 0.05563039861,
+    "woe": 0.3993058335,
+    "iv_contribution": 0.01847257771
+  },
+  {
+    "feature": "EXT_SOURCE_2",
+    "bin_index": 6,
+    "bin": "[0.67, 0.73)",
+    "count": 28635,
+    "bad_rate": 0.0429544264,
+    "woe": 0.6712293155,
+    "iv_contribution": 0.05302547748
+  },
+  {
+    "feature": "EXT_SOURCE_2",
+    "bin_index": 7,
+    "bin": "[0.73, inf)",
+    "count": 16254,
+    "bad_rate": 0.0273163529,
+    "woe": 1.140091374,
+    "iv_contribution": 0.07228707554
+  },
+  {
+    "feature": "EXT_SOURCE_2",
+    "bin_index": 9,
+    "bin": "Missing",
+    "count": 413,
+    "bad_rate": 0.08232445521,
+    "woe": -0.02130631311,
+    "iv_contribution": 1.025266169e-06
+  },
+  {
+    "feature": "EXT_SOURCE_1",
+    "bin_index": 0,
+    "bin": "(-inf, 0.24)",
+    "count": 10119,
+    "bad_rate": 0.1596995751,
+    "woe": -0.7720169113,
+    "iv_contribution": 0.04505523205
+  },
+  {
+    "feature": "EXT_SOURCE_1",
+    "bin_index": 1,
+    "bin": "[0.24, 0.40)",
+    "count": 18351,
+    "bad_rate": 0.101629339,
+    "woe": -0.2532315108,
+    "iv_contribution": 0.007093246942
+  },
+  {
+    "feature": "EXT_SOURCE_1",
+    "bin_index": 2,
+    "bin": "[0.40, 0.53)",
+    "count": 14784,
+    "bad_rate": 0.06845238095,
+    "woe": 0.178226981,
+    "iv_contribution": 0.002362452339
+  },
+  {
+    "feature": "EXT_SOURCE_1",
+    "bin_index": 3,
+    "bin": "[0.53, 0.64)",
+    "count": 13434,
+    "bad_rate": 0.054339735,
+    "woe": 0.4241456558,
+    "iv_contribution": 0.01098158385
+  },
+  {
+    "feature": "EXT_SOURCE_1",
+    "bin_index": 4,
+    "bin": "[0.64, 0.72)",
+    "count": 9296,
+    "bad_rate": 0.0406626506,
+    "woe": 0.728450796,
+    "iv_contribution": 0.01981494956
+  },
+  {
+    "feature": "EXT_SOURCE_1",
+    "bin_index": 5,
+    "bin": "[0.72, inf)",
+    "count": 14479,
+    "bad_rate": 0.02914565923,
+    "woe": 1.073388464,
+    "iv_contribution": 0.05854928808
+  },
+  {
+    "feature": "EXT_SOURCE_1",
+    "bin_index": 7,
+    "bin": "Missing",
+    "count": 104043,
+    "bad_rate": 0.08527243544,
+    "woe": -0.05970697009,
+    "iv_contribution": 0.002061248701
+  },
+  {
+    "feature": "years_employed",
+    "bin_index": 0,
+    "bin": "(-inf, 2.54)",
+    "count": 45951,
+    "bad_rate": 0.112707014,
+    "woe": -0.3690984097,
+    "iv_contribution": 0.03960987641
+  },
+  {
+    "feature": "years_employed",
+    "bin_index": 1,
+    "bin": "[2.54, 3.55)",
+    "count": 16625,
+    "bad_rate": 0.104,
+    "woe": -0.2789324797,
+    "iv_contribution": 0.007881161541
+  },
+  {
+    "feature": "years_employed",
+    "bin_index": 2,
+    "bin": "[3.55, 4.92)",
+    "count": 18208,
+    "bad_rate": 0.09149824253,
+    "woe": -0.1370049361,
+    "iv_contribution": 0.001961987708
+  },
+  {
+    "feature": "years_employed",
+    "bin_index": 3,
+    "bin": "[4.92, 6.64)",
+    "count": 16746,
+    "bad_rate": 0.08007882479,
+    "woe": 0.008794534169,
+    "iv_contribution": 6.993990852e-06
+  },
+  {
+    "feature": "years_employed",
+    "bin_index": 4,
+    "bin": "[6.64, 8.41)",
+    "count": 13868,
+    "bad_rate": 0.07326218633,
+    "woe": 0.1051440985,
+    "iv_contribution": 0.0007951604823
+  },
+  {
+    "feature": "years_employed",
+    "bin_index": 5,
+    "bin": "[8.41, 10.78)",
+    "count": 12750,
+    "bad_rate": 0.06533333333,
+    "woe": 0.2282055953,
+    "iv_contribution": 0.003271547701
+  },
+  {
+    "feature": "years_employed",
+    "bin_index": 6,
+    "bin": "[10.78, 18.12)",
+    "count": 17504,
+    "bad_rate": 0.05415904936,
+    "woe": 0.427667357,
+    "iv_contribution": 0.01452618151
+  },
+  {
+    "feature": "years_employed",
+    "bin_index": 7,
+    "bin": "[18.12, inf)",
+    "count": 9629,
+    "bad_rate": 0.04008723647,
+    "woe": 0.7433024242,
+    "iv_contribution": 0.02124399194
+  },
+  {
+    "feature": "years_employed",
+    "bin_index": 9,
+    "bin": "Missing",
+    "count": 33225,
+    "bad_rate": 0.05408577878,
+    "woe": 0.4290986139,
+    "iv_contribution": 0.02774125726
+  },
+  {
+    "feature": "bureau_debt_to_credit",
+    "bin_index": 0,
+    "bin": "(-inf, 0.02)",
+    "count": 49466,
+    "bad_rate": 0.0553915821,
+    "woe": 0.403860841,
+    "iv_contribution": 0.03696734576
+  },
+  {
+    "feature": "bureau_debt_to_credit",
+    "bin_index": 1,
+    "bin": "[0.02, 0.21)",
+    "count": 28872,
+    "bad_rate": 0.06203241895,
+    "woe": 0.2835762583,
+    "iv_contribution": 0.01117961401
+  },
+  {
+    "feature": "bureau_debt_to_credit",
+    "bin_index": 2,
+    "bin": "[0.21, 0.31)",
+    "count": 16191,
+    "bad_rate": 0.07047124946,
+    "woe": 0.1469909267,
+    "iv_contribution": 0.001782936091
+  },
+  {
+    "feature": "bureau_debt_to_credit",
+    "bin_index": 3,
+    "bin": "[0.31, 0.44)",
+    "count": 17545,
+    "bad_rate": 0.07996580222,
+    "woe": 0.0103297762,
+    "iv_contribution": 1.010285225e-05
+  },
+  {
+    "feature": "bureau_debt_to_credit",
+    "bin_index": 4,
+    "bin": "[0.44, 0.53)",
+    "count": 11205,
+    "bad_rate": 0.08995983936,
+    "woe": -0.1183566038,
+    "iv_contribution": 0.0008940414685
+  },
+  {
+    "feature": "bureau_debt_to_credit",
+    "bin_index": 5,
+    "bin": "[0.53, 0.63)",
+    "count": 10892,
+    "bad_rate": 0.09906353287,
+    "woe": -0.2248086426,
+    "iv_contribution": 0.003278721397
+  },
+  {
+    "feature": "bureau_debt_to_credit",
+    "bin_index": 6,
+    "bin": "[0.63, 0.78)",
+    "count": 11054,
+    "bad_rate": 0.1173330921,
+    "woe": -0.4145509228,
+    "iv_contribution": 0.0122501663
+  },
+  {
+    "feature": "bureau_debt_to_credit",
+    "bin_index": 7,
+    "bin": "[0.78, inf)",
+    "count": 12266,
+    "bad_rate": 0.1358225991,
+    "woe": -0.5820535362,
+    "iv_contribution": 0.02872647661
+  },
+  {
+    "feature": "bureau_debt_to_credit",
+    "bin_index": 9,
+    "bin": "Missing",
+    "count": 27015,
+    "bad_rate": 0.1025356284,
+    "woe": -0.2631189032,
+    "iv_contribution": 0.01132035074
+  },
+  {
+    "feature": "age_years",
+    "bin_index": 0,
+    "bin": "(-inf, 28.25)",
+    "count": 19066,
+    "bad_rate": 0.1171194797,
+    "woe": -0.412486721,
+    "iv_contribution": 0.02090125358
+  },
+  {
+    "feature": "age_years",
+    "bin_index": 1,
+    "bin": "[28.25, 31.68)",
+    "count": 16211,
+    "bad_rate": 0.1080130775,
+    "woe": -0.3212828302,
+    "iv_contribution": 0.01037818156
+  },
+  {
+    "feature": "age_years",
+    "bin_index": 2,
+    "bin": "[31.68, 34.82)",
+    "count": 14883,
+    "bad_rate": 0.1010548948,
+    "woe": -0.2469239056,
+    "iv_contribution": 0.00545528587
+  },
+  {
+    "feature": "age_years",
+    "bin_index": 3,
+    "bin": "[34.82, 38.19)",
+    "count": 16818,
+    "bad_rate": 0.09186585801,
+    "woe": -0.1414193403,
+    "iv_contribution": 0.001934454915
+  },
+  {
+    "feature": "age_years",
+    "bin_index": 4,
+    "bin": "[38.19, 47.10)",
+    "count": 43601,
+    "bad_rate": 0.07967707163,
+    "woe": 0.01426076305,
+    "iv_contribution": 4.777219535e-05
+  },
+  {
+    "feature": "age_years",
+    "bin_index": 5,
+    "bin": "[47.10, 54.67)",
+    "count": 31300,
+    "bad_rate": 0.06942492013,
+    "woe": 0.1630748842,
+    "iv_contribution": 0.004213914843
+  },
+  {
+    "feature": "age_years",
+    "bin_index": 6,
+    "bin": "[54.67, 63.47)",
+    "count": 33225,
+    "bad_rate": 0.05423626787,
+    "woe": 0.4261609561,
+    "iv_contribution": 0.02739571953
+  },
+  {
+    "feature": "age_years",
+    "bin_index": 7,
+    "bin": "[63.47, inf)",
+    "count": 9402,
+    "bad_rate": 0.04392682408,
+    "woe": 0.6478273,
+    "iv_contribution": 0.01637080096
+  },
+  {
+    "feature": "OCCUPATION_TYPE",
+    "bin_index": 0,
+    "bin": "Accountants, IT staff, Managers",
+    "count": 19051,
+    "bad_rate": 0.05663744685,
+    "woe": 0.3802983114,
+    "iv_contribution": 0.01274748244
+  },
+  {
+    "feature": "OCCUPATION_TYPE",
+    "bin_index": 1,
+    "bin": "High skill tech staff, HR staff, Private service staff, Core staff, Secretaries, Medicine staff",
+    "count": 31206,
+    "bad_rate": 0.06476318657,
+    "woe": 0.2375804467,
+    "iv_contribution": 0.008644861706
+  },
+  {
+    "feature": "OCCUPATION_TYPE",
+    "bin_index": 2,
+    "bin": "Realty agents, Sales staff, Cleaning staff",
+    "count": 22370,
+    "bad_rate": 0.09566383549,
+    "woe": -0.1861211714,
+    "iv_contribution": 0.004541253986
+  },
+  {
+    "feature": "OCCUPATION_TYPE",
+    "bin_index": 3,
+    "bin": "Cooking staff, Laborers",
+    "count": 36746,
+    "bad_rate": 0.1046916671,
+    "woe": -0.2863333552,
+    "iv_contribution": 0.01841330103
+  },
+  {
+    "feature": "OCCUPATION_TYPE",
+    "bin_index": 4,
+    "bin": "Security staff, Drivers, Waiters/barmen staff, Low-skill Laborers",
+    "count": 17241,
+    "bad_rate": 0.116408561,
+    "woe": -0.4055932914,
+    "iv_contribution": 0.01822164958
+  },
+  {
+    "feature": "OCCUPATION_TYPE",
+    "bin_index": 6,
+    "bin": "Missing",
+    "count": 57892,
+    "bad_rate": 0.06565674014,
+    "woe": 0.2229216298,
+    "iv_contribution": 0.01420585802
+  },
+  {
+    "feature": "ORGANIZATION_TYPE",
+    "bin_index": 0,
+    "bin": "Trade: type 4, Trade: type 6, Trade: type 5, Religion, Culture, Military, Industry: type 6, Security Ministries, Insurance, Industry: type 12, Bank, Police, University, Transport: type 1, Trade: type 2, School, Services, Industry: type 8",
+    "count": 15324,
+    "bad_rate": 0.0546202036,
+    "woe": 0.4187009105,
+    "iv_contribution": 0.01223433125
+  },
+  {
+    "feature": "ORGANIZATION_TYPE",
+    "bin_index": 1,
+    "bin": "Industry: type 9, Medicine, Government",
+    "count": 15059,
+    "bad_rate": 0.06886247427,
+    "woe": 0.171813602,
+    "iv_contribution": 0.002242312991
+  },
+  {
+    "feature": "ORGANIZATION_TYPE",
+    "bin_index": 2,
+    "bin": "Industry: type 5, Other, Kindergarten, Transport: type 2",
+    "count": 15840,
+    "bad_rate": 0.07310606061,
+    "woe": 0.107445881,
+    "iv_contribution": 0.0009475192834
+  },
+  {
+    "feature": "ORGANIZATION_TYPE",
+    "bin_index": 3,
+    "bin": "Emergency, Electricity, Industry: type 7, Industry: type 10, Hotel, Business Entity Type 1, Telecom, Housing, Postal",
+    "count": 9353,
+    "bad_rate": 0.07804982359,
+    "woe": 0.03666180323,
+    "iv_contribution": 6.709579886e-05
+  },
+  {
+    "feature": "ORGANIZATION_TYPE",
+    "bin_index": 4,
+    "bin": "Industry: type 11, Transport: type 4, Mobile, Business Entity Type 2, Industry: type 4, Advertising",
+    "count": 12087,
+    "bad_rate": 0.08711839166,
+    "woe": -0.08314381188,
+    "iv_contribution": 0.0004689411708
+  },
+  {
+    "feature": "ORGANIZATION_TYPE",
+    "bin_index": 5,
+    "bin": "Business Entity Type 3, Trade: type 7, Legal Services, Industry: type 2",
+    "count": 46070,
+    "bad_rate": 0.09209897981,
+    "woe": -0.1442104958,
+    "iv_contribution": 0.005516804776
+  },
+  {
+    "feature": "ORGANIZATION_TYPE",
+    "bin_index": 6,
+    "bin": "Trade: type 3, Self-employed, Agriculture, Trade: type 1",
+    "count": 26658,
+    "bad_rate": 0.102858429,
+    "woe": -0.2666218837,
+    "iv_contribution": 0.01148703453
+  },
+  {
+    "feature": "ORGANIZATION_TYPE",
+    "bin_index": 7,
+    "bin": "Security, Industry: type 3, Restaurant, Construction, Industry: type 1, Realtor, Cleaning, Transport: type 3, Industry: type 13",
+    "count": 10890,
+    "bad_rate": 0.1191919192,
+    "woe": -0.4323771941,
+    "iv_contribution": 0.01322659169
+  },
+  {
+    "feature": "ORGANIZATION_TYPE",
+    "bin_index": 9,
+    "bin": "Missing",
+    "count": 33225,
+    "bad_rate": 0.05408577878,
+    "woe": 0.4290986139,
+    "iv_contribution": 0.02774125726
+  },
+  {
+    "feature": "credit_to_goods",
+    "bin_index": 0,
+    "bin": "(-inf, 1.10)",
+    "count": 79865,
+    "bad_rate": 0.06428347837,
+    "woe": 0.2455279233,
+    "iv_contribution": 0.02355174965
+  },
+  {
+    "feature": "credit_to_goods",
+    "bin_index": 1,
+    "bin": "[1.10, 1.13)",
+    "count": 19690,
+    "bad_rate": 0.07120365668,
+    "woe": 0.1358633249,
+    "iv_contribution": 0.001861008264
+  },
+  {
+    "feature": "credit_to_goods",
+    "bin_index": 2,
+    "bin": "[1.13, 1.16)",
+    "count": 18916,
+    "bad_rate": 0.07194967224,
+    "woe": 0.1246370924,
+    "iv_contribution": 0.001511673167
+  },
+  {
+    "feature": "credit_to_goods",
+    "bin_index": 3,
+    "bin": "[1.16, 1.21)",
+    "count": 27212,
+    "bad_rate": 0.0912097604,
+    "woe": -0.1335295988,
+    "iv_contribution": 0.002781271423
+  },
+  {
+    "feature": "credit_to_goods",
+    "bin_index": 4,
+    "bin": "[1.21, 1.32)",
+    "count": 21625,
+    "bad_rate": 0.1074682081,
+    "woe": -0.3156149245,
+    "iv_contribution": 0.0133283635
+  },
+  {
+    "feature": "credit_to_goods",
+    "bin_index": 5,
+    "bin": "[1.32, inf)",
+    "count": 17037,
+    "bad_rate": 0.1277807126,
+    "woe": -0.5117567365,
+    "iv_contribution": 0.02996038167
+  },
+  {
+    "feature": "credit_to_goods",
+    "bin_index": 7,
+    "bin": "Missing",
+    "count": 161,
+    "bad_rate": 0.09316770186,
+    "woe": -0.156925573,
+    "iv_contribution": 2.295132521e-05
+  },
+  {
+    "feature": "prev_refusal_rate",
+    "bin_index": 0,
+    "bin": "(-inf, 0.06)",
+    "count": 114531,
+    "bad_rate": 0.07076686661,
+    "woe": 0.1424867592,
+    "iv_contribution": 0.01187324581
+  },
+  {
+    "feature": "prev_refusal_rate",
+    "bin_index": 1,
+    "bin": "[0.06, 0.16)",
+    "count": 10002,
+    "bad_rate": 0.07198560288,
+    "woe": 0.1240991142,
+    "iv_contribution": 0.0007926031237
+  },
+  {
+    "feature": "prev_refusal_rate",
+    "bin_index": 2,
+    "bin": "[0.16, 0.21)",
+    "count": 9933,
+    "bad_rate": 0.08416389812,
+    "woe": -0.04541063884,
+    "iv_contribution": 0.0001131507698
+  },
+  {
+    "feature": "prev_refusal_rate",
+    "bin_index": 3,
+    "bin": "[0.21, 0.28)",
+    "count": 9316,
+    "bad_rate": 0.08984542722,
+    "woe": -0.1169582668,
+    "iv_contribution": 0.0007254327178
+  },
+  {
+    "feature": "prev_refusal_rate",
+    "bin_index": 4,
+    "bin": "[0.28, 0.44)",
+    "count": 16327,
+    "bad_rate": 0.107061922,
+    "woe": -0.3113721337,
+    "iv_contribution": 0.009776869246
+  },
+  {
+    "feature": "prev_refusal_rate",
+    "bin_index": 5,
+    "bin": "[0.44, inf)",
+    "count": 14614,
+    "bad_rate": 0.1411660052,
+    "woe": -0.626842884,
+    "iv_contribution": 0.04043394549
+  },
+  {
+    "feature": "prev_refusal_rate",
+    "bin_index": 7,
+    "bin": "Missing",
+    "count": 9783,
+    "bad_rate": 0.05989982623,
+    "woe": 0.3208308397,
+    "iv_contribution": 0.004774609804
+  },
+  {
+    "feature": "NAME_INCOME_TYPE",
+    "bin_index": 0,
+    "bin": "Businessman, Maternity leave, Student, Pensioner",
+    "count": 33235,
+    "bad_rate": 0.05394914999,
+    "woe": 0.4317723906,
+    "iv_contribution": 0.02806570735
+  },
+  {
+    "feature": "NAME_INCOME_TYPE",
+    "bin_index": 1,
+    "bin": "State servant",
+    "count": 13127,
+    "bad_rate": 0.05812447627,
+    "woe": 0.3528042784,
+    "iv_contribution": 0.007645611669
+  },
+  {
+    "feature": "NAME_INCOME_TYPE",
+    "bin_index": 2,
+    "bin": "Commercial associate",
+    "count": 42989,
+    "bad_rate": 0.07627532625,
+    "woe": 0.0615825537,
+    "iv_contribution": 0.0008611075618
+  },
+  {
+    "feature": "NAME_INCOME_TYPE",
+    "bin_index": 3,
+    "bin": "Working, Unemployed",
+    "count": 95155,
+    "bad_rate": 0.09521307341,
+    "woe": -0.1808997759,
+    "iv_contribution": 0.01820848752
+  },
+  {
+    "feature": "REGION_RATING_CLIENT_W_CITY",
+    "bin_index": 0,
+    "bin": "(-inf, 1.50)",
+    "count": 20527,
+    "bad_rate": 0.0472548351,
+    "woe": 0.5713104925,
+    "iv_contribution": 0.02866978716
+  },
+  {
+    "feature": "REGION_RATING_CLIENT_W_CITY",
+    "bin_index": 1,
+    "bin": "[1.50, 2.50)",
+    "count": 137572,
+    "bad_rate": 0.0792966592,
+    "woe": 0.01945988607,
+    "iv_contribution": 0.000280064159
+  },
+  {
+    "feature": "REGION_RATING_CLIENT_W_CITY",
+    "bin_index": 2,
+    "bin": "[2.50, inf)",
+    "count": 26407,
+    "bad_rate": 0.1142121407,
+    "woe": -0.3840621107,
+    "iv_contribution": 0.02480056792
+  },
+  {
+    "feature": "AMT_GOODS_PRICE",
+    "bin_index": 0,
+    "bin": "(-inf, 450117.00)",
+    "count": 94679,
+    "bad_rate": 0.09416026785,
+    "woe": -0.1686179069,
+    "iv_contribution": 0.01565985321
+  },
+  {
+    "feature": "AMT_GOODS_PRICE",
+    "bin_index": 1,
+    "bin": "[450117.00, 677889.00)",
+    "count": 41410,
+    "bad_rate": 0.07744506158,
+    "woe": 0.04509613227,
+    "iv_contribution": 0.0004478848207
+  },
+  {
+    "feature": "AMT_GOODS_PRICE",
+    "bin_index": 2,
+    "bin": "[677889.00, 902250.00)",
+    "count": 23115,
+    "bad_rate": 0.06324897253,
+    "woe": 0.2628566581,
+    "iv_contribution": 0.00775662863
+  },
+  {
+    "feature": "AMT_GOODS_PRICE",
+    "bin_index": 3,
+    "bin": "[902250.00, 1273590.00)",
+    "count": 15490,
+    "bad_rate": 0.05687540349,
+    "woe": 0.3758534366,
+    "iv_contribution": 0.01014241265
+  },
+  {
+    "feature": "AMT_GOODS_PRICE",
+    "bin_index": 4,
+    "bin": "[1273590.00, inf)",
+    "count": 9651,
+    "bad_rate": 0.04300072531,
+    "woe": 0.6701036567,
+    "iv_contribution": 0.01781960873
+  },
+  {
+    "feature": "AMT_GOODS_PRICE",
+    "bin_index": 6,
+    "bin": "Missing",
+    "count": 161,
+    "bad_rate": 0.09316770186,
+    "woe": -0.156925573,
+    "iv_contribution": 2.295132521e-05
+  },
+  {
+    "feature": "NAME_EDUCATION_TYPE",
+    "bin_index": 0,
+    "bin": "Academic degree, Higher education",
+    "count": 44810,
+    "bad_rate": 0.05407275162,
+    "woe": 0.429353276,
+    "iv_contribution": 0.0374546772
+  },
+  {
+    "feature": "NAME_EDUCATION_TYPE",
+    "bin_index": 1,
+    "bin": "Incomplete higher, Secondary / secondary special, Lower secondary",
+    "count": 139696,
+    "bad_rate": 0.08927957851,
+    "woe": -0.110018813,
+    "iv_contribution": 0.009597502467
+  },
+  {
+    "feature": "DAYS_LAST_PHONE_CHANGE",
+    "bin_index": 0,
+    "bin": "(-inf, -2469.50)",
+    "count": 10593,
+    "bad_rate": 0.0507882564,
+    "woe": 0.4954847485,
+    "iv_contribution": 0.0114770165
+  },
+  {
+    "feature": "DAYS_LAST_PHONE_CHANGE",
+    "bin_index": 1,
+    "bin": "[-2469.50, -2040.50)",
+    "count": 11497,
+    "bad_rate": 0.05697138384,
+    "woe": 0.3740655306,
+    "iv_contribution": 0.00746195376
+  },
+  {
+    "feature": "DAYS_LAST_PHONE_CHANGE",
+    "bin_index": 2,
+    "bin": "[-2040.50, -1815.50)",
+    "count": 9402,
+    "bad_rate": 0.0611572006,
+    "woe": 0.2987184506,
+    "iv_contribution": 0.004014494261
+  },
+  {
+    "feature": "DAYS_LAST_PHONE_CHANGE",
+    "bin_index": 3,
+    "bin": "[-1815.50, -1386.50)",
+    "count": 25838,
+    "bad_rate": 0.06575586346,
+    "woe": 0.2213069535,
+    "iv_contribution": 0.0062529519
+  },
+  {
+    "feature": "DAYS_LAST_PHONE_CHANGE",
+    "bin_index": 4,
+    "bin": "[-1386.50, -1122.50)",
+    "count": 12881,
+    "bad_rate": 0.07266516575,
+    "woe": 0.1139705897,
+    "iv_contribution": 0.0008645783473
+  },
+  {
+    "feature": "DAYS_LAST_PHONE_CHANGE",
+    "bin_index": 5,
+    "bin": "[-1122.50, -760.50)",
+    "count": 22108,
+    "bad_rate": 0.08236837344,
+    "woe": -0.02188750751,
+    "iv_contribution": 5.793191854e-05
+  },
+  {
+    "feature": "DAYS_LAST_PHONE_CHANGE",
+    "bin_index": 6,
+    "bin": "[-760.50, -590.50)",
+    "count": 14655,
+    "bad_rate": 0.09150460594,
+    "woe": -0.1370814847,
+    "iv_contribution": 0.001580953114
+  },
+  {
+    "feature": "DAYS_LAST_PHONE_CHANGE",
+    "bin_index": 7,
+    "bin": "[-590.50, inf)",
+    "count": 77531,
+    "bad_rate": 0.09454282803,
+    "woe": -0.1730949535,
+    "iv_contribution": 0.01353902004
+  },
+  {
+    "feature": "DAYS_LAST_PHONE_CHANGE",
+    "bin_index": 9,
+    "bin": "Missing",
+    "count": 1,
+    "bad_rate": 0.0,
+    "woe": 0.0,
+    "iv_contribution": 0.0
+  }
+]

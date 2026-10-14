@@ -1,0 +1,59 @@
+# Pipeline settings. Paths are relative to the repository root.
+paths:
+  raw_dir: data/raw
+  clean_dir: data/clean
+  duckdb: data/clean/credit.duckdb
+  outputs: outputs
+  web_data: web/public/data
+  powerbi: powerbi
+
+raw_files:
+  application_train: application_train.csv
+  bureau: bureau.csv
+  previous_application: previous_application.csv
+
+seed: 42
+
+split:
+  train: 0.6
+  validation: 0.2
+  test: 0.2
+  max_rate_gap_pp: 0.2        # each split's rate must be within this many pp of baseline
+
+segments:
+  min_segment_size: 1000
+
+binning:
+  iv_min: 0.02                # keep features with IV >= this
+  iv_leak_flag: 0.5           # IV above this is flagged as a possible leak
+  corr_max: 0.7               # drop the lower-IV feature of any pair with |corr| above this
+  max_features: 15
+  min_bin_size: 0.05
+  max_n_bins: 8
+
+protected_attributes:
+  - CODE_GENDER
+  - NAME_FAMILY_STATUS
+
+model:
+  max_iter: 1000
+  # Reversed-sign handling (see outputs/coefficient_diagnostics.md). A feature whose joint
+  # coefficient has the wrong sign is removed only if (a) its univariate coefficient has the
+  # expected sign, i.e. the bins are fine and the reversal comes from overlap with other
+  # features, and (b) removing it lowers validation Gini by less than max_gini_loss.
+  # One feature is removed at a time (smallest Gini loss first) and the model is refitted.
+  sign_fix_max_gini_loss: 0.005
+
+scorecard:
+  base_score: 600
+  base_odds: 50               # good:bad odds at base_score
+  pdo: 20
+
+cutoff:
+  step: 5
+  # Recommendation rule. Declared before any cut-off was computed; do not edit after seeing results.
+  rule: "highest-profit cut-off whose payment-difficulty rate among approved <= max_difficulty_rate"
+  max_difficulty_rate: 0.06
+
+score_bands:
+  width: 20

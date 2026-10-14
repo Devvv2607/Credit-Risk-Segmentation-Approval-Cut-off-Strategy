@@ -1,0 +1,142 @@
+[
+  {
+    "feature": "(intercept)",
+    "coefficient": -2.433614068,
+    "expected_sign": null,
+    "sign_ok": null,
+    "univariate_coefficient": null,
+    "vif": null,
+    "max_corr_feature": null,
+    "max_corr": null
+  },
+  {
+    "feature": "EXT_SOURCE_3",
+    "coefficient": -0.7394934623,
+    "expected_sign": "negative",
+    "sign_ok": true,
+    "univariate_coefficient": -0.999854056,
+    "vif": 1.192156069,
+    "max_corr_feature": "bureau_debt_to_credit",
+    "max_corr": 0.3405358102
+  },
+  {
+    "feature": "EXT_SOURCE_2",
+    "coefficient": -0.7391963301,
+    "expected_sign": "negative",
+    "sign_ok": true,
+    "univariate_coefficient": -1.000025719,
+    "vif": 1.197098377,
+    "max_corr_feature": "REGION_RATING_CLIENT_W_CITY",
+    "max_corr": 0.3158864768
+  },
+  {
+    "feature": "EXT_SOURCE_1",
+    "coefficient": -0.5165098101,
+    "expected_sign": "negative",
+    "sign_ok": true,
+    "univariate_coefficient": -1.001596652,
+    "vif": 1.086328164,
+    "max_corr_feature": "OCCUPATION_TYPE",
+    "max_corr": 0.1805778109
+  },
+  {
+    "feature": "years_employed",
+    "coefficient": -0.3441678535,
+    "expected_sign": "negative",
+    "sign_ok": true,
+    "univariate_coefficient": -1.001361398,
+    "vif": 1.361048659,
+    "max_corr_feature": "ORGANIZATION_TYPE",
+    "max_corr": 0.4596342853
+  },
+  {
+    "feature": "bureau_debt_to_credit",
+    "coefficient": -0.4224268144,
+    "expected_sign": "negative",
+    "sign_ok": true,
+    "univariate_coefficient": -1.001448217,
+    "vif": 1.137261624,
+    "max_corr_feature": "EXT_SOURCE_3",
+    "max_corr": 0.3405358102
+  },
+  {
+    "feature": "OCCUPATION_TYPE",
+    "coefficient": -0.2624289185,
+    "expected_sign": "negative",
+    "sign_ok": true,
+    "univariate_coefficient": -1.016445912,
+    "vif": 1.331435987,
+    "max_corr_feature": "ORGANIZATION_TYPE",
+    "max_corr": 0.4032761739
+  },
+  {
+    "feature": "ORGANIZATION_TYPE",
+    "coefficient": -0.4284894976,
+    "expected_sign": "negative",
+    "sign_ok": true,
+    "univariate_coefficient": -1.001212734,
+    "vif": 1.439313061,
+    "max_corr_feature": "years_employed",
+    "max_corr": 0.4596342853
+  },
+  {
+    "feature": "credit_to_goods",
+    "coefficient": -0.6845197804,
+    "expected_sign": "negative",
+    "sign_ok": true,
+    "univariate_coefficient": -0.9990363253,
+    "vif": 1.040156386,
+    "max_corr_feature": "AMT_GOODS_PRICE",
+    "max_corr": 0.1712074938
+  },
+  {
+    "feature": "prev_refusal_rate",
+    "coefficient": -0.6005235631,
+    "expected_sign": "negative",
+    "sign_ok": true,
+    "univariate_coefficient": -0.9987838905,
+    "vif": 1.033913114,
+    "max_corr_feature": "EXT_SOURCE_3",
+    "max_corr": 0.1444179349
+  },
+  {
+    "feature": "REGION_RATING_CLIENT_W_CITY",
+    "coefficient": -0.381865383,
+    "expected_sign": "negative",
+    "sign_ok": true,
+    "univariate_coefficient": -1.005227716,
+    "vif": 1.123450049,
+    "max_corr_feature": "EXT_SOURCE_2",
+    "max_corr": 0.3158864768
+  },
+  {
+    "feature": "AMT_GOODS_PRICE",
+    "coefficient": -0.08392632909,
+    "expected_sign": "negative",
+    "sign_ok": true,
+    "univariate_coefficient": -1.00508417,
+    "vif": 1.092158002,
+    "max_corr_feature": "credit_to_goods",
+    "max_corr": 0.1712074938
+  },
+  {
+    "feature": "NAME_EDUCATION_TYPE",
+    "coefficient": -0.5204940051,
+    "expected_sign": "negative",
+    "sign_ok": true,
+    "univariate_coefficient": -1.003514048,
+    "vif": 1.129394816,
+    "max_corr_feature": "OCCUPATION_TYPE",
+    "max_corr": 0.2604313397
+  },
+  {
+    "feature": "DAYS_LAST_PHONE_CHANGE",
+    "coefficient": -0.2065250557,
+    "expected_sign": "negative",
+    "sign_ok": true,
+    "univariate_coefficient": -1.002728183,
+    "vif": 1.068648696,
+    "max_corr_feature": "EXT_SOURCE_2",
+    "max_corr": 0.1786155137
+  }
+]

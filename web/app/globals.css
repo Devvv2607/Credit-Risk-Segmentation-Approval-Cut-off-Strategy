@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #faf6f0;
+  --panel: #f3eee7;
+  --border: #e5ded3;
+  --ink: #0f3b33;
+  --ink-muted: #5e7a72;
+  --accent: #14532d;
+  --warn-bg: #f5ebd7;
+  --warn-ink: #8a5a00;
+  --series-1: #1e4e79;
+  --series-2: #2e6b4f;
+  --series-3: #b4552d;
+  --grid: #e5ded3;
+  --tooltip-bg: #ffffff;
+  --focus: #14532d;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --bg: #0f1a17;
+  --panel: #16241f;
+  --border: #2a3b35;
+  --ink: #e6efe9;
+  --ink-muted: #9db5ab;
+  --accent: #8fd4a8;
+  --warn-bg: #3a2e17;
+  --warn-ink: #f0c674;
+  --series-1: #7fb0de;
+  --series-2: #79c39b;
+  --series-3: #e79a73;
+  --grid: #2a3b35;
+  --tooltip-bg: #1b2b25;
+  --focus: #8fd4a8;
+  color-scheme: dark;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 19px;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.overline {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--ink-muted);
+  line-height: 1.4;
+}
+
+.prose-block p + p {
+  margin-top: 1.1em;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Range input styling for the simulator */
+input[type="range"].cutoff-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--border);
+}
+input[type="range"].cutoff-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--ink);
+  border: 3px solid var(--bg);
+  box-shadow: 0 0 0 1px var(--ink);
+  cursor: pointer;
+}
+input[type="range"].cutoff-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--ink);
+  border: 3px solid var(--bg);
+  cursor: pointer;
+}
+
+.recharts-cartesian-grid line {
+  stroke: var(--grid);
+}
+.recharts-text {
+  fill: var(--ink-muted);
+  font-size: 13px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}

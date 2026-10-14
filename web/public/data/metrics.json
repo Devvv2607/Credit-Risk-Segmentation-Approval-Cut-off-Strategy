@@ -1,0 +1,82 @@
+{
+  "model": "LogisticRegression on WoE features (lbfgs, default L2 penalty, C=1.0)",
+  "features": [
+    "EXT_SOURCE_3",
+    "EXT_SOURCE_2",
+    "EXT_SOURCE_1",
+    "years_employed",
+    "bureau_debt_to_credit",
+    "OCCUPATION_TYPE",
+    "ORGANIZATION_TYPE",
+    "credit_to_goods",
+    "prev_refusal_rate",
+    "REGION_RATING_CLIENT_W_CITY",
+    "AMT_GOODS_PRICE",
+    "NAME_EDUCATION_TYPE",
+    "DAYS_LAST_PHONE_CHANGE"
+  ],
+  "features_selected_by_binning": [
+    "EXT_SOURCE_3",
+    "EXT_SOURCE_2",
+    "EXT_SOURCE_1",
+    "years_employed",
+    "bureau_debt_to_credit",
+    "age_years",
+    "OCCUPATION_TYPE",
+    "ORGANIZATION_TYPE",
+    "credit_to_goods",
+    "prev_refusal_rate",
+    "NAME_INCOME_TYPE",
+    "REGION_RATING_CLIENT_W_CITY",
+    "AMT_GOODS_PRICE",
+    "NAME_EDUCATION_TYPE",
+    "DAYS_LAST_PHONE_CHANGE"
+  ],
+  "removed_for_sign": [
+    "age_years",
+    "NAME_INCOME_TYPE"
+  ],
+  "validation_gini_before_sign_fix": 0.48647043979665505,
+  "train": {
+    "n": 184506,
+    "auc": 0.7448162265913889,
+    "gini": 0.4896324531827778,
+    "ks": 0.3631016623471742
+  },
+  "validation": {
+    "n": 61502,
+    "auc": 0.7432152452775314,
+    "gini": 0.4864304905550627,
+    "ks": 0.3641722419353003
+  },
+  "test": {
+    "n": 61503,
+    "auc": 0.7478502832644672,
+    "gini": 0.49570056652893446,
+    "ks": 0.3683815147078045,
+    "label": "final \u2014 computed once after all modelling and cut-off choices were frozen"
+  },
+  "benchmark": {
+    "model": "HistGradientBoostingClassifier (sklearn defaults) on all non-protected raw candidate features",
+    "n_features": 134,
+    "trained_on": "train",
+    "validation": {
+      "n": 61502,
+      "auc": 0.7580878876546389,
+      "gini": 0.5161757753092777,
+      "ks": 0.3840552723086403
+    },
+    "test": {
+      "n": 61503,
+      "auc": 0.7598236187038798,
+      "gini": 0.5196472374077596,
+      "ks": 0.3911074967198491
+    }
+  },
+  "train_validation_gini_gap": 0.0032019626277151048,
+  "gap_within_limit": true,
+  "baseline_rate": 0.08072881945686496,
+  "unexpected_signs_remaining": [],
+  "validation_test_gini_gap": -0.00927007597387175,
+  "benchmark_test_gini_gap": 0.023946670878825183
+}

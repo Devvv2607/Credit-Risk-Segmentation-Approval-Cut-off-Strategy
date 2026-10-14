@@ -1,0 +1,9 @@
+{
+  "model_table_rows": 307511,
+  "application_rows": 307511,
+  "unique_ids": 307511,
+  "with_bureau_history": 263491,
+  "with_previous_application": 291057,
+  "no_history_with_nonnull_amounts": 0,
+  "columns": 140
+}

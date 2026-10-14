@@ -1,0 +1,419 @@
+{
+  "claims": [
+    {
+      "id": "SEG-001",
+      "group": "segments",
+      "title": "Portfolio baseline",
+      "text": "307,511 applications were analysed; 24,825 of them (8.07%) had payment difficulties \u2014 the baseline every segment is compared against.",
+      "sources": [
+        "baseline.json"
+      ],
+      "values": {
+        "applications": {
+          "raw": 307511,
+          "formatted": "307,511",
+          "format": "int",
+          "source": "baseline.json"
+        },
+        "bads": {
+          "raw": 24825,
+          "formatted": "24,825",
+          "format": "int",
+          "source": "baseline.json"
+        },
+        "rate": {
+          "raw": 0.08072881945686496,
+          "formatted": "8.07%",
+          "format": "pct2",
+          "source": "baseline.json"
+        }
+      }
+    },
+    {
+      "id": "SEG-002",
+      "group": "segments",
+      "title": "Riskiest segment",
+      "text": "The riskiest segment of at least 1,000 applicants is EXT_SOURCE_3 band 0.0-0.2, with a payment-difficulty rate of 20.9% \u2014 2.6\u00d7 the baseline.",
+      "sources": [
+        "baseline.json",
+        "segments.csv"
+      ],
+      "values": {
+        "min_size": {
+          "raw": 1000,
+          "formatted": "1,000",
+          "format": "int",
+          "source": "baseline.json"
+        },
+        "dimension": {
+          "raw": "EXT_SOURCE_3 band",
+          "formatted": "EXT_SOURCE_3 band",
+          "format": "text",
+          "source": "segments.csv"
+        },
+        "segment": {
+          "raw": "0.0-0.2",
+          "formatted": "0.0-0.2",
+          "format": "text",
+          "source": "segments.csv"
+        },
+        "rate": {
+          "raw": 0.2094393769,
+          "formatted": "20.9%",
+          "format": "pct1",
+          "source": "segments.csv"
+        },
+        "lift": {
+          "raw": 2.594356988,
+          "formatted": "2.6\u00d7",
+          "format": "x1",
+          "source": "segments.csv"
+        }
+      }
+    },
+    {
+      "id": "SEG-003",
+      "group": "segments",
+      "title": "Age gradient",
+      "text": "Payment difficulty falls with age: applicants aged 20-24 have a rate of 12.3%, against 3.7% for those aged 65+.",
+      "sources": [
+        "segments.csv"
+      ],
+      "values": {
+        "young_seg": {
+          "raw": "20-24",
+          "formatted": "20-24",
+          "format": "text",
+          "source": "segments.csv"
+        },
+        "young_rate": {
+          "raw": 0.1229461293,
+          "formatted": "12.3%",
+          "format": "pct1",
+          "source": "segments.csv"
+        },
+        "old_seg": {
+          "raw": "65+",
+          "formatted": "65+",
+          "format": "text",
+          "source": "segments.csv"
+        },
+        "old_rate": {
+          "raw": 0.03656678517,
+          "formatted": "3.7%",
+          "format": "pct1",
+          "source": "segments.csv"
+        }
+      }
+    },
+    {
+      "id": "SEG-004",
+      "group": "segments",
+      "title": "External score",
+      "text": "The external credit score EXT_SOURCE_3 separates risk most sharply: its lowest band (0.0-0.2) has a rate of 20.9% (2.6\u00d7 the baseline), its highest band (0.8-1.0) 2.9%.",
+      "sources": [
+        "segments.csv"
+      ],
+      "values": {
+        "low_seg": {
+          "raw": "0.0-0.2",
+          "formatted": "0.0-0.2",
+          "format": "text",
+          "source": "segments.csv"
+        },
+        "low_rate": {
+          "raw": 0.2094393769,
+          "formatted": "20.9%",
+          "format": "pct1",
+          "source": "segments.csv"
+        },
+        "low_lift": {
+          "raw": 2.594356988,
+          "formatted": "2.6\u00d7",
+          "format": "x1",
+          "source": "segments.csv"
+        },
+        "high_seg": {
+          "raw": "0.8-1.0",
+          "formatted": "0.8-1.0",
+          "format": "text",
+          "source": "segments.csv"
+        },
+        "high_rate": {
+          "raw": 0.02872880441,
+          "formatted": "2.9%",
+          "format": "pct1",
+          "source": "segments.csv"
+        }
+      }
+    },
+    {
+      "id": "SEG-005",
+      "group": "segments",
+      "title": "Region rating",
+      "text": "Applicants in the worst-rated regions (Rating 3) have a payment-difficulty rate of 11.1%, 1.4\u00d7 the baseline, and make up 15.7% of the portfolio.",
+      "sources": [
+        "segments.csv"
+      ],
+      "values": {
+        "seg": {
+          "raw": "Rating 3",
+          "formatted": "Rating 3",
+          "format": "text",
+          "source": "segments.csv"
+        },
+        "rate": {
+          "raw": 0.1110283468,
+          "formatted": "11.1%",
+          "format": "pct1",
+          "source": "segments.csv"
+        },
+        "lift": {
+          "raw": 1.375324791,
+          "formatted": "1.4\u00d7",
+          "format": "x1",
+          "source": "segments.csv"
+        },
+        "share": {
+          "raw": 0.1571651095,
+          "formatted": "15.7%",
+          "format": "pct1",
+          "source": "segments.csv"
+        }
+      }
+    },
+    {
+      "id": "MOD-001",
+      "group": "model",
+      "title": "Feature selection",
+      "text": "134 candidate features were binned on the training split; 15 were selected after the IV, correlation and size filters, and 13 remain in the scorecard after the coefficient-sign review.",
+      "sources": [
+        "metrics.json",
+        "selected_features.json"
+      ],
+      "values": {
+        "evaluated": {
+          "raw": 134,
+          "formatted": "134",
+          "format": "int",
+          "source": "selected_features.json"
+        },
+        "selected": {
+          "raw": 15,
+          "formatted": "15",
+          "format": "int",
+          "source": "selected_features.json"
+        },
+        "final": {
+          "raw": 13,
+          "formatted": "13",
+          "format": "int",
+          "source": "metrics.json"
+        }
+      }
+    },
+    {
+      "id": "MOD-002",
+      "group": "model",
+      "title": "Held-out performance",
+      "text": "On the held-out test split the scorecard reaches a Gini of 0.496 (AUC 0.748, KS 0.368).",
+      "sources": [
+        "metrics.json"
+      ],
+      "values": {
+        "gini": {
+          "raw": 0.49570056652893446,
+          "formatted": "0.496",
+          "format": "num3",
+          "source": "metrics.json"
+        },
+        "auc": {
+          "raw": 0.7478502832644672,
+          "formatted": "0.748",
+          "format": "num3",
+          "source": "metrics.json"
+        },
+        "ks": {
+          "raw": 0.3683815147078045,
+          "formatted": "0.368",
+          "format": "num3",
+          "source": "metrics.json"
+        }
+      }
+    },
+    {
+      "id": "MOD-003",
+      "group": "model",
+      "title": "Stability",
+      "text": "Train and validation Gini differ by 0.003, a sign the model is not overfitting; validation Gini is 0.486 and test Gini 0.496.",
+      "sources": [
+        "metrics.json"
+      ],
+      "values": {
+        "gap": {
+          "raw": 0.0032019626277151048,
+          "formatted": "0.003",
+          "format": "num3",
+          "source": "metrics.json"
+        },
+        "val_gini": {
+          "raw": 0.4864304905550627,
+          "formatted": "0.486",
+          "format": "num3",
+          "source": "metrics.json"
+        },
+        "test_gini": {
+          "raw": 0.49570056652893446,
+          "formatted": "0.496",
+          "format": "num3",
+          "source": "metrics.json"
+        }
+      }
+    },
+    {
+      "id": "MOD-004",
+      "group": "model",
+      "title": "Explainability trade-off",
+      "text": "An unconstrained gradient-boosting benchmark on 134 raw features scores a test Gini of 0.520, 0.024 above the scorecard \u2014 the price of a transparent, points-based model.",
+      "sources": [
+        "metrics.json"
+      ],
+      "values": {
+        "bench_features": {
+          "raw": 134,
+          "formatted": "134",
+          "format": "int",
+          "source": "metrics.json"
+        },
+        "bench_gini": {
+          "raw": 0.5196472374077596,
+          "formatted": "0.520",
+          "format": "num3",
+          "source": "metrics.json"
+        },
+        "gap": {
+          "raw": 0.023946670878825183,
+          "formatted": "0.024",
+          "format": "num3",
+          "source": "metrics.json"
+        }
+      }
+    },
+    {
+      "id": "CUT-001",
+      "group": "cutoff",
+      "title": "Recommended cut-off",
+      "text": "Under the illustrative assumptions, the recommended cut-off is a score of 535: it approves 87.9% of validation applicants, whose payment-difficulty rate is 5.88% against 8.07% if everyone were approved.",
+      "sources": [
+        "recommendation.json"
+      ],
+      "values": {
+        "cutoff": {
+          "raw": 535,
+          "formatted": "535",
+          "format": "int",
+          "source": "recommendation.json"
+        },
+        "approval": {
+          "raw": 0.8791258820851354,
+          "formatted": "87.9%",
+          "format": "pct1",
+          "source": "recommendation.json"
+        },
+        "rate": {
+          "raw": 0.05877783531848783,
+          "formatted": "5.88%",
+          "format": "pct2",
+          "source": "recommendation.json"
+        },
+        "baseline": {
+          "raw": 0.08072908198107379,
+          "formatted": "8.07%",
+          "format": "pct2",
+          "source": "recommendation.json"
+        }
+      }
+    },
+    {
+      "id": "CUT-002",
+      "group": "cutoff",
+      "title": "Held-out confirmation",
+      "text": "Applied once to the held-out test split, the same cut-off approves 88.2% with a payment-difficulty rate of 5.88% (test baseline 8.07%).",
+      "sources": [
+        "recommendation.json"
+      ],
+      "values": {
+        "approval": {
+          "raw": 0.8824284994227923,
+          "formatted": "88.2%",
+          "format": "pct1",
+          "source": "recommendation.json"
+        },
+        "rate": {
+          "raw": 0.05881485849056604,
+          "formatted": "5.88%",
+          "format": "pct2",
+          "source": "recommendation.json"
+        },
+        "baseline": {
+          "raw": 0.08072776937710356,
+          "formatted": "8.07%",
+          "format": "pct2",
+          "source": "recommendation.json"
+        }
+      }
+    },
+    {
+      "id": "CUT-003",
+      "group": "cutoff",
+      "title": "Sensitivity",
+      "text": "Across 27 combinations of low, base and high assumptions, the recommended cut-off stays between 535 and 550.",
+      "sources": [
+        "recommendation.json"
+      ],
+      "values": {
+        "scenarios": {
+          "raw": 27,
+          "formatted": "27",
+          "format": "int",
+          "source": "recommendation.json"
+        },
+        "min_cut": {
+          "raw": 535,
+          "formatted": "535",
+          "format": "int",
+          "source": "recommendation.json"
+        },
+        "max_cut": {
+          "raw": 550,
+          "formatted": "550",
+          "format": "int",
+          "source": "recommendation.json"
+        }
+      }
+    },
+    {
+      "id": "CUT-004",
+      "group": "cutoff",
+      "title": "Cases avoided",
+      "text": "At that cut-off, 1,787 of the validation applicants with payment difficulties are declined, at the cost of declining 5,647 applicants who would have repaid.",
+      "sources": [
+        "recommendation.json"
+      ],
+      "values": {
+        "avoided": {
+          "raw": 1787,
+          "formatted": "1,787",
+          "format": "int",
+          "source": "recommendation.json"
+        },
+        "rejected": {
+          "raw": 5647,
+          "formatted": "5,647",
+          "format": "int",
+          "source": "recommendation.json"
+        }
+      }
+    }
+  ]
+}

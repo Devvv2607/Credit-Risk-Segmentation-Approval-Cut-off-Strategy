@@ -1,0 +1,187 @@
+{
+  "passed": 36,
+  "total": 36,
+  "all_passed": true,
+  "checks": [
+    {
+      "check": "manifest rows match table raw_application_train",
+      "status": "pass",
+      "detail": "307511"
+    },
+    {
+      "check": "manifest rows match table raw_bureau",
+      "status": "pass",
+      "detail": "1716428"
+    },
+    {
+      "check": "manifest rows match table raw_previous_application",
+      "status": "pass",
+      "detail": "1670214"
+    },
+    {
+      "check": "SK_ID_CURR unique in application_train",
+      "status": "pass",
+      "detail": "unique"
+    },
+    {
+      "check": "model table rows equal application rows",
+      "status": "pass",
+      "detail": "307511"
+    },
+    {
+      "check": "TARGET only contains 0 and 1",
+      "status": "pass",
+      "detail": "{0,1}"
+    },
+    {
+      "check": "split ids exclusive and cover the population",
+      "status": "pass",
+      "detail": "307,511 ids in 3 exclusive splits"
+    },
+    {
+      "check": "split rates within tolerance of baseline",
+      "status": "pass",
+      "detail": "all within limit"
+    },
+    {
+      "check": "split summary sizes match split ids",
+      "status": "pass",
+      "detail": "sizes agree"
+    },
+    {
+      "check": "baseline.json matches recomputed rate",
+      "status": "pass",
+      "detail": "0.08072881945686496"
+    },
+    {
+      "check": "metrics.json baseline matches",
+      "status": "pass",
+      "detail": "agree"
+    },
+    {
+      "check": "split summary baseline matches",
+      "status": "pass",
+      "detail": "agree"
+    },
+    {
+      "check": "cut-off table minimum equals validation baseline",
+      "status": "pass",
+      "detail": "0.08072908198"
+    },
+    {
+      "check": "segment weighted rate equals baseline (complete dimensions)",
+      "status": "pass",
+      "detail": "5 complete dimensions"
+    },
+    {
+      "check": "segments meet minimum size",
+      "status": "pass",
+      "detail": "3816"
+    },
+    {
+      "check": "Wilson intervals contain the estimate",
+      "status": "pass",
+      "detail": "ok"
+    },
+    {
+      "check": "binning fit on train only",
+      "status": "pass",
+      "detail": "184506"
+    },
+    {
+      "check": "no protected attribute selected",
+      "status": "pass",
+      "detail": "['CODE_GENDER', 'NAME_FAMILY_STATUS']"
+    },
+    {
+      "check": "selected features meet IV threshold",
+      "status": "pass",
+      "detail": "ok"
+    },
+    {
+      "check": "model features are a subset of selected features",
+      "status": "pass",
+      "detail": "13"
+    },
+    {
+      "check": "unexpected coefficient signs documented",
+      "status": "pass",
+      "detail": "all negative"
+    },
+    {
+      "check": "Gini = 2*AUC - 1 (train)",
+      "status": "pass",
+      "detail": "0.4896"
+    },
+    {
+      "check": "Gini = 2*AUC - 1 (validation)",
+      "status": "pass",
+      "detail": "0.4864"
+    },
+    {
+      "check": "Gini = 2*AUC - 1 (test)",
+      "status": "pass",
+      "detail": "0.4957"
+    },
+    {
+      "check": "train-validation Gini gap below 0.05",
+      "status": "pass",
+      "detail": "0.0032"
+    },
+    {
+      "check": "test metrics present and labelled final",
+      "status": "pass",
+      "detail": "present"
+    },
+    {
+      "check": "points reproduce scores",
+      "status": "pass",
+      "detail": "2.2737367544323206e-13"
+    },
+    {
+      "check": "score strictly decreasing in probability (validation)",
+      "status": "pass",
+      "detail": "Spearman = -1"
+    },
+    {
+      "check": "score strictly decreasing in probability (test)",
+      "status": "pass",
+      "detail": "Spearman = -1"
+    },
+    {
+      "check": "approval rate non-increasing with cut-off",
+      "status": "pass",
+      "detail": "monotonic"
+    },
+    {
+      "check": "recommendation satisfies declared rule",
+      "status": "pass",
+      "detail": "535"
+    },
+    {
+      "check": "recommendation has validation and test figures",
+      "status": "pass",
+      "detail": "both present"
+    },
+    {
+      "check": "test cut-off figures recompute",
+      "status": "pass",
+      "detail": "recomputed"
+    },
+    {
+      "check": "rendered claims match metrics",
+      "status": "pass",
+      "detail": "13 claims"
+    },
+    {
+      "check": "no applicant-level data in outputs/",
+      "status": "pass",
+      "detail": "clean"
+    },
+    {
+      "check": "no applicant-level data in web/public/data/",
+      "status": "pass",
+      "detail": "clean"
+    }
+  ]
+}

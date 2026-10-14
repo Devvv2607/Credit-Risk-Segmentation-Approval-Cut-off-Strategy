@@ -1,0 +1,158 @@
+# Claims registry. Every finding stated on the site, in the README or in the resume
+# bullets is a registered claim. Templates contain no numbers: each {placeholder} is
+# resolved by src/claims.py from the named source file, and the rendering fails if a
+# metric is missing.
+#
+# Metric reference forms:
+#   json:  {source: metrics.json, path: test.gini}
+#   csv:   {source: segments.csv, where: {dimension: Age band}, pick: max|min, by: bad_rate, field: segment}
+#          (without pick/by the filter must match exactly one row)
+#   count: {source: iv_summary.csv, count: true, where: {decision: selected}}
+# Formats: pct1, pct2 (x100 with %), pp1, pp2 (percentage points), int, num1, num2,
+#          num3, x1, x2 (multiple), money (rounded thousands separators), text.
+
+claims:
+  - id: SEG-001
+    group: segments
+    title: Portfolio baseline
+    template: "{applications} applications were analysed; {bads} of them ({rate}) had payment difficulties — the baseline every segment is compared against."
+    metrics:
+      applications: {source: baseline.json, path: applications, format: int}
+      bads: {source: baseline.json, path: bads, format: int}
+      rate: {source: baseline.json, path: baseline_rate, format: pct2}
+
+  - id: SEG-002
+    group: segments
+    title: Riskiest segment
+    template: "The riskiest segment of at least {min_size} applicants is {dimension} {segment}, with a payment-difficulty rate of {rate} — {lift} the baseline."
+    metrics:
+      min_size: {source: baseline.json, path: min_segment_size, format: int}
+      dimension: {source: segments.csv, pick: max, by: lift, field: dimension, format: text}
+      segment: {source: segments.csv, pick: max, by: lift, field: segment, format: text}
+      rate: {source: segments.csv, pick: max, by: lift, field: bad_rate, format: pct1}
+      lift: {source: segments.csv, pick: max, by: lift, field: lift, format: x1}
+
+  - id: SEG-003
+    group: segments
+    title: Age gradient
+    template: "Payment difficulty falls with age: applicants aged {young_seg} have a rate of {young_rate}, against {old_rate} for those aged {old_seg}."
+    metrics:
+      young_seg: {source: segments.csv, where: {dimension: Age band}, pick: min, by: segment_order, field: segment, format: text}
+      young_rate: {source: segments.csv, where: {dimension: Age band}, pick: min, by: segment_order, field: bad_rate, format: pct1}
+      old_seg: {source: segments.csv, where: {dimension: Age band}, pick: max, by: segment_order, field: segment, format: text}
+      old_rate: {source: segments.csv, where: {dimension: Age band}, pick: max, by: segment_order, field: bad_rate, format: pct1}
+
+  - id: SEG-004
+    group: segments
+    title: External score
+    template: "The external credit score EXT_SOURCE_3 separates risk most sharply: its lowest band ({low_seg}) has a rate of {low_rate} ({low_lift} the baseline), its highest band ({high_seg}) {high_rate}."
+    metrics:
+      low_seg: {source: segments.csv, where: {dimension: EXT_SOURCE_3 band}, pick: max, by: bad_rate, field: segment, format: text}
+      low_rate: {source: segments.csv, where: {dimension: EXT_SOURCE_3 band}, pick: max, by: bad_rate, field: bad_rate, format: pct1}
+      low_lift: {source: segments.csv, where: {dimension: EXT_SOURCE_3 band}, pick: max, by: bad_rate, field: lift, format: x1}
+      high_seg: {source: segments.csv, where: {dimension: EXT_SOURCE_3 band}, pick: min, by: bad_rate, field: segment, format: text}
+      high_rate: {source: segments.csv, where: {dimension: EXT_SOURCE_3 band}, pick: min, by: bad_rate, field: bad_rate, format: pct1}
+
+  - id: SEG-005
+    group: segments
+    title: Region rating
+    template: "Applicants in the worst-rated regions ({seg}) have a payment-difficulty rate of {rate}, {lift} the baseline, and make up {share} of the portfolio."
+    metrics:
+      seg: {source: segments.csv, where: {dimension: Region rating}, pick: max, by: bad_rate, field: segment, format: text}
+      rate: {source: segments.csv, where: {dimension: Region rating}, pick: max, by: bad_rate, field: bad_rate, format: pct1}
+      lift: {source: segments.csv, where: {dimension: Region rating}, pick: max, by: bad_rate, field: lift, format: x1}
+      share: {source: segments.csv, where: {dimension: Region rating}, pick: max, by: bad_rate, field: portfolio_share, format: pct1}
+
+  - id: MOD-001
+    group: model
+    title: Feature selection
+    template: "{evaluated} candidate features were binned on the training split; {selected} were selected after the IV, correlation and size filters, and {final} remain in the scorecard after the coefficient-sign review."
+    metrics:
+      evaluated: {source: selected_features.json, path: candidates_evaluated, format: int}
+      selected: {source: selected_features.json, path: selected, length: true, format: int}
+      final: {source: metrics.json, path: features, length: true, format: int}
+
+  - id: MOD-002
+    group: model
+    title: Held-out performance
+    template: "On the held-out test split the scorecard reaches a Gini of {gini} (AUC {auc}, KS {ks})."
+    metrics:
+      gini: {source: metrics.json, path: test.gini, format: num3}
+      auc: {source: metrics.json, path: test.auc, format: num3}
+      ks: {source: metrics.json, path: test.ks, format: num3}
+
+  - id: MOD-003
+    group: model
+    title: Stability
+    template: "Train and validation Gini differ by {gap}, a sign the model is not overfitting; validation Gini is {val_gini} and test Gini {test_gini}."
+    metrics:
+      gap: {source: metrics.json, path: train_validation_gini_gap, format: num3}
+      val_gini: {source: metrics.json, path: validation.gini, format: num3}
+      test_gini: {source: metrics.json, path: test.gini, format: num3}
+
+  - id: MOD-004
+    group: model
+    title: Explainability trade-off
+    template: "An unconstrained gradient-boosting benchmark on {bench_features} raw features scores a test Gini of {bench_gini}, {gap} above the scorecard — the price of a transparent, points-based model."
+    metrics:
+      bench_features: {source: metrics.json, path: benchmark.n_features, format: int}
+      bench_gini: {source: metrics.json, path: benchmark.test.gini, format: num3}
+      gap: {source: metrics.json, path: benchmark_test_gini_gap, format: num3}
+
+  - id: CUT-001
+    group: cutoff
+    title: Recommended cut-off
+    template: "Under the illustrative assumptions, the recommended cut-off is a score of {cutoff}: it approves {approval} of validation applicants, whose payment-difficulty rate is {rate} against {baseline} if everyone were approved."
+    metrics:
+      cutoff: {source: recommendation.json, path: cutoff, format: int}
+      approval: {source: recommendation.json, path: validation.approval_rate, format: pct1}
+      rate: {source: recommendation.json, path: validation.bad_rate, format: pct2}
+      baseline: {source: recommendation.json, path: validation.baseline_rate, format: pct2}
+
+  - id: CUT-002
+    group: cutoff
+    title: Held-out confirmation
+    template: "Applied once to the held-out test split, the same cut-off approves {approval} with a payment-difficulty rate of {rate} (test baseline {baseline})."
+    metrics:
+      approval: {source: recommendation.json, path: test.approval_rate, format: pct1}
+      rate: {source: recommendation.json, path: test.bad_rate, format: pct2}
+      baseline: {source: recommendation.json, path: test.baseline_rate, format: pct2}
+
+  - id: CUT-003
+    group: cutoff
+    title: Sensitivity
+    template: "Across {scenarios} combinations of low, base and high assumptions, the recommended cut-off stays between {min_cut} and {max_cut}."
+    metrics:
+      scenarios: {source: recommendation.json, path: sensitivity.scenarios, format: int}
+      min_cut: {source: recommendation.json, path: sensitivity.min_cutoff, format: int}
+      max_cut: {source: recommendation.json, path: sensitivity.max_cutoff, format: int}
+
+  - id: CUT-004
+    group: cutoff
+    title: Cases avoided
+    template: "At that cut-off, {avoided} of the validation applicants with payment difficulties are declined, at the cost of declining {rejected} applicants who would have repaid."
+    metrics:
+      avoided: {source: recommendation.json, path: validation.bads_avoided, format: int}
+      rejected: {source: recommendation.json, path: validation.goods_rejected, format: int}
+
+resume_bullets:
+  - "Built an end-to-end credit-risk pipeline (DuckDB SQL, Python) on {applications} Home Credit applications, segmenting borrowers and finding the riskiest group at {seg_lift} the {baseline} baseline payment-difficulty rate."
+  - "Developed a WoE/IV logistic scorecard ({final} features from {evaluated} candidates) reaching a held-out test Gini of {gini} with a train–validation gap of {gap}."
+  - "Designed an approval cut-off strategy: score {cutoff} approves {approval} of applicants while cutting the payment-difficulty rate from {baseline_val} to {rate_test} on held-out data; across {scenarios} assumption scenarios the recommended cut-off stays within {min_cut}–{max_cut}."
+  - "Published a static Next.js analysis site with an interactive cut-off simulator; every figure is generated by the pipeline and checked by {checks} automated validation checks."
+resume_metrics:
+  applications: {source: baseline.json, path: applications, format: int}
+  seg_lift: {source: segments.csv, pick: max, by: lift, field: lift, format: x1}
+  baseline: {source: baseline.json, path: baseline_rate, format: pct1}
+  final: {source: metrics.json, path: features, length: true, format: int}
+  evaluated: {source: selected_features.json, path: candidates_evaluated, format: int}
+  gini: {source: metrics.json, path: test.gini, format: num2}
+  gap: {source: metrics.json, path: train_validation_gini_gap, format: num3}
+  cutoff: {source: recommendation.json, path: cutoff, format: int}
+  approval: {source: recommendation.json, path: test.approval_rate, format: pct0}
+  baseline_val: {source: recommendation.json, path: test.baseline_rate, format: pct1}
+  rate_test: {source: recommendation.json, path: test.bad_rate, format: pct1}
+  scenarios: {source: recommendation.json, path: sensitivity.scenarios, format: int}
+  min_cut: {source: recommendation.json, path: sensitivity.min_cutoff, format: int}
+  max_cut: {source: recommendation.json, path: sensitivity.max_cutoff, format: int}
+  checks: {source: validation_report.json, path: passed, format: int}

@@ -1,0 +1,46 @@
+{
+  "cutoff": 535,
+  "rule": "highest-profit cut-off whose payment-difficulty rate among approved <= max_difficulty_rate",
+  "max_difficulty_rate": 0.06,
+  "selected_on": "validation",
+  "label": "Result under the illustrative assumptions in config/assumptions.yaml; not a lending decision.",
+  "validation": {
+    "n": 61502,
+    "approved": 54068,
+    "approval_rate": 0.8791258820851354,
+    "bad_rate": 0.05877783531848783,
+    "bads_avoided": 1787,
+    "goods_rejected": 5647,
+    "profit": 2258900000.0,
+    "baseline_rate": 0.08072908198107379,
+    "profit_approve_all": 2150970000.0,
+    "bad_rate_reduction_pp": 2.1951246662585957,
+    "bad_rate_relative_reduction": 0.27191250196220773
+  },
+  "unconstrained_max_profit": {
+    "cutoff": 525,
+    "approval_rate": 0.9372540730382751,
+    "bad_rate": 0.06644345367173811,
+    "profit": 2271280000.0
+  },
+  "sensitivity": {
+    "scenarios": 27,
+    "min_cutoff": 535,
+    "max_cutoff": 550,
+    "max_abs_shift": 15,
+    "one_at_a_time_min_cutoff": 535,
+    "one_at_a_time_max_cutoff": 540
+  },
+  "test": {
+    "n": 61503,
+    "approved": 54272,
+    "approval_rate": 0.8824284994227923,
+    "bad_rate": 0.05881485849056604,
+    "baseline_rate": 0.08072776937710356,
+    "bad_rate_reduction_pp": 2.1912910886537524,
+    "approval_rate_diff_pp_vs_validation": 0.330261733765691,
+    "bad_rate_diff_pp_vs_validation": 0.003702317207820993,
+    "consistent_with_validation": true,
+    "consistency_rule": "approval within 1pp and payment-difficulty rate within 0.5pp of validation"
+  }
+}

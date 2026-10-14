@@ -1,0 +1,31 @@
+{
+  "currency": "currency units (dataset is unit-free)",
+  "avg_loan": {
+    "value": 500000,
+    "low": 300000,
+    "high": 800000,
+    "label": "assumption",
+    "note": "Average loan size per approved applicant. Placeholder of the same order as AMT_CREDIT in the data; not a Home Credit figure."
+  },
+  "margin": {
+    "value": 0.12,
+    "low": 0.08,
+    "high": 0.18,
+    "label": "assumption",
+    "note": "Net margin earned on a loan that is repaid, as a share of the loan amount. Illustrative."
+  },
+  "loss_given_bad": {
+    "value": 0.5,
+    "low": 0.35,
+    "high": 0.7,
+    "label": "assumption",
+    "note": "Share of the loan amount lost when an applicant has payment difficulties. Illustrative; real loss depends on recoveries and timing."
+  },
+  "excluded": [
+    "funding cost",
+    "operating cost",
+    "fees",
+    "timing of recoveries",
+    "loan term"
+  ]
+}

@@ -1,0 +1,602 @@
+[
+  {
+    "score_threshold": 464,
+    "cum_bad_share": 0.0,
+    "cum_good_share": 0.0,
+    "ks": 0.0
+  },
+  {
+    "score_threshold": 466,
+    "cum_bad_share": 0.0002014098691,
+    "cum_good_share": 0.0,
+    "ks": 0.0002014098691
+  },
+  {
+    "score_threshold": 468,
+    "cum_bad_share": 0.0002014098691,
+    "cum_good_share": 1.768721922e-05,
+    "ks": 0.0001837226499
+  },
+  {
+    "score_threshold": 470,
+    "cum_bad_share": 0.0004028197382,
+    "cum_good_share": 3.537443843e-05,
+    "ks": 0.0003674452997
+  },
+  {
+    "score_threshold": 472,
+    "cum_bad_share": 0.001007049345,
+    "cum_good_share": 5.306165765e-05,
+    "ks": 0.0009539876878
+  },
+  {
+    "score_threshold": 474,
+    "cum_bad_share": 0.001409869084,
+    "cum_good_share": 8.843609608e-05,
+    "ks": 0.001321432988
+  },
+  {
+    "score_threshold": 476,
+    "cum_bad_share": 0.001812688822,
+    "cum_good_share": 0.0001238105345,
+    "ks": 0.001688878287
+  },
+  {
+    "score_threshold": 478,
+    "cum_bad_share": 0.002014098691,
+    "cum_good_share": 0.0001591849729,
+    "ks": 0.001854913718
+  },
+  {
+    "score_threshold": 480,
+    "cum_bad_share": 0.003423967774,
+    "cum_good_share": 0.0001768721922,
+    "ks": 0.003247095582
+  },
+  {
+    "score_threshold": 482,
+    "cum_bad_share": 0.005035246727,
+    "cum_good_share": 0.0002653082882,
+    "ks": 0.004769938439
+  },
+  {
+    "score_threshold": 484,
+    "cum_bad_share": 0.007854984894,
+    "cum_good_share": 0.0003537443843,
+    "ks": 0.00750124051
+  },
+  {
+    "score_threshold": 486,
+    "cum_bad_share": 0.009063444109,
+    "cum_good_share": 0.0004775549188,
+    "ks": 0.00858588919
+  },
+  {
+    "score_threshold": 488,
+    "cum_bad_share": 0.01148036254,
+    "cum_good_share": 0.000742863207,
+    "ks": 0.01073749933
+  },
+  {
+    "score_threshold": 490,
+    "cum_bad_share": 0.01389728097,
+    "cum_good_share": 0.0008666737416,
+    "ks": 0.01303060723
+  },
+  {
+    "score_threshold": 492,
+    "cum_bad_share": 0.01812688822,
+    "cum_good_share": 0.001167356468,
+    "ks": 0.01695953175
+  },
+  {
+    "score_threshold": 494,
+    "cum_bad_share": 0.02155085599,
+    "cum_good_share": 0.00157416251,
+    "ks": 0.01997669348
+  },
+  {
+    "score_threshold": 496,
+    "cum_bad_share": 0.02557905337,
+    "cum_good_share": 0.002157840744,
+    "ks": 0.02342121263
+  },
+  {
+    "score_threshold": 498,
+    "cum_bad_share": 0.03101711984,
+    "cum_good_share": 0.002918391171,
+    "ks": 0.02809872867
+  },
+  {
+    "score_threshold": 500,
+    "cum_bad_share": 0.04008056395,
+    "cum_good_share": 0.003820439351,
+    "ks": 0.0362601246
+  },
+  {
+    "score_threshold": 502,
+    "cum_bad_share": 0.04894259819,
+    "cum_good_share": 0.004934734161,
+    "ks": 0.04400786403
+  },
+  {
+    "score_threshold": 504,
+    "cum_bad_share": 0.05558912387,
+    "cum_good_share": 0.006668081644,
+    "ks": 0.04892104222
+  },
+  {
+    "score_threshold": 506,
+    "cum_bad_share": 0.06807653575,
+    "cum_good_share": 0.008083059181,
+    "ks": 0.05999347657
+  },
+  {
+    "score_threshold": 508,
+    "cum_bad_share": 0.0775427996,
+    "cum_good_share": 0.01024089993,
+    "ks": 0.06730189967
+  },
+  {
+    "score_threshold": 510,
+    "cum_bad_share": 0.09043303122,
+    "cum_good_share": 0.01282323393,
+    "ks": 0.07760979729
+  },
+  {
+    "score_threshold": 512,
+    "cum_bad_share": 0.1055387714,
+    "cum_good_share": 0.01510488521,
+    "ks": 0.09043388619
+  },
+  {
+    "score_threshold": 514,
+    "cum_bad_share": 0.1224572004,
+    "cum_good_share": 0.01827089745,
+    "ks": 0.104186303
+  },
+  {
+    "score_threshold": 516,
+    "cum_bad_share": 0.1373615307,
+    "cum_good_share": 0.02180834129,
+    "ks": 0.1155531894
+  },
+  {
+    "score_threshold": 518,
+    "cum_bad_share": 0.15387714,
+    "cum_good_share": 0.02584102727,
+    "ks": 0.1280361127
+  },
+  {
+    "score_threshold": 520,
+    "cum_bad_share": 0.1722054381,
+    "cum_good_share": 0.03107644416,
+    "ks": 0.1411289939
+  },
+  {
+    "score_threshold": 522,
+    "cum_bad_share": 0.1929506546,
+    "cum_good_share": 0.03666560543,
+    "ks": 0.1562850491
+  },
+  {
+    "score_threshold": 524,
+    "cum_bad_share": 0.2136958711,
+    "cum_good_share": 0.0437228059,
+    "ks": 0.1699730652
+  },
+  {
+    "score_threshold": 526,
+    "cum_bad_share": 0.2370594159,
+    "cum_good_share": 0.05139905904,
+    "ks": 0.1856603569
+  },
+  {
+    "score_threshold": 528,
+    "cum_bad_share": 0.2616314199,
+    "cum_good_share": 0.05926987159,
+    "ks": 0.2023615483
+  },
+  {
+    "score_threshold": 530,
+    "cum_bad_share": 0.2841893253,
+    "cum_good_share": 0.06899784216,
+    "ks": 0.2151914831
+  },
+  {
+    "score_threshold": 532,
+    "cum_bad_share": 0.3125881168,
+    "cum_good_share": 0.07969860978,
+    "ks": 0.232889507
+  },
+  {
+    "score_threshold": 534,
+    "cum_bad_share": 0.3419939577,
+    "cum_good_share": 0.09055856238,
+    "ks": 0.2514353953
+  },
+  {
+    "score_threshold": 536,
+    "cum_bad_share": 0.3711983887,
+    "cum_good_share": 0.1036647918,
+    "ks": 0.2675335969
+  },
+  {
+    "score_threshold": 538,
+    "cum_bad_share": 0.4020140987,
+    "cum_good_share": 0.1176730694,
+    "ks": 0.2843410293
+  },
+  {
+    "score_threshold": 540,
+    "cum_bad_share": 0.4326283988,
+    "cum_good_share": 0.1323711486,
+    "ks": 0.3002572502
+  },
+  {
+    "score_threshold": 542,
+    "cum_bad_share": 0.4648539778,
+    "cum_good_share": 0.1490855708,
+    "ks": 0.3157684071
+  },
+  {
+    "score_threshold": 544,
+    "cum_bad_share": 0.4944612286,
+    "cum_good_share": 0.1678163359,
+    "ks": 0.3266448927
+  },
+  {
+    "score_threshold": 546,
+    "cum_bad_share": 0.526082578,
+    "cum_good_share": 0.1874668365,
+    "ks": 0.3386157416
+  },
+  {
+    "score_threshold": 548,
+    "cum_bad_share": 0.5548841893,
+    "cum_good_share": 0.2082139446,
+    "ks": 0.3466702447
+  },
+  {
+    "score_threshold": 550,
+    "cum_bad_share": 0.5828801611,
+    "cum_good_share": 0.2293324843,
+    "ks": 0.3535476768
+  },
+  {
+    "score_threshold": 552,
+    "cum_bad_share": 0.6112789527,
+    "cum_good_share": 0.2531925431,
+    "ks": 0.3580864096
+  },
+  {
+    "score_threshold": 554,
+    "cum_bad_share": 0.6398791541,
+    "cum_good_share": 0.2779369628,
+    "ks": 0.3619421913
+  },
+  {
+    "score_threshold": 556,
+    "cum_bad_share": 0.6678751259,
+    "cum_good_share": 0.3027521313,
+    "ks": 0.3651229946
+  },
+  {
+    "score_threshold": 558,
+    "cum_bad_share": 0.6950654582,
+    "cum_good_share": 0.3285931586,
+    "ks": 0.3664722996
+  },
+  {
+    "score_threshold": 560,
+    "cum_bad_share": 0.7182275932,
+    "cum_good_share": 0.3552477979,
+    "ks": 0.3629797952
+  },
+  {
+    "score_threshold": 562,
+    "cum_bad_share": 0.7432024169,
+    "cum_good_share": 0.3821854328,
+    "ks": 0.3610169841
+  },
+  {
+    "score_threshold": 564,
+    "cum_bad_share": 0.7671701913,
+    "cum_good_share": 0.4111747851,
+    "ks": 0.3559954062
+  },
+  {
+    "score_threshold": 566,
+    "cum_bad_share": 0.7887210473,
+    "cum_good_share": 0.4393682125,
+    "ks": 0.3493528348
+  },
+  {
+    "score_threshold": 568,
+    "cum_bad_share": 0.8098690836,
+    "cum_good_share": 0.4700201634,
+    "ks": 0.3398489202
+  },
+  {
+    "score_threshold": 570,
+    "cum_bad_share": 0.833836858,
+    "cum_good_share": 0.4998585022,
+    "ks": 0.3339783558
+  },
+  {
+    "score_threshold": 572,
+    "cum_bad_share": 0.8495468278,
+    "cum_good_share": 0.5293784711,
+    "ks": 0.3201683567
+  },
+  {
+    "score_threshold": 574,
+    "cum_bad_share": 0.8658610272,
+    "cum_good_share": 0.5594290566,
+    "ks": 0.3064319706
+  },
+  {
+    "score_threshold": 576,
+    "cum_bad_share": 0.8801611279,
+    "cum_good_share": 0.5888075277,
+    "ks": 0.2913536002
+  },
+  {
+    "score_threshold": 578,
+    "cum_bad_share": 0.8946626385,
+    "cum_good_share": 0.617230889,
+    "ks": 0.2774317495
+  },
+  {
+    "score_threshold": 580,
+    "cum_bad_share": 0.9065458207,
+    "cum_good_share": 0.6456542502,
+    "ks": 0.2608915705
+  },
+  {
+    "score_threshold": 582,
+    "cum_bad_share": 0.9166163142,
+    "cum_good_share": 0.6735823694,
+    "ks": 0.2430339448
+  },
+  {
+    "score_threshold": 584,
+    "cum_bad_share": 0.9266868077,
+    "cum_good_share": 0.700820687,
+    "ks": 0.2258661207
+  },
+  {
+    "score_threshold": 586,
+    "cum_bad_share": 0.9363544814,
+    "cum_good_share": 0.7267678376,
+    "ks": 0.2095866438
+  },
+  {
+    "score_threshold": 588,
+    "cum_bad_share": 0.9456193353,
+    "cum_good_share": 0.75181294,
+    "ks": 0.1938063954
+  },
+  {
+    "score_threshold": 590,
+    "cum_bad_share": 0.9546827795,
+    "cum_good_share": 0.7761682408,
+    "ks": 0.1785145386
+  },
+  {
+    "score_threshold": 592,
+    "cum_bad_share": 0.9619335347,
+    "cum_good_share": 0.7988963175,
+    "ks": 0.1630372172
+  },
+  {
+    "score_threshold": 594,
+    "cum_bad_share": 0.9663645519,
+    "cum_good_share": 0.8202271039,
+    "ks": 0.146137448
+  },
+  {
+    "score_threshold": 596,
+    "cum_bad_share": 0.9724068479,
+    "cum_good_share": 0.8399306661,
+    "ks": 0.1324761818
+  },
+  {
+    "score_threshold": 598,
+    "cum_bad_share": 0.9772406848,
+    "cum_good_share": 0.8591389862,
+    "ks": 0.1181016986
+  },
+  {
+    "score_threshold": 600,
+    "cum_bad_share": 0.9808660624,
+    "cum_good_share": 0.8766139588,
+    "ks": 0.1042521037
+  },
+  {
+    "score_threshold": 602,
+    "cum_bad_share": 0.9844914401,
+    "cum_good_share": 0.8916480951,
+    "ks": 0.09284334499
+  },
+  {
+    "score_threshold": 604,
+    "cum_bad_share": 0.987713998,
+    "cum_good_share": 0.9061339276,
+    "ks": 0.08158007036
+  },
+  {
+    "score_threshold": 606,
+    "cum_bad_share": 0.9897280967,
+    "cum_good_share": 0.918426545,
+    "ks": 0.0713015517
+  },
+  {
+    "score_threshold": 608,
+    "cum_bad_share": 0.9909365559,
+    "cum_good_share": 0.930613039,
+    "ks": 0.06032351687
+  },
+  {
+    "score_threshold": 610,
+    "cum_bad_share": 0.9927492447,
+    "cum_good_share": 0.94110156,
+    "ks": 0.0516476847
+  },
+  {
+    "score_threshold": 612,
+    "cum_bad_share": 0.9947633434,
+    "cum_good_share": 0.9506349712,
+    "ks": 0.04412837223
+  },
+  {
+    "score_threshold": 614,
+    "cum_bad_share": 0.9955689829,
+    "cum_good_share": 0.9591955853,
+    "ks": 0.03637339761
+  },
+  {
+    "score_threshold": 616,
+    "cum_bad_share": 0.9963746224,
+    "cum_good_share": 0.9661289752,
+    "ks": 0.03024564715
+  },
+  {
+    "score_threshold": 618,
+    "cum_bad_share": 0.996978852,
+    "cum_good_share": 0.9724256252,
+    "ks": 0.02455322672
+  },
+  {
+    "score_threshold": 620,
+    "cum_bad_share": 0.9973816717,
+    "cum_good_share": 0.9772896105,
+    "ks": 0.02009206117
+  },
+  {
+    "score_threshold": 622,
+    "cum_bad_share": 0.9979859013,
+    "cum_good_share": 0.9820474725,
+    "ks": 0.01593842881
+  },
+  {
+    "score_threshold": 624,
+    "cum_bad_share": 0.9981873112,
+    "cum_good_share": 0.9856202908,
+    "ks": 0.0125670204
+  },
+  {
+    "score_threshold": 626,
+    "cum_bad_share": 0.998388721,
+    "cum_good_share": 0.9886094308,
+    "ks": 0.009779290222
+  },
+  {
+    "score_threshold": 628,
+    "cum_bad_share": 0.9991943605,
+    "cum_good_share": 0.9908910821,
+    "ks": 0.00830327842
+  },
+  {
+    "score_threshold": 630,
+    "cum_bad_share": 0.9993957704,
+    "cum_good_share": 0.9929251123,
+    "ks": 0.006470658079
+  },
+  {
+    "score_threshold": 632,
+    "cum_bad_share": 0.9993957704,
+    "cum_good_share": 0.9946938342,
+    "ks": 0.004701936157
+  },
+  {
+    "score_threshold": 634,
+    "cum_bad_share": 0.9993957704,
+    "cum_good_share": 0.9959319396,
+    "ks": 0.003463830812
+  },
+  {
+    "score_threshold": 636,
+    "cum_bad_share": 0.9995971803,
+    "cum_good_share": 0.9969401111,
+    "ks": 0.002657069186
+  },
+  {
+    "score_threshold": 638,
+    "cum_bad_share": 0.9997985901,
+    "cum_good_share": 0.9979305954,
+    "ks": 0.001867994779
+  },
+  {
+    "score_threshold": 640,
+    "cum_bad_share": 0.9997985901,
+    "cum_good_share": 0.9985319608,
+    "ks": 0.001266629326
+  },
+  {
+    "score_threshold": 642,
+    "cum_bad_share": 0.9997985901,
+    "cum_good_share": 0.9988503308,
+    "ks": 0.0009482593799
+  },
+  {
+    "score_threshold": 644,
+    "cum_bad_share": 0.9997985901,
+    "cum_good_share": 0.9993278857,
+    "ks": 0.0004707044611
+  },
+  {
+    "score_threshold": 646,
+    "cum_bad_share": 0.9997985901,
+    "cum_good_share": 0.9995755067,
+    "ks": 0.0002230833921
+  },
+  {
+    "score_threshold": 648,
+    "cum_bad_share": 0.9997985901,
+    "cum_good_share": 0.9997523789,
+    "ks": 4.621119993e-05
+  },
+  {
+    "score_threshold": 650,
+    "cum_bad_share": 0.9997985901,
+    "cum_good_share": 0.9998231278,
+    "ks": -2.453767693e-05
+  },
+  {
+    "score_threshold": 652,
+    "cum_bad_share": 0.9997985901,
+    "cum_good_share": 0.9998938767,
+    "ks": -9.528655379e-05
+  },
+  {
+    "score_threshold": 654,
+    "cum_bad_share": 0.9997985901,
+    "cum_good_share": 0.9999469383,
+    "ks": -0.0001483482114
+  },
+  {
+    "score_threshold": 656,
+    "cum_bad_share": 0.9997985901,
+    "cum_good_share": 0.9999646256,
+    "ks": -0.0001660354307
+  },
+  {
+    "score_threshold": 658,
+    "cum_bad_share": 1.0,
+    "cum_good_share": 0.9999646256,
+    "ks": 3.537443843e-05
+  },
+  {
+    "score_threshold": 660,
+    "cum_bad_share": 1.0,
+    "cum_good_share": 0.9999823128,
+    "ks": 1.768721922e-05
+  },
+  {
+    "score_threshold": 662,
+    "cum_bad_share": 1.0,
+    "cum_good_share": 1.0,
+    "ks": 0.0
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "file": "application_train.csv",
+    "title": "Application data (application_train)",
+    "publisher": "Home Credit Group, via Kaggle",
+    "url": "https://www.kaggle.com/competitions/home-credit-default-risk/data",
+    "fields_used": "TARGET, applicant demographics, income, credit and annuity amounts, employment, region ratings, EXT_SOURCE_1-3, document and contact flags, building information",
+    "licence": "Kaggle competition data; use subject to the competition rules (no redistribution of raw data)",
+    "access": "Kaggle CLI: kaggle competitions download -c home-credit-default-risk",
+    "limitations": "Only loans that were granted have outcomes (no rejected applicants); no application dates; country not disclosed and not Indian lending data; TARGET is a payment-difficulty flag, not a full default definition.",
+    "rows": 307511,
+    "columns": 122,
+    "sha256": "52e96b895b1112e1c853f670e58372719c8441c5ed1c57ac2f7fad559d784f5f",
+    "retrieved": "2026-10-14"
+  },
+  {
+    "file": "bureau.csv",
+    "title": "Credit bureau records (bureau)",
+    "publisher": "Home Credit Group, via Kaggle",
+    "url": "https://www.kaggle.com/competitions/home-credit-default-risk/data",
+    "fields_used": "CREDIT_ACTIVE, AMT_CREDIT_SUM, AMT_CREDIT_SUM_DEBT, AMT_CREDIT_SUM_OVERDUE, CREDIT_DAY_OVERDUE",
+    "licence": "Kaggle competition data; use subject to the competition rules",
+    "access": "Same Kaggle download",
+    "limitations": "Covers only applicants with a bureau record; others are flagged as having no bureau history rather than a clean one. Reporting completeness across institutions is unknown.",
+    "rows": 1716428,
+    "columns": 17,
+    "sha256": "9d799143423f280720cf51c1bfbbab2a0422da8ff2763335bb30bf43155494f7",
+    "retrieved": "2026-10-14"
+  },
+  {
+    "file": "previous_application.csv",
+    "title": "Previous Home Credit applications (previous_application)",
+    "publisher": "Home Credit Group, via Kaggle",
+    "url": "https://www.kaggle.com/competitions/home-credit-default-risk/data",
+    "fields_used": "NAME_CONTRACT_STATUS (count of previous applications and refusals)",
+    "licence": "Kaggle competition data; use subject to the competition rules",
+    "access": "Same Kaggle download",
+    "limitations": "Only applications made to Home Credit itself; refusal reasons are not modelled.",
+    "rows": 1670214,
+    "columns": 37,
+    "sha256": "5046cd657ee04df2eaa6dc8308ae86be6b3b1763674a3f63574886a2f2896505",
+    "retrieved": "2026-10-14"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "dataset": "Home Credit Default Risk (Kaggle competition)",
+  "source_url": "https://www.kaggle.com/competitions/home-credit-default-risk/data",
+  "loaded_at": "2026-10-14T07:48:37+00:00",
+  "files": [
+    {
+      "file": "application_train.csv",
+      "table": "raw_application_train",
+      "rows": 307511,
+      "columns": 122,
+      "bytes": 166133370,
+      "sha256": "52e96b895b1112e1c853f670e58372719c8441c5ed1c57ac2f7fad559d784f5f"
+    },
+    {
+      "file": "bureau.csv",
+      "table": "raw_bureau",
+      "rows": 1716428,
+      "columns": 17,
+      "bytes": 170016717,
+      "sha256": "9d799143423f280720cf51c1bfbbab2a0422da8ff2763335bb30bf43155494f7"
+    },
+    {
+      "file": "previous_application.csv",
+      "table": "raw_previous_application",
+      "rows": 1670214,
+      "columns": 37,
+      "bytes": 404973293,
+      "sha256": "5046cd657ee04df2eaa6dc8308ae86be6b3b1763674a3f63574886a2f2896505"
+    }
+  ]
+}

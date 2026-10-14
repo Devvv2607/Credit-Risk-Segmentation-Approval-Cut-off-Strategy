@@ -1,0 +1,12 @@
+{
+  "rows": 307511,
+  "anomaly_flag_count": 55374,
+  "infinite_values": 0,
+  "negative_ages": 0,
+  "negative_years_employed": 0,
+  "target_values": [
+    0,
+    1
+  ],
+  "xna_remaining": 0
+}

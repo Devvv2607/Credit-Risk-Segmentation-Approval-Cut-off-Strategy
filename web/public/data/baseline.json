@@ -1,0 +1,23 @@
+{
+  "applications": 307511,
+  "bads": 24825,
+  "baseline_rate": 0.08072881945686496,
+  "min_segment_size": 1000,
+  "dimensions": [
+    "Age band",
+    "Annuity-to-income band",
+    "Contract type",
+    "EXT_SOURCE_1 band",
+    "EXT_SOURCE_2 band",
+    "EXT_SOURCE_3 band",
+    "Education",
+    "Income type",
+    "Region rating"
+  ],
+  "dimensions_with_excluded_segments": [
+    "Annuity-to-income band",
+    "EXT_SOURCE_2 band",
+    "Education",
+    "Income type"
+  ]
+}

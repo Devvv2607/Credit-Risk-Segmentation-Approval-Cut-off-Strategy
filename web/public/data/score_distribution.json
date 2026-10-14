@@ -1,0 +1,156 @@
+[
+  {
+    "split": "validation",
+    "band_order": 0,
+    "score_band": "<520",
+    "band_low": null,
+    "band_high": 520.0,
+    "count": 2681,
+    "bads": 869,
+    "bad_rate": 0.3241327863,
+    "share": 0.04359207831
+  },
+  {
+    "split": "validation",
+    "band_order": 1,
+    "score_band": "520-539",
+    "band_low": 520.0,
+    "band_high": 540.0,
+    "count": 7147,
+    "bads": 1282,
+    "bad_rate": 0.1793759619,
+    "share": 0.116207603
+  },
+  {
+    "split": "validation",
+    "band_order": 2,
+    "score_band": "540-559",
+    "band_low": 540.0,
+    "band_high": 560.0,
+    "count": 13988,
+    "bads": 1413,
+    "bad_rate": 0.1010151558,
+    "share": 0.2274397581
+  },
+  {
+    "split": "validation",
+    "band_order": 3,
+    "score_band": "560-579",
+    "band_low": 560.0,
+    "band_high": 580.0,
+    "count": 17091,
+    "bads": 901,
+    "bad_rate": 0.05271780469,
+    "share": 0.2778934018
+  },
+  {
+    "split": "validation",
+    "band_order": 4,
+    "score_band": "580-599",
+    "band_low": 580.0,
+    "band_high": 600.0,
+    "count": 13603,
+    "bads": 386,
+    "bad_rate": 0.02837609351,
+    "share": 0.221179799
+  },
+  {
+    "split": "validation",
+    "band_order": 5,
+    "score_band": "600-619",
+    "band_low": 600.0,
+    "band_high": 620.0,
+    "count": 5686,
+    "bads": 101,
+    "bad_rate": 0.01776292649,
+    "share": 0.09245227797
+  },
+  {
+    "split": "validation",
+    "band_order": 6,
+    "score_band": "620+",
+    "band_low": 620.0,
+    "band_high": null,
+    "count": 1306,
+    "bads": 13,
+    "bad_rate": 0.009954058193,
+    "share": 0.02123508179
+  },
+  {
+    "split": "test",
+    "band_order": 0,
+    "score_band": "<520",
+    "band_low": null,
+    "band_high": 520.0,
+    "count": 2612,
+    "bads": 855,
+    "bad_rate": 0.3273353752,
+    "share": 0.04246947303
+  },
+  {
+    "split": "test",
+    "band_order": 1,
+    "score_band": "520-539",
+    "band_low": 520.0,
+    "band_high": 540.0,
+    "count": 7020,
+    "bads": 1293,
+    "bad_rate": 0.1841880342,
+    "share": 0.1141407736
+  },
+  {
+    "split": "test",
+    "band_order": 2,
+    "score_band": "540-559",
+    "band_low": 540.0,
+    "band_high": 560.0,
+    "count": 14019,
+    "bads": 1418,
+    "bad_rate": 0.1011484414,
+    "share": 0.2279401005
+  },
+  {
+    "split": "test",
+    "band_order": 3,
+    "score_band": "560-579",
+    "band_low": 560.0,
+    "band_high": 580.0,
+    "count": 17354,
+    "bads": 935,
+    "bad_rate": 0.05387806846,
+    "share": 0.2821650976
+  },
+  {
+    "split": "test",
+    "band_order": 4,
+    "score_band": "580-599",
+    "band_low": 580.0,
+    "band_high": 600.0,
+    "count": 13427,
+    "bads": 369,
+    "bad_rate": 0.02748193938,
+    "share": 0.2183145538
+  },
+  {
+    "split": "test",
+    "band_order": 5,
+    "score_band": "600-619",
+    "band_low": 600.0,
+    "band_high": 620.0,
+    "count": 5774,
+    "bads": 82,
+    "bad_rate": 0.01420159335,
+    "share": 0.09388159927
+  },
+  {
+    "split": "test",
+    "band_order": 6,
+    "score_band": "620+",
+    "band_low": 620.0,
+    "band_high": null,
+    "count": 1297,
+    "bads": 13,
+    "bad_rate": 0.0100231303,
+    "share": 0.02108840219
+  }
+]

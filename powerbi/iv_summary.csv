@@ -1,0 +1,135 @@
+feature,dtype,iv,n_bins,leak_flag,decision,reason
+EXT_SOURCE_3,numerical,0.3283608373,9,False,selected,"IV above threshold, not highly correlated with a stronger feature"
+EXT_SOURCE_2,numerical,0.3179731052,9,False,selected,"IV above threshold, not highly correlated with a stronger feature"
+EXT_SOURCE_1,numerical,0.1459180015,7,False,selected,"IV above threshold, not highly correlated with a stronger feature"
+years_employed,numerical,0.1170381585,9,False,selected,"IV above threshold, not highly correlated with a stronger feature"
+bureau_debt_to_credit,numerical,0.1064097552,9,False,selected,"IV above threshold, not highly correlated with a stronger feature"
+employed_to_age,numerical,0.09497010301,9,False,dropped,|corr| 0.96 with years_employed (higher IV) exceeds 0.7
+age_years,numerical,0.08669738346,8,False,selected,"IV above threshold, not highly correlated with a stronger feature"
+OCCUPATION_TYPE,categorical,0.07677440677,6,False,selected,"IV above threshold, not highly correlated with a stronger feature"
+ORGANIZATION_TYPE,categorical,0.07393188875,9,False,selected,"IV above threshold, not highly correlated with a stronger feature"
+credit_to_goods,numerical,0.07301739901,7,False,selected,"IV above threshold, not highly correlated with a stronger feature"
+prev_refusal_rate,numerical,0.06848985696,7,False,selected,"IV above threshold, not highly correlated with a stronger feature"
+NAME_INCOME_TYPE,categorical,0.05478091411,4,False,selected,"IV above threshold, not highly correlated with a stronger feature"
+REGION_RATING_CLIENT_W_CITY,numerical,0.05375041924,3,False,selected,"IV above threshold, not highly correlated with a stronger feature"
+prev_refused_count,numerical,0.05251331177,4,False,dropped,|corr| 0.83 with prev_refusal_rate (higher IV) exceeds 0.7
+AMT_GOODS_PRICE,numerical,0.05184933937,6,False,selected,"IV above threshold, not highly correlated with a stronger feature"
+REGION_RATING_CLIENT,numerical,0.05065169486,3,False,dropped,|corr| 0.95 with REGION_RATING_CLIENT_W_CITY (higher IV) exceeds 0.7
+NAME_EDUCATION_TYPE,categorical,0.04705217967,2,False,selected,"IV above threshold, not highly correlated with a stronger feature"
+DAYS_LAST_PHONE_CHANGE,numerical,0.04524889985,9,False,selected,"IV above threshold, not highly correlated with a stronger feature"
+DAYS_ID_PUBLISH,numerical,0.03856302804,8,False,dropped,passed filters but outside top 15 by IV
+FLOORSMAX_AVG,numerical,0.03573517428,5,False,dropped,passed filters but outside top 15 by IV
+FLOORSMAX_MEDI,numerical,0.03539382817,5,False,dropped,|corr| 1.00 with FLOORSMAX_AVG (higher IV) exceeds 0.7
+FLOORSMAX_MODE,numerical,0.03448016963,5,False,dropped,|corr| 0.98 with FLOORSMAX_AVG (higher IV) exceeds 0.7
+TOTALAREA_MODE,numerical,0.03412549505,7,False,dropped,|corr| 0.89 with FLOORSMAX_AVG (higher IV) exceeds 0.7
+flag_days_employed_anomaly,numerical,0.03267810804,2,False,dropped,|corr| 0.78 with NAME_INCOME_TYPE (higher IV) exceeds 0.7
+FLAG_EMP_PHONE,numerical,0.03264181358,2,False,dropped,|corr| 0.78 with NAME_INCOME_TYPE (higher IV) exceeds 0.7
+AMT_CREDIT,numerical,0.03257463033,5,False,dropped,|corr| 0.92 with AMT_GOODS_PRICE (higher IV) exceeds 0.7
+REG_CITY_NOT_WORK_CITY,numerical,0.03249632326,2,False,dropped,passed filters but outside top 15 by IV
+LIVINGAREA_AVG,numerical,0.03226037066,7,False,dropped,|corr| 0.88 with FLOORSMAX_AVG (higher IV) exceeds 0.7
+REGION_POPULATION_RELATIVE,numerical,0.03220938082,6,False,dropped,passed filters but outside top 15 by IV
+LIVINGAREA_MEDI,numerical,0.03198133677,7,False,dropped,|corr| 0.88 with FLOORSMAX_AVG (higher IV) exceeds 0.7
+ELEVATORS_AVG,numerical,0.03087333118,5,False,dropped,|corr| 0.90 with FLOORSMAX_AVG (higher IV) exceeds 0.7
+APARTMENTS_AVG,numerical,0.03084601959,5,False,dropped,|corr| 0.88 with FLOORSMAX_AVG (higher IV) exceeds 0.7
+APARTMENTS_MEDI,numerical,0.03079039835,6,False,dropped,|corr| 0.88 with FLOORSMAX_AVG (higher IV) exceeds 0.7
+LIVINGAREA_MODE,numerical,0.03062487649,7,False,dropped,|corr| 0.86 with FLOORSMAX_AVG (higher IV) exceeds 0.7
+ELEVATORS_MEDI,numerical,0.0304406622,5,False,dropped,|corr| 0.90 with FLOORSMAX_AVG (higher IV) exceeds 0.7
+APARTMENTS_MODE,numerical,0.02993868905,5,False,dropped,|corr| 0.87 with FLOORSMAX_AVG (higher IV) exceeds 0.7
+ELEVATORS_MODE,numerical,0.02917192897,4,False,dropped,|corr| 0.88 with FLOORSMAX_AVG (higher IV) exceeds 0.7
+FLAG_DOCUMENT_3,numerical,0.02812780835,2,False,dropped,passed filters but outside top 15 by IV
+DAYS_REGISTRATION,numerical,0.02808661022,8,False,dropped,passed filters but outside top 15 by IV
+YEARS_BEGINEXPLUATATION_MODE,numerical,0.02767863249,7,False,dropped,|corr| 0.81 with FLOORSMAX_AVG (higher IV) exceeds 0.7
+YEARS_BEGINEXPLUATATION_MEDI,numerical,0.02756473721,7,False,dropped,|corr| 0.81 with FLOORSMAX_AVG (higher IV) exceeds 0.7
+YEARS_BEGINEXPLUATATION_AVG,numerical,0.02743999542,7,False,dropped,|corr| 0.81 with FLOORSMAX_AVG (higher IV) exceeds 0.7
+ENTRANCES_AVG,numerical,0.02517759975,6,False,dropped,|corr| 0.74 with FLOORSMAX_AVG (higher IV) exceeds 0.7
+ENTRANCES_MEDI,numerical,0.02486848166,6,False,dropped,|corr| 0.74 with FLOORSMAX_AVG (higher IV) exceeds 0.7
+bureau_active_count,numerical,0.02485996346,4,False,dropped,passed filters but outside top 15 by IV
+ENTRANCES_MODE,numerical,0.02385138642,6,False,dropped,|corr| 0.74 with FLOORSMAX_AVG (higher IV) exceeds 0.7
+WALLSMATERIAL_MODE,categorical,0.02339215576,3,False,dropped,|corr| 0.78 with FLOORSMAX_AVG (higher IV) exceeds 0.7
+REG_CITY_NOT_LIVE_CITY,numerical,0.02331254017,2,False,dropped,passed filters but outside top 15 by IV
+OWN_CAR_AGE,numerical,0.02288220138,5,False,dropped,passed filters but outside top 15 by IV
+EMERGENCYSTATE_MODE,categorical,0.02157637427,2,False,dropped,|corr| 0.73 with FLOORSMAX_AVG (higher IV) exceeds 0.7
+NONLIVINGAREA_AVG,numerical,0.02121202612,4,False,dropped,|corr| 0.74 with FLOORSMAX_AVG (higher IV) exceeds 0.7
+NONLIVINGAREA_MEDI,numerical,0.0210081443,4,False,dropped,|corr| 0.73 with FLOORSMAX_AVG (higher IV) exceeds 0.7
+NONLIVINGAREA_MODE,numerical,0.02085258445,4,False,dropped,|corr| 0.73 with FLOORSMAX_AVG (higher IV) exceeds 0.7
+BASEMENTAREA_AVG,numerical,0.01974795331,6,False,dropped,IV below 0.02
+HOUSETYPE_MODE,categorical,0.01971394277,2,False,dropped,IV below 0.02
+BASEMENTAREA_MEDI,numerical,0.01956670346,5,False,dropped,IV below 0.02
+AMT_REQ_CREDIT_BUREAU_YEAR,numerical,0.01928694705,6,False,dropped,IV below 0.02
+BASEMENTAREA_MODE,numerical,0.01888066691,5,False,dropped,IV below 0.02
+FLOORSMIN_AVG,numerical,0.01740546597,4,False,dropped,IV below 0.02
+FLOORSMIN_MEDI,numerical,0.0173826508,4,False,dropped,IV below 0.02
+FLOORSMIN_MODE,numerical,0.01693922449,4,False,dropped,IV below 0.02
+AMT_REQ_CREDIT_BUREAU_QRT,numerical,0.01677400098,3,False,dropped,IV below 0.02
+LIVINGAPARTMENTS_AVG,numerical,0.01621104247,5,False,dropped,IV below 0.02
+LIVINGAPARTMENTS_MEDI,numerical,0.01615742152,5,False,dropped,IV below 0.02
+NAME_HOUSING_TYPE,categorical,0.016089428,2,False,dropped,IV below 0.02
+YEARS_BUILD_MODE,numerical,0.01600483978,4,False,dropped,IV below 0.02
+AMT_REQ_CREDIT_BUREAU_MON,numerical,0.01571495175,3,False,dropped,IV below 0.02
+YEARS_BUILD_MEDI,numerical,0.01567806521,5,False,dropped,IV below 0.02
+YEARS_BUILD_AVG,numerical,0.01558649251,5,False,dropped,IV below 0.02
+LIVINGAPARTMENTS_MODE,numerical,0.01543980315,5,False,dropped,IV below 0.02
+AMT_REQ_CREDIT_BUREAU_DAY,numerical,0.01539535442,2,False,dropped,IV below 0.02
+AMT_REQ_CREDIT_BUREAU_HOUR,numerical,0.01539535442,2,False,dropped,IV below 0.02
+AMT_REQ_CREDIT_BUREAU_WEEK,numerical,0.01539535442,2,False,dropped,IV below 0.02
+bureau_credit_count,numerical,0.01479188492,4,False,dropped,IV below 0.02
+AMT_ANNUITY,numerical,0.01448307694,5,False,dropped,IV below 0.02
+LANDAREA_MODE,numerical,0.01385844225,3,False,dropped,IV below 0.02
+bureau_max_days_overdue,numerical,0.01379178116,2,False,dropped,IV below 0.02
+bureau_max_overdue,numerical,0.01379178116,2,False,dropped,IV below 0.02
+bureau_total_overdue,numerical,0.01379178116,2,False,dropped,IV below 0.02
+has_bureau_history,numerical,0.01379178116,2,False,dropped,IV below 0.02
+LANDAREA_MEDI,numerical,0.01368152448,3,False,dropped,IV below 0.02
+LANDAREA_AVG,numerical,0.01364160094,3,False,dropped,IV below 0.02
+LIVE_CITY_NOT_WORK_CITY,numerical,0.01348863359,2,False,dropped,IV below 0.02
+NAME_CONTRACT_TYPE,categorical,0.01337936484,2,False,dropped,IV below 0.02
+DEF_30_CNT_SOCIAL_CIRCLE,numerical,0.01322713591,3,False,dropped,IV below 0.02
+COMMONAREA_AVG,numerical,0.01264578232,5,False,dropped,IV below 0.02
+COMMONAREA_MEDI,numerical,0.01253593333,5,False,dropped,IV below 0.02
+FLAG_DOCUMENT_6,numerical,0.01246013881,2,False,dropped,IV below 0.02
+COMMONAREA_MODE,numerical,0.01215504511,5,False,dropped,IV below 0.02
+DEF_60_CNT_SOCIAL_CIRCLE,numerical,0.01171381582,3,False,dropped,IV below 0.02
+AMT_INCOME_TOTAL,numerical,0.01117893997,5,False,dropped,IV below 0.02
+FONDKAPREMONT_MODE,categorical,0.0111631063,3,False,dropped,IV below 0.02
+HOUR_APPR_PROCESS_START,numerical,0.0108729103,7,False,dropped,IV below 0.02
+prev_app_count,numerical,0.01034895231,6,False,dropped,IV below 0.02
+NONLIVINGAPARTMENTS_AVG,numerical,0.01026263254,3,False,dropped,IV below 0.02
+NONLIVINGAPARTMENTS_MEDI,numerical,0.01013537507,3,False,dropped,IV below 0.02
+FLAG_WORK_PHONE,numerical,0.009998021376,2,False,dropped,IV below 0.02
+NONLIVINGAPARTMENTS_MODE,numerical,0.009966630708,3,False,dropped,IV below 0.02
+FLAG_PHONE,numerical,0.007874109178,2,False,dropped,IV below 0.02
+annuity_to_income,numerical,0.006966778842,6,False,dropped,IV below 0.02
+FLAG_OWN_CAR,categorical,0.006372834494,2,False,dropped,IV below 0.02
+CNT_CHILDREN,numerical,0.005591596715,2,False,dropped,IV below 0.02
+has_previous_application,numerical,0.005006958708,2,False,dropped,IV below 0.02
+credit_to_income,numerical,0.003722664862,4,False,dropped,IV below 0.02
+CNT_FAM_MEMBERS,numerical,0.002984145962,3,False,dropped,IV below 0.02
+OBS_30_CNT_SOCIAL_CIRCLE,numerical,0.002979546062,6,False,dropped,IV below 0.02
+OBS_60_CNT_SOCIAL_CIRCLE,numerical,0.002890011403,6,False,dropped,IV below 0.02
+NAME_TYPE_SUITE,categorical,0.002118061622,3,False,dropped,IV below 0.02
+FLAG_DOCUMENT_8,numerical,0.001024134951,2,False,dropped,IV below 0.02
+REG_REGION_NOT_WORK_REGION,numerical,0.0006255324202,2,False,dropped,IV below 0.02
+WEEKDAY_APPR_PROCESS_START,categorical,0.0006006868148,7,False,dropped,IV below 0.02
+FLAG_OWN_REALTY,categorical,0.0003935278875,2,False,dropped,IV below 0.02
+FLAG_EMAIL,numerical,1.98831326e-06,2,False,dropped,IV below 0.02
+FLAG_CONT_MOBILE,numerical,0,1,False,dropped,IV below 0.02
+FLAG_DOCUMENT_10,numerical,0,1,False,dropped,IV below 0.02
+FLAG_DOCUMENT_11,numerical,0,1,False,dropped,IV below 0.02
+FLAG_DOCUMENT_12,numerical,0,1,False,dropped,IV below 0.02
+FLAG_DOCUMENT_13,numerical,0,1,False,dropped,IV below 0.02
+FLAG_DOCUMENT_14,numerical,0,1,False,dropped,IV below 0.02
+FLAG_DOCUMENT_15,numerical,0,1,False,dropped,IV below 0.02
+FLAG_DOCUMENT_16,numerical,0,1,False,dropped,IV below 0.02
+FLAG_DOCUMENT_17,numerical,0,1,False,dropped,IV below 0.02
+FLAG_DOCUMENT_18,numerical,0,1,False,dropped,IV below 0.02
+FLAG_DOCUMENT_19,numerical,0,1,False,dropped,IV below 0.02
+FLAG_DOCUMENT_2,numerical,0,1,False,dropped,IV below 0.02
+FLAG_DOCUMENT_20,numerical,0,1,False,dropped,IV below 0.02
+FLAG_DOCUMENT_21,numerical,0,1,False,dropped,IV below 0.02
+FLAG_DOCUMENT_4,numerical,0,1,False,dropped,IV below 0.02
+FLAG_DOCUMENT_5,numerical,0,1,False,dropped,IV below 0.02
+FLAG_DOCUMENT_7,numerical,0,1,False,dropped,IV below 0.02
+FLAG_DOCUMENT_9,numerical,0,1,False,dropped,IV below 0.02
+FLAG_MOBIL,numerical,0,1,False,dropped,IV below 0.02
+LIVE_REGION_NOT_WORK_REGION,numerical,0,1,False,dropped,IV below 0.02
+REG_REGION_NOT_LIVE_REGION,numerical,0,1,False,dropped,IV below 0.02
