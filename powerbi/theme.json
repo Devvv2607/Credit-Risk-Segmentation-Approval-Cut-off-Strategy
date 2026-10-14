@@ -1,0 +1,17 @@
+{
+  "name": "Dev Mittal Analysis",
+  "dataColors": [
+    "#1E4E79",
+    "#2E6B4F",
+    "#B4552D",
+    "#5E7A72",
+    "#8A5A00",
+    "#0F3B33"
+  ],
+  "background": "#FAF6F0",
+  "foreground": "#0F3B33",
+  "tableAccent": "#2E6B4F",
+  "good": "#2E6B4F",
+  "neutral": "#8A5A00",
+  "bad": "#B4552D"
+}

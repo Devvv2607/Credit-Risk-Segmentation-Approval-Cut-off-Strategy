@@ -1,0 +1,26 @@
+table Cutoff
+	lineageTag: e6a9b291-b08a-4d60-b5dc-4ec0097e1777
+
+	measure 'Cutoff Value' = SELECTEDVALUE ( Cutoff[Cutoff], [Recommended cut-off] )
+		formatString: 0
+		lineageTag: 2cbd7ef2-0b59-428f-8a50-b6700f598cb2
+
+	column Cutoff
+		formatString: 0
+		lineageTag: 651e3a0d-aded-402f-b7e5-cce7128a165b
+		summarizeBy: none
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	partition Cutoff = calculated
+		mode: import
+		source = GENERATESERIES(460, 660, 5)
+
+	annotation PBI_Id = 8071764707424cbf93328da83c894b6b
+

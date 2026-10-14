@@ -19,11 +19,11 @@ STAGES = {
     "segments": "src.segments", "features": "src.features", "split": "src.split",
     "binning": "src.binning", "model": "src.model", "scorecard": "src.scorecard",
     "cutoff": "src.cutoff", "final-test": "src.final_test", "claims": "src.claims",
-    "validate": "src.validate", "powerbi": "src.powerbi", "export-web": "src.export_web",
+    "validate": "src.validate", "powerbi": "src.powerbi", "export-powerbi": "src.powerbi", "export-web": "src.export_web",
     "readme": "src.readme",
 }
 ALL = ["data-check", "ingest", "clean", "segments", "features", "split", "binning", "model",
-       "scorecard", "cutoff", "final-test", "claims", "powerbi", "export-web", "validate",
+       "scorecard", "cutoff", "final-test", "claims", "export-powerbi", "export-web", "validate",
        "claims", "export-web", "readme"]
 
 

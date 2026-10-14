@@ -1,0 +1,266 @@
+createOrReplace
+
+	ref table _Measures
+
+		measure Applications = LOOKUPVALUE ( metrics[applications], metrics[split], "full_population" )
+			formatString: #,0
+
+		measure 'Baseline payment-difficulty rate' = LOOKUPVALUE ( metrics[payment_difficulty_rate], metrics[split], "full_population" )
+			formatString: 0.0%
+
+		measure 'Test Gini' = LOOKUPVALUE ( metrics[gini], metrics[split], "test" )
+			formatString: 0.000
+
+		measure 'Recommended cut-off' = MAX ( recommendation[cutoff] )
+			formatString: 0
+
+		measure 'Validation baseline rate' = MAX ( recommendation[baseline_payment_difficulty_rate] )
+			formatString: 0.0%
+
+		measure 'Segment payment-difficulty rate' = DIVIDE ( SUM ( segments[bads] ), SUM ( segments[n] ) )
+			formatString: 0.0%
+
+		measure 'Segment lift' = DIVIDE ( [Segment payment-difficulty rate], [Baseline payment-difficulty rate] )
+			formatString: 0.00
+
+		measure 'Approval rate at cut-off' = LOOKUPVALUE ( cutoff_table[approval_rate], cutoff_table[cutoff], [Cutoff Value] )
+			formatString: 0.0%
+
+		measure 'Payment-difficulty rate at cut-off' = LOOKUPVALUE ( cutoff_table[payment_difficulty_rate], cutoff_table[cutoff], [Cutoff Value] )
+			formatString: 0.0%
+
+		measure 'Applicants approved at cut-off' = LOOKUPVALUE ( cutoff_table[approved], cutoff_table[cutoff], [Cutoff Value] )
+			formatString: #,0
+
+		measure 'Illustrative profit at cut-off' = LOOKUPVALUE ( cutoff_table[profit], cutoff_table[cutoff], [Cutoff Value] )
+			formatString: #,0
+
+		measure 'Rate change vs baseline (pp)' = ( [Payment-difficulty rate at cut-off] - [Validation baseline rate] ) * 100
+			formatString: +0.0;-0.0;0.0
+
+		measure 'Test approval rate at recommended' = MAX ( recommendation[test_approval_rate] )
+			formatString: 0.0%
+
+		measure 'Test payment-difficulty rate at recommended' = MAX ( recommendation[test_payment_difficulty_rate] )
+			formatString: 0.0%
+
+	ref table Cutoff
+
+		measure 'Cutoff Value' = SELECTEDVALUE ( Cutoff[Cutoff], [Recommended cut-off] )
+			formatString: 0
+
+	ref table metrics
+
+		column payment_difficulty_rate
+			dataType: double
+			formatString: 0.0%
+			summarizeBy: none
+			sourceColumn: payment_difficulty_rate
+
+			annotation SummarizationSetBy = User
+
+	ref table recommendation
+
+		column val_approval_rate
+			dataType: double
+			formatString: 0.0%
+			summarizeBy: none
+			sourceColumn: val_approval_rate
+
+			annotation SummarizationSetBy = User
+
+		column val_payment_difficulty_rate
+			dataType: double
+			formatString: 0.0%
+			summarizeBy: none
+			sourceColumn: val_payment_difficulty_rate
+
+			annotation SummarizationSetBy = User
+
+		column test_approval_rate
+			dataType: double
+			formatString: 0.0%
+			summarizeBy: none
+			sourceColumn: test_approval_rate
+
+			annotation SummarizationSetBy = User
+
+		column test_payment_difficulty_rate
+			dataType: double
+			formatString: 0.0%
+			summarizeBy: none
+			sourceColumn: test_payment_difficulty_rate
+
+			annotation SummarizationSetBy = User
+
+		column baseline_payment_difficulty_rate
+			dataType: double
+			formatString: 0.0%
+			summarizeBy: none
+			sourceColumn: baseline_payment_difficulty_rate
+
+			annotation SummarizationSetBy = User
+
+	ref table segments
+
+		column segment
+			dataType: string
+			summarizeBy: none
+			sourceColumn: segment
+			sortByColumn: segment_order
+
+			annotation SummarizationSetBy = User
+
+		column payment_difficulty_rate
+			dataType: double
+			formatString: 0.0%
+			summarizeBy: none
+			sourceColumn: payment_difficulty_rate
+
+			annotation SummarizationSetBy = User
+
+		column ci_low
+			dataType: double
+			formatString: 0.0%
+			summarizeBy: none
+			sourceColumn: ci_low
+
+			annotation SummarizationSetBy = User
+
+		column ci_high
+			dataType: double
+			formatString: 0.0%
+			summarizeBy: none
+			sourceColumn: ci_high
+
+			annotation SummarizationSetBy = User
+
+		column portfolio_share
+			dataType: double
+			formatString: 0.0%
+			summarizeBy: none
+			sourceColumn: portfolio_share
+
+			annotation SummarizationSetBy = User
+
+		column n
+			dataType: int64
+			formatString: #,0
+			summarizeBy: sum
+			sourceColumn: n
+
+			annotation SummarizationSetBy = User
+
+	ref table score_distribution
+
+		column score_band
+			dataType: string
+			summarizeBy: none
+			sourceColumn: score_band
+			sortByColumn: band_order
+
+			annotation SummarizationSetBy = User
+
+		column payment_difficulty_rate
+			dataType: double
+			formatString: 0.0%
+			summarizeBy: average
+			sourceColumn: payment_difficulty_rate
+
+			annotation SummarizationSetBy = User
+
+		column share
+			dataType: double
+			formatString: 0.0%
+			summarizeBy: sum
+			sourceColumn: share
+
+			annotation SummarizationSetBy = User
+
+	ref table scorecard
+
+		column payment_difficulty_rate
+			dataType: double
+			formatString: 0.0%
+			summarizeBy: average
+			sourceColumn: payment_difficulty_rate
+
+			annotation SummarizationSetBy = User
+
+		column woe
+			dataType: double
+			formatString: 0.000
+			summarizeBy: sum
+			sourceColumn: woe
+
+			annotation SummarizationSetBy = User
+
+		column points
+			dataType: int64
+			formatString: 0
+			summarizeBy: sum
+			sourceColumn: points
+
+			annotation SummarizationSetBy = User
+
+		column count
+			dataType: int64
+			formatString: #,0
+			summarizeBy: sum
+			sourceColumn: count
+
+			annotation SummarizationSetBy = User
+
+	ref table iv_summary
+
+		column iv
+			dataType: double
+			formatString: 0.000
+			summarizeBy: sum
+			sourceColumn: iv
+
+			annotation SummarizationSetBy = User
+
+	ref table cutoff_table
+
+		column approval_rate
+			dataType: double
+			formatString: 0.0%
+			summarizeBy: sum
+			sourceColumn: approval_rate
+
+			annotation SummarizationSetBy = User
+
+		column payment_difficulty_rate
+			dataType: double
+			formatString: 0.0%
+			summarizeBy: sum
+			sourceColumn: payment_difficulty_rate
+
+			annotation SummarizationSetBy = User
+
+		column profit
+			dataType: double
+			formatString: #,0
+			summarizeBy: sum
+			sourceColumn: profit
+
+			annotation SummarizationSetBy = User
+
+	ref table sensitivity
+
+		column approval_rate
+			dataType: double
+			formatString: 0.0%
+			summarizeBy: none
+			sourceColumn: approval_rate
+
+			annotation SummarizationSetBy = User
+
+		column payment_difficulty_rate
+			dataType: double
+			formatString: 0.0%
+			summarizeBy: none
+			sourceColumn: payment_difficulty_rate
+
+			annotation SummarizationSetBy = User

@@ -1,0 +1,76 @@
+table iv_summary
+	lineageTag: 1b5b1e75-68b9-40ba-8d9a-bf1f406d7bd0
+
+	column feature
+		dataType: string
+		lineageTag: c8a8eaad-c902-485a-bb70-e8c350683d7d
+		summarizeBy: none
+		sourceColumn: feature
+
+		annotation SummarizationSetBy = Automatic
+
+	column dtype
+		dataType: string
+		lineageTag: 6e0f133f-0ec4-4ec7-b654-001bbc7b39c9
+		summarizeBy: none
+		sourceColumn: dtype
+
+		annotation SummarizationSetBy = Automatic
+
+	column iv
+		dataType: double
+		formatString: 0.000
+		lineageTag: 433f3457-e869-4014-b1ce-59bff60aa130
+		summarizeBy: sum
+		sourceColumn: iv
+
+		annotation SummarizationSetBy = User
+
+	column n_bins
+		dataType: int64
+		formatString: 0
+		lineageTag: a48fa408-0b9c-4d29-b886-e3fe02ab5a03
+		summarizeBy: sum
+		sourceColumn: n_bins
+
+		annotation SummarizationSetBy = Automatic
+
+	column leak_flag
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 36905818-2968-4f00-aba6-dc0be1749d40
+		summarizeBy: none
+		sourceColumn: leak_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column decision
+		dataType: string
+		lineageTag: 9c330a5b-75ba-4eaf-b486-dd16711d3dbe
+		summarizeBy: none
+		sourceColumn: decision
+
+		annotation SummarizationSetBy = Automatic
+
+	column reason
+		dataType: string
+		lineageTag: 4f054fcf-c495-4ce9-8c47-a3ad8ddc2072
+		summarizeBy: none
+		sourceColumn: reason
+
+		annotation SummarizationSetBy = Automatic
+
+	partition iv_summary = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\Dev\Downloads\DATA ANALYTICS PROJECT\credit-risk-cutoff\powerbi\iv_summary.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"feature", type text}, {"dtype", type text}, {"iv", type number}, {"n_bins", Int64.Type}, {"leak_flag", type logical}, {"decision", type text}, {"reason", type text}}, "en-US")
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

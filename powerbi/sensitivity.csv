@@ -1,4 +1,4 @@
-avg_loan_level,margin_level,loss_given_bad_level,avg_loan,margin,loss_given_bad,n_changed,recommended_cutoff,approval_rate,bad_rate,profit,shift_vs_base
+avg_loan_level,margin_level,loss_given_bad_level,avg_loan,margin,loss_given_bad,n_changed,recommended_cutoff,approval_rate,payment_difficulty_rate,profit,shift_vs_base
 low,low,low,300000,0.08,0.35,3,535,0.8791258821,0.05877783532,887670000,0
 low,low,base,300000,0.08,0.5,2,540,0.8402003187,0.05445678678,750540000,5
 low,low,high,300000,0.08,0.7,3,550,0.7378134044,0.04528726007,608178000,15

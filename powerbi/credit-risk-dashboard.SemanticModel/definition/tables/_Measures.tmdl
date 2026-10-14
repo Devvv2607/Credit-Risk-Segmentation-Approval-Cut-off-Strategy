@@ -1,0 +1,79 @@
+table _Measures
+	lineageTag: 1e9c16f1-5b4e-4548-8a57-bd76cdaf2f5a
+
+	measure Applications = LOOKUPVALUE ( metrics[applications], metrics[split], "full_population" )
+		formatString: #,0
+		lineageTag: 17a72ca5-1f50-4338-ba95-18edfe1a615c
+
+	measure 'Baseline payment-difficulty rate' = LOOKUPVALUE ( metrics[payment_difficulty_rate], metrics[split], "full_population" )
+		formatString: 0.0%
+		lineageTag: a5634f01-5564-49ac-9b60-e61348c70f94
+
+	measure 'Test Gini' = LOOKUPVALUE ( metrics[gini], metrics[split], "test" )
+		formatString: 0.000
+		lineageTag: be9e31bd-3184-4375-8926-5a84946d75bf
+
+	measure 'Recommended cut-off' = MAX ( recommendation[cutoff] )
+		formatString: 0
+		lineageTag: ace10155-8be3-4de7-8dc7-94a1515cf250
+
+	measure 'Validation baseline rate' = MAX ( recommendation[baseline_payment_difficulty_rate] )
+		formatString: 0.0%
+		lineageTag: 5719a1ad-0781-4cc3-9e72-b4829fe74d24
+
+	measure 'Segment payment-difficulty rate' = DIVIDE ( SUM ( segments[bads] ), SUM ( segments[n] ) )
+		formatString: 0.0%
+		lineageTag: 31a0e585-0975-41d2-adcf-ad4adb0aea10
+
+	measure 'Segment lift' = DIVIDE ( [Segment payment-difficulty rate], [Baseline payment-difficulty rate] )
+		formatString: 0.00
+		lineageTag: 3f13e011-7f6d-4ffe-85d6-a9b964f3ad47
+
+	measure 'Approval rate at cut-off' = LOOKUPVALUE ( cutoff_table[approval_rate], cutoff_table[cutoff], [Cutoff Value] )
+		formatString: 0.0%
+		lineageTag: 640019ad-eaf5-4a58-b68f-9b06994d4c37
+
+	measure 'Payment-difficulty rate at cut-off' = LOOKUPVALUE ( cutoff_table[payment_difficulty_rate], cutoff_table[cutoff], [Cutoff Value] )
+		formatString: 0.0%
+		lineageTag: 79491331-cf89-4d89-a7ce-761c978ad392
+
+	measure 'Applicants approved at cut-off' = LOOKUPVALUE ( cutoff_table[approved], cutoff_table[cutoff], [Cutoff Value] )
+		formatString: #,0
+		lineageTag: 052b6ccc-ee42-47eb-8d43-2b0b88ec8a2a
+
+	measure 'Illustrative profit at cut-off' = LOOKUPVALUE ( cutoff_table[profit], cutoff_table[cutoff], [Cutoff Value] )
+		formatString: #,0
+		lineageTag: f4511353-d29e-4a8d-8403-c688d9ee4fad
+
+	measure 'Rate change vs baseline (pp)' = ( [Payment-difficulty rate at cut-off] - [Validation baseline rate] ) * 100
+		formatString: +0.0;-0.0;0.0
+		lineageTag: 71619a6c-826f-4629-85df-e45f5c43d814
+
+	measure 'Test approval rate at recommended' = MAX ( recommendation[test_approval_rate] )
+		formatString: 0.0%
+		lineageTag: abcfa58c-f6e4-4af4-b8e5-00a52320e099
+
+	measure 'Test payment-difficulty rate at recommended' = MAX ( recommendation[test_payment_difficulty_rate] )
+		formatString: 0.0%
+		lineageTag: 359ef362-3b0b-403c-8425-67ce26bd15f8
+
+	column Column1
+		dataType: string
+		lineageTag: 1eb95b83-fba0-4e79-b2ea-ea1a2cea247c
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Measures = m
+		mode: import
+		source =
+				let
+				    Source = #table(type table [Column1 = text], {})
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

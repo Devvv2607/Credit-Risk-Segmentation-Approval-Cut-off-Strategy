@@ -1,0 +1,2 @@
+cutoff,rule,val_approval_rate,val_payment_difficulty_rate,test_approval_rate,test_payment_difficulty_rate,baseline_payment_difficulty_rate
+535,highest-profit cut-off whose payment-difficulty rate among approved <= 6.0%,0.8791258821,0.05877783532,0.8824284994,0.05881485849,0.08072908198

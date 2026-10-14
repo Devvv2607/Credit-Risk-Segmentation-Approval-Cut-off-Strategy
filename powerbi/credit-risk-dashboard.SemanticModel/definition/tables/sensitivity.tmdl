@@ -1,0 +1,125 @@
+table sensitivity
+	lineageTag: 38613003-20de-436a-b19d-b85bd4136376
+
+	column avg_loan_level
+		dataType: string
+		lineageTag: db1da764-6efa-4536-9b4d-e590235d1e7e
+		summarizeBy: none
+		sourceColumn: avg_loan_level
+
+		annotation SummarizationSetBy = Automatic
+
+	column margin_level
+		dataType: string
+		lineageTag: 7ab3df19-28d8-4129-bd9f-cda741f31acf
+		summarizeBy: none
+		sourceColumn: margin_level
+
+		annotation SummarizationSetBy = Automatic
+
+	column loss_given_bad_level
+		dataType: string
+		lineageTag: 0c4b9f2c-55ae-4f07-8896-78199cd3ca50
+		summarizeBy: none
+		sourceColumn: loss_given_bad_level
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_loan
+		dataType: int64
+		formatString: 0
+		lineageTag: bf574f2b-ae72-43ed-88c7-644b38a4f3dc
+		summarizeBy: sum
+		sourceColumn: avg_loan
+
+		annotation SummarizationSetBy = Automatic
+
+	column margin
+		dataType: double
+		lineageTag: 5c8aaf0c-9e3a-4322-82ec-5f9470ab3caa
+		summarizeBy: sum
+		sourceColumn: margin
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column loss_given_bad
+		dataType: double
+		lineageTag: 42aa6394-1e37-460b-b892-6fec8c78622c
+		summarizeBy: sum
+		sourceColumn: loss_given_bad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column n_changed
+		dataType: int64
+		formatString: 0
+		lineageTag: 4b2695ac-5e36-4825-990e-dd21368dde92
+		summarizeBy: sum
+		sourceColumn: n_changed
+
+		annotation SummarizationSetBy = Automatic
+
+	column recommended_cutoff
+		dataType: int64
+		formatString: 0
+		lineageTag: b0551eca-ab1b-4368-ade2-1e1f6be2ddf3
+		summarizeBy: sum
+		sourceColumn: recommended_cutoff
+
+		annotation SummarizationSetBy = Automatic
+
+	column approval_rate
+		dataType: double
+		formatString: 0.0%
+		lineageTag: 66a97afc-62e5-4a14-9f3f-2e7726cfbbe6
+		summarizeBy: none
+		sourceColumn: approval_rate
+
+		annotation SummarizationSetBy = User
+
+	column payment_difficulty_rate
+		dataType: double
+		formatString: 0.0%
+		lineageTag: 5c0c6fff-70ca-4959-928e-fc16c0708359
+		summarizeBy: none
+		sourceColumn: payment_difficulty_rate
+
+		annotation SummarizationSetBy = User
+
+	column profit
+		dataType: double
+		lineageTag: f81cb86e-3b30-4c13-adeb-d916b1eeb8ae
+		summarizeBy: sum
+		sourceColumn: profit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column shift_vs_base
+		dataType: int64
+		formatString: 0
+		lineageTag: 01d704fe-c1b3-49a3-860f-5f38b14ea99b
+		summarizeBy: sum
+		sourceColumn: shift_vs_base
+
+		annotation SummarizationSetBy = Automatic
+
+	partition sensitivity = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\Dev\Downloads\DATA ANALYTICS PROJECT\credit-risk-cutoff\powerbi\sensitivity.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"avg_loan_level", type text}, {"margin_level", type text}, {"loss_given_bad_level", type text}, {"avg_loan", Int64.Type}, {"margin", type number}, {"loss_given_bad", type number}, {"n_changed", Int64.Type}, {"recommended_cutoff", Int64.Type}, {"approval_rate", type number}, {"payment_difficulty_rate", type number}, {"profit", type number}, {"shift_vs_base", Int64.Type}}, "en-US")
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

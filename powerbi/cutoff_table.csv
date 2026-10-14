@@ -1,4 +1,4 @@
-cutoff,approved,approval_rate,goods_approved,bads_approved,bad_rate,bads_avoided,goods_rejected,profit
+cutoff,approved,approval_rate,goods_approved,bads_approved,payment_difficulty_rate,bads_avoided,goods_rejected,profit
 460,61502,1,56537,4965,0.08072908198,0,0,2150970000
 465,61501,0.9999837404,56537,4964,0.08071413473,1,0,2151220000
 470,61497,0.9999187018,56535,4962,0.08068686277,3,2,2151600000

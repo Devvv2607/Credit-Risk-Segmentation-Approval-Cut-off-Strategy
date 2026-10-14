@@ -1,0 +1,73 @@
+table metrics
+	lineageTag: 6bf132a8-64d5-4cbc-be47-4eb0f428eeef
+
+	column split
+		dataType: string
+		lineageTag: e2454838-1897-463b-9915-a726c25e8129
+		summarizeBy: none
+		sourceColumn: split
+
+		annotation SummarizationSetBy = Automatic
+
+	column applications
+		dataType: int64
+		formatString: 0
+		lineageTag: 2e206c10-cad6-4a10-b1a0-f49a1b14d4ee
+		summarizeBy: sum
+		sourceColumn: applications
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_difficulty_rate
+		dataType: double
+		formatString: 0.0%
+		lineageTag: ac894f59-b3c5-4431-b566-e5611880d906
+		summarizeBy: none
+		sourceColumn: payment_difficulty_rate
+
+		annotation SummarizationSetBy = User
+
+	column auc
+		dataType: double
+		lineageTag: bd928b8c-82b0-4253-a363-b713ccac0a9f
+		summarizeBy: sum
+		sourceColumn: auc
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column gini
+		dataType: double
+		lineageTag: a96f0979-a3f0-432c-8bf9-a9441f8eddcd
+		summarizeBy: sum
+		sourceColumn: gini
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ks
+		dataType: double
+		lineageTag: 0603ce03-bf7d-4011-acbe-e9958f13a66d
+		summarizeBy: sum
+		sourceColumn: ks
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition metrics = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\Dev\Downloads\DATA ANALYTICS PROJECT\credit-risk-cutoff\powerbi\metrics.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"split", type text}, {"applications", Int64.Type}, {"payment_difficulty_rate", type number}, {"auc", type number}, {"gini", type number}, {"ks", type number}}, "en-US")
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

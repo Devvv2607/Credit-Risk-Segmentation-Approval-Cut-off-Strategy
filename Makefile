@@ -8,7 +8,7 @@ PY := .venv/bin/python
 endif
 export PYTHONIOENCODING := utf-8
 
-.PHONY: setup data-check ingest clean segments features split binning model scorecard cutoff final-test claims validate powerbi export-web readme all test lint web
+.PHONY: setup data-check ingest clean segments features split binning model scorecard cutoff final-test claims validate powerbi export-powerbi export-web readme all test lint web
 
 setup:
 	python3.11 -m venv .venv || py -3.11 -m venv .venv
@@ -42,8 +42,10 @@ claims:
 	$(PY) -m src.claims
 validate:
 	$(PY) -m src.validate
-powerbi:
+# Regenerates every file in powerbi/ (CSVs, metrics, recommendation, theme).
+export-powerbi:
 	$(PY) -m src.powerbi
+powerbi: export-powerbi
 export-web:
 	$(PY) -m src.export_web
 readme:
@@ -51,7 +53,7 @@ readme:
 
 # claims and export-web run a second time so the resume bullets and the site pick up
 # the validation report.
-all: ingest clean segments features split binning model scorecard cutoff final-test claims powerbi export-web validate
+all: ingest clean segments features split binning model scorecard cutoff final-test claims export-powerbi export-web validate
 	$(PY) -m src.claims
 	$(PY) -m src.export_web
 	$(PY) -m src.readme

@@ -1,0 +1,98 @@
+table scorecard
+	lineageTag: 5bb617e7-8051-4f00-b741-f2e63fa3e304
+
+	column feature
+		dataType: string
+		lineageTag: 353934e8-f0b6-49f3-8165-42058ec90e94
+		summarizeBy: none
+		sourceColumn: feature
+
+		annotation SummarizationSetBy = Automatic
+
+	column bin_index
+		dataType: int64
+		formatString: 0
+		lineageTag: a2641821-90db-4658-a699-cdfde38b4d20
+		summarizeBy: sum
+		sourceColumn: bin_index
+
+		annotation SummarizationSetBy = Automatic
+
+	column bin
+		dataType: string
+		lineageTag: 04a9cefc-6298-41d4-90da-c47201269058
+		summarizeBy: none
+		sourceColumn: bin
+
+		annotation SummarizationSetBy = Automatic
+
+	column count
+		dataType: int64
+		formatString: #,0
+		lineageTag: bd5a0ea6-8e64-49e6-a166-85fc8d359186
+		summarizeBy: sum
+		sourceColumn: count
+
+		annotation SummarizationSetBy = User
+
+	column payment_difficulty_rate
+		dataType: double
+		formatString: 0.0%
+		lineageTag: 518120dd-30ca-47e2-8d4c-093ec59f0e8a
+		summarizeBy: average
+		sourceColumn: payment_difficulty_rate
+
+		annotation SummarizationSetBy = User
+
+	column woe
+		dataType: double
+		formatString: 0.000
+		lineageTag: ffce4533-819d-4f9b-bf7c-c61ccfd698b1
+		summarizeBy: sum
+		sourceColumn: woe
+
+		annotation SummarizationSetBy = User
+
+	column coefficient
+		dataType: double
+		lineageTag: 568c937a-9580-40fe-bb6e-9401598e52af
+		summarizeBy: sum
+		sourceColumn: coefficient
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column points_exact
+		dataType: double
+		lineageTag: 5cfc9f94-e079-4a22-a1dd-91738a757609
+		summarizeBy: sum
+		sourceColumn: points_exact
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column points
+		dataType: int64
+		formatString: 0
+		lineageTag: c6a3a669-e29e-4621-b6ec-f319e66a4eb9
+		summarizeBy: sum
+		sourceColumn: points
+
+		annotation SummarizationSetBy = User
+
+	partition scorecard = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\Dev\Downloads\DATA ANALYTICS PROJECT\credit-risk-cutoff\powerbi\scorecard.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"feature", type text}, {"bin_index", Int64.Type}, {"bin", type text}, {"count", Int64.Type}, {"payment_difficulty_rate", type number}, {"woe", type number}, {"coefficient", type number}, {"points_exact", type number}, {"points", Int64.Type}}, "en-US")
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

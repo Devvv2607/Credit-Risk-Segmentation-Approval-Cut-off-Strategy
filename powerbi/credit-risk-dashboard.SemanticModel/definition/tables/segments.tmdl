@@ -1,0 +1,125 @@
+table segments
+	lineageTag: 3f44e767-d03f-428f-9707-c0a7a690f6a4
+
+	column dimension
+		dataType: string
+		lineageTag: 5b1e5008-e8b7-4857-a7c2-f9d36dc5c91e
+		summarizeBy: none
+		sourceColumn: dimension
+
+		annotation SummarizationSetBy = Automatic
+
+	column segment
+		dataType: string
+		lineageTag: 73d82aa1-d7f2-4129-8f0f-50ed0a2707f2
+		summarizeBy: none
+		sourceColumn: segment
+		sortByColumn: segment_order
+
+		annotation SummarizationSetBy = User
+
+	column n
+		dataType: int64
+		formatString: #,0
+		lineageTag: 77093c32-b0b8-44ea-8b11-95a6878d7204
+		summarizeBy: sum
+		sourceColumn: n
+
+		annotation SummarizationSetBy = User
+
+	column bads
+		dataType: int64
+		formatString: 0
+		lineageTag: 4ea8fca7-deeb-4416-b201-3aa108375028
+		summarizeBy: sum
+		sourceColumn: bads
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_difficulty_rate
+		dataType: double
+		formatString: 0.0%
+		lineageTag: 5d7b5ac9-bc3a-40ef-8276-acdde1181523
+		summarizeBy: none
+		sourceColumn: payment_difficulty_rate
+
+		annotation SummarizationSetBy = User
+
+	column ci_low
+		dataType: double
+		formatString: 0.0%
+		lineageTag: 231586ff-b414-4a03-9282-355af51130c1
+		summarizeBy: none
+		sourceColumn: ci_low
+
+		annotation SummarizationSetBy = User
+
+	column ci_high
+		dataType: double
+		formatString: 0.0%
+		lineageTag: 3e11ff74-d12c-4cc3-bb75-72bc3438ffef
+		summarizeBy: none
+		sourceColumn: ci_high
+
+		annotation SummarizationSetBy = User
+
+	column lift
+		dataType: double
+		lineageTag: 7c034cb6-1d5d-4f69-97b0-8a45820eca72
+		summarizeBy: sum
+		sourceColumn: lift
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column portfolio_share
+		dataType: double
+		formatString: 0.0%
+		lineageTag: 02d5f6b3-1f36-406f-a53d-4db39f9d9568
+		summarizeBy: none
+		sourceColumn: portfolio_share
+
+		annotation SummarizationSetBy = User
+
+	column risk_rank
+		dataType: int64
+		formatString: 0
+		lineageTag: 2aa418df-3604-4411-9c7f-9f9aa8d6392b
+		summarizeBy: sum
+		sourceColumn: risk_rank
+
+		annotation SummarizationSetBy = Automatic
+
+	column segment_order
+		dataType: int64
+		formatString: 0
+		lineageTag: 55429e2c-b4c3-4a8a-9067-68be59e39759
+		summarizeBy: sum
+		sourceColumn: segment_order
+
+		annotation SummarizationSetBy = Automatic
+
+	column dimension_complete
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: bae1b0b4-856b-4883-9e05-1a7371843c9a
+		summarizeBy: none
+		sourceColumn: dimension_complete
+
+		annotation SummarizationSetBy = Automatic
+
+	partition segments = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\Dev\Downloads\DATA ANALYTICS PROJECT\credit-risk-cutoff\powerbi\segments.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"dimension", type text}, {"segment", type text}, {"n", Int64.Type}, {"bads", Int64.Type}, {"payment_difficulty_rate", type number}, {"ci_low", type number}, {"ci_high", type number}, {"lift", type number}, {"portfolio_share", type number}, {"risk_rank", Int64.Type}, {"segment_order", Int64.Type}, {"dimension_complete", type logical}}, "en-US")
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

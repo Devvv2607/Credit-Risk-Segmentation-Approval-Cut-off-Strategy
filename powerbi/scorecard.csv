@@ -1,4 +1,4 @@
-feature,bin_index,bin,count,bad_rate,woe,coefficient,points_exact,points
+feature,bin_index,bin,count,payment_difficulty_rate,woe,coefficient,points_exact,points
 EXT_SOURCE_3,0,"(-inf, 0.19)",10642,0.2110505544,-1.113877448,-0.7394934623,19.10536695,19
 EXT_SOURCE_3,1,"[0.19, 0.32)",16539,0.1390047766,-0.6089013334,-0.7394934623,29.88017916,30
 EXT_SOURCE_3,2,"[0.32, 0.41)",18602,0.0993979142,-0.2285495993,-0.7394934623,37.99584719,38

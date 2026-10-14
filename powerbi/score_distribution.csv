@@ -1,4 +1,4 @@
-split,band_order,score_band,band_low,band_high,count,bads,bad_rate,share
+split,band_order,score_band,band_low,band_high,count,bads,payment_difficulty_rate,share
 validation,0,<520,,520,2681,869,0.3241327863,0.04359207831
 validation,1,520-539,520,540,7147,1282,0.1793759619,0.116207603
 validation,2,540-559,540,560,13988,1413,0.1010151558,0.2274397581

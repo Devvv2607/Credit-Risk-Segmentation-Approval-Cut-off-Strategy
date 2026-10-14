@@ -1,4 +1,4 @@
-dimension,segment,n,bads,bad_rate,ci_low,ci_high,lift,portfolio_share,risk_rank,segment_order,dimension_complete
+dimension,segment,n,bads,payment_difficulty_rate,ci_low,ci_high,lift,portfolio_share,risk_rank,segment_order,dimension_complete
 Age band,20-24,12233,1504,0.1229461293,0.1172450521,0.1288839491,1.522952152,0.03978069077,1,1,True
 Age band,25-34,72429,7721,0.1066009471,0.1043742569,0.1088693666,1.320481928,0.2355330378,2,2,True
 Age band,35-44,84261,7085,0.08408397717,0.0822290682,0.08597680902,1.041560842,0.2740097102,3,3,True
