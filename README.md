@@ -2,7 +2,7 @@
 
 An end-to-end, reproducible credit-risk analysis of the public **Home Credit Default Risk** dataset: SQL segmentation of payment-difficulty risk, a WoE/IV logistic **points scorecard**, and an **approval cut-off strategy** with an interactive simulator, published as a static Next.js site. Every figure below is rendered from the pipeline outputs by `src/readme.py`, not typed.
 
-**Live site:** not yet deployed — add the Vercel URL to `config/site.yaml`
+**Live site:** [https://credit-risk-segmentation-approval-c.vercel.app](https://credit-risk-segmentation-approval-c.vercel.app)
 
 > Generated file — edit `docs/README.template.md`, then run `make readme` (or `python tasks.py readme`).
 
