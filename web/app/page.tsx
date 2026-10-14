@@ -53,7 +53,7 @@ export default function Home() {
       </Warn>
 
       <section aria-labelledby="coverage" className="mt-16 max-w-wide">
-        <h2 id="coverage" className="overline mb-4">
+        <h2 id="coverage" className="eyebrow mb-4">
           Analysis coverage
         </h2>
         <StatGrid
@@ -77,7 +77,7 @@ export default function Home() {
 
       <section aria-labelledby="report" className="mt-16 max-w-wide">
         <Panel className="p-7 sm:p-9">
-          <p className="overline">Report · Analysis sections</p>
+          <p className="eyebrow">Report · Analysis sections</p>
           <h2 id="report" className="mt-3 text-[28px] font-bold leading-tight text-ink">
             Segment risk, a points scorecard and where to set the approval cut-off
           </h2>
@@ -92,7 +92,7 @@ export default function Home() {
       </section>
 
       <section aria-labelledby="featured" className="mt-16 max-w-wide">
-        <h2 id="featured" className="overline mb-4">
+        <h2 id="featured" className="eyebrow mb-4">
           Featured visualizations
         </h2>
         <div className="grid gap-6 xl:grid-cols-2">

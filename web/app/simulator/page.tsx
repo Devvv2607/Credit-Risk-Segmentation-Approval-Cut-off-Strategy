@@ -27,7 +27,7 @@ export default function SimulatorPage() {
 
       <H2 id="test-check">Held-out test check</H2>
       <Panel>
-        <p className="overline">Recommended cut-off {recommendation.cutoff} · applied once to the test split</p>
+        <p className="eyebrow">Recommended cut-off {recommendation.cutoff} · applied once to the test split</p>
         <div className="mt-4 grid gap-6 sm:grid-cols-3">
           <div>
             <p className="text-[15px] text-muted">Approval rate</p>

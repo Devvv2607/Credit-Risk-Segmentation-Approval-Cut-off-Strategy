@@ -43,8 +43,14 @@ SOURCES = [
         "title": "Application data (application_train)",
         "publisher": "Home Credit Group, via Kaggle",
         "url": "https://www.kaggle.com/competitions/home-credit-default-risk/data",
-        "fields_used": "TARGET, applicant demographics, income, credit and annuity amounts, employment, "
-                       "region ratings, EXT_SOURCE_1-3, document and contact flags, building information",
+        "fields_used": [
+            "TARGET", "EXT_SOURCE_1", "EXT_SOURCE_2", "EXT_SOURCE_3", "DAYS_BIRTH", "DAYS_EMPLOYED",
+            "AMT_INCOME_TOTAL", "AMT_CREDIT", "AMT_ANNUITY", "AMT_GOODS_PRICE", "NAME_CONTRACT_TYPE",
+            "NAME_INCOME_TYPE", "NAME_EDUCATION_TYPE", "OCCUPATION_TYPE", "ORGANIZATION_TYPE",
+            "REGION_RATING_CLIENT", "REGION_RATING_CLIENT_W_CITY", "DAYS_LAST_PHONE_CHANGE",
+        ],
+        "fields_note": "Shown: fields used in segmentation or the final scorecard. Every other non-protected "
+                       "column was evaluated as a binning candidate (see iv_summary.csv).",
         "licence": "Kaggle competition data; use subject to the competition rules (no redistribution of raw data)",
         "access": "Kaggle CLI: kaggle competitions download -c home-credit-default-risk",
         "limitations": "Only loans that were granted have outcomes (no rejected applicants); no application "
@@ -56,7 +62,9 @@ SOURCES = [
         "title": "Credit bureau records (bureau)",
         "publisher": "Home Credit Group, via Kaggle",
         "url": "https://www.kaggle.com/competitions/home-credit-default-risk/data",
-        "fields_used": "CREDIT_ACTIVE, AMT_CREDIT_SUM, AMT_CREDIT_SUM_DEBT, AMT_CREDIT_SUM_OVERDUE, CREDIT_DAY_OVERDUE",
+        "fields_used": ["CREDIT_ACTIVE", "AMT_CREDIT_SUM", "AMT_CREDIT_SUM_DEBT", "AMT_CREDIT_SUM_OVERDUE",
+                        "CREDIT_DAY_OVERDUE"],
+        "fields_note": "Aggregated per applicant: credit counts, overdue amounts and debt-to-credit ratio.",
         "licence": "Kaggle competition data; use subject to the competition rules",
         "access": "Same Kaggle download",
         "limitations": "Covers only applicants with a bureau record; others are flagged as having no bureau "
@@ -67,7 +75,8 @@ SOURCES = [
         "title": "Previous Home Credit applications (previous_application)",
         "publisher": "Home Credit Group, via Kaggle",
         "url": "https://www.kaggle.com/competitions/home-credit-default-risk/data",
-        "fields_used": "NAME_CONTRACT_STATUS (count of previous applications and refusals)",
+        "fields_used": ["NAME_CONTRACT_STATUS"],
+        "fields_note": "Aggregated per applicant: count of previous applications, refusals and refusal rate.",
         "licence": "Kaggle competition data; use subject to the competition rules",
         "access": "Same Kaggle download",
         "limitations": "Only applications made to Home Credit itself; refusal reasons are not modelled.",

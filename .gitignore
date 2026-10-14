@@ -10,3 +10,6 @@ web/out/
 web/next-env.d.ts
 .vercel
 web/tsconfig.tsbuildinfo
+
+/web/test-results/
+/web/playwright-report/

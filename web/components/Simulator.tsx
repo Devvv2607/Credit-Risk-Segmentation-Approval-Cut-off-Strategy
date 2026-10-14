@@ -11,7 +11,7 @@ import { int, money, pct, pp } from "@/lib/format";
 function Kpi({ label, value, sub, tone }: { label: string; value: string; sub?: string; tone?: "warn" }) {
   return (
     <div className="rounded-xl border border-border bg-panel px-5 py-5">
-      <p className="overline">{label}</p>
+      <p className="eyebrow">{label}</p>
       <p className="num mt-2 text-[34px] font-bold leading-none tracking-[-0.02em] text-ink">{value}</p>
       {sub && <p className={`mt-2 text-[14px] leading-snug ${tone === "warn" ? "text-warn-ink" : "text-muted"}`}>{sub}</p>}
     </div>

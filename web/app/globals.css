@@ -60,7 +60,7 @@ a {
   border-radius: 4px;
 }
 
-.overline {
+.eyebrow {
   font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -118,4 +118,12 @@ input[type="range"].cutoff-slider::-moz-range-thumb {
     scroll-behavior: auto !important;
     transition: none !important;
   }
+}
+
+/* Long file paths and identifiers in running text may wrap rather than push the page
+   wider than the viewport. Chips that must stay whole use whitespace-nowrap. */
+p code,
+li code,
+dd code {
+  overflow-wrap: anywhere;
 }

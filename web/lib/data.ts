@@ -217,7 +217,8 @@ export const sources = sourcesJson as unknown as {
   title: string;
   publisher: string;
   url: string;
-  fields_used: string;
+  fields_used: string[];
+  fields_note: string;
   licence: string;
   access: string;
   limitations: string;

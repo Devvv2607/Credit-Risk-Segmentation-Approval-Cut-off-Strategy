@@ -15,12 +15,12 @@ export function ExtLink({
   className?: string;
 }) {
   const external = /^https?:\/\//.test(href);
-  const cls = `inline-flex items-center gap-1 text-accent underline decoration-1 underline-offset-[5px] hover:decoration-2 ${className}`;
+  const cls = `inline text-accent underline decoration-1 underline-offset-[5px] hover:decoration-2 ${className}`;
   const inner = (
     <>
-      {github && <Github size={17} aria-hidden className="mr-0.5" />}
+      {github && <Github size={17} aria-hidden className="mr-1 inline-block align-[-0.15em]" />}
       {children}
-      <ArrowUpRight size={16} aria-hidden />
+      <ArrowUpRight size={16} aria-hidden className="ml-0.5 inline-block align-[-0.1em]" />
     </>
   );
   if (external) {
@@ -125,9 +125,9 @@ export function KV({ rows }: { rows: [string, React.ReactNode, ("warn" | undefin
   return (
     <dl className="divide-y divide-border">
       {rows.map(([k, v, tone]) => (
-        <div key={k} className="grid gap-1 py-3 sm:grid-cols-[180px_1fr] sm:gap-6">
-          <dt className="overline pt-1">{k}</dt>
-          <dd className={`min-w-0 break-words text-[17px] leading-relaxed ${tone === "warn" ? "text-warn-ink" : "text-ink"}`}>{v}</dd>
+        <div key={k} className="grid grid-cols-1 gap-1 py-3 sm:grid-cols-[160px_minmax(0,1fr)] sm:gap-6">
+          <dt className="eyebrow pt-1">{k}</dt>
+          <dd className={`min-w-0 text-[17px] leading-relaxed ${tone === "warn" ? "text-warn-ink" : "text-ink"}`}>{v}</dd>
         </div>
       ))}
     </dl>

@@ -9,7 +9,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "check-data": "node scripts/check-data.mjs",
-    "check-copy": "node scripts/check-copy.mjs"
+    "check-copy": "node scripts/check-copy.mjs",
+    "test:layout": "playwright test"
   },
   "dependencies": {
     "lucide-react": "0.453.0",
@@ -19,6 +20,7 @@
     "recharts": "2.13.0"
   },
   "devDependencies": {
+    "@playwright/test": "1.55.0",
     "@types/node": "20.16.11",
     "@types/react": "18.3.11",
     "@types/react-dom": "18.3.1",

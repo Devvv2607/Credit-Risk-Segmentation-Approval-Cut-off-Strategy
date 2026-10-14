@@ -9,7 +9,7 @@ export default function About() {
     <div className="max-w-prose">
       <PageHeader title={site.author} subtitle="About the analyst" />
       <Panel>
-        <p className="overline">Bio · to be written</p>
+        <p className="eyebrow">Bio · to be written</p>
         <p className="mt-3 text-muted">
           A short bio will go here. Edit <code>web/app/about/page.tsx</code> to add it.
         </p>

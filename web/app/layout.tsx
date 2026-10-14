@@ -31,8 +31,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to content
         </a>
         <Sidebar author={site.author} />
-        <div className="min-[900px]:pl-[300px]">
-          <main id="main" className="px-4 pb-16 pt-24 min-[900px]:px-[60px] min-[900px]:pt-20">
+        <div className="min-w-0 min-[900px]:pl-[300px]">
+          <main id="main" className="min-w-0 px-4 pb-16 pt-24 min-[900px]:px-[60px] min-[900px]:pt-20">
             {children}
           </main>
           <Footer />

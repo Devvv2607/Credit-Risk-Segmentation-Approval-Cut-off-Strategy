@@ -26,20 +26,39 @@ export default function DataPage() {
         {int(manifest.files.find((f) => f.table === "raw_previous_application")?.rows ?? 0)} previous applications.
       </p>
 
-      <div className="grid gap-6 xl:grid-cols-3">
+      <div className="space-y-6">
         {sources.map((s) => (
           <Panel key={s.file}>
-            <p className="overline">Source · {s.file}</p>
+            <p className="eyebrow">Source · {s.file}</p>
             <h2 className="mb-2 mt-2 text-[22px] font-bold leading-snug text-ink">{s.title}</h2>
             <KV
               rows={[
                 ["Publisher", s.publisher],
-                ["URL", <ExtLink key="u" href={s.url}>kaggle.com/competitions/home-credit-default-risk</ExtLink>],
+                [
+                  "URL",
+                  <ExtLink key="u" href={s.url} className="[overflow-wrap:anywhere]">
+                    {s.url.replace(/^https?:\/\//, "")}
+                  </ExtLink>,
+                ],
                 ["Retrieved", s.retrieved],
                 ["Size", `${int(s.rows)} rows × ${s.columns} columns`],
-                ["Fields used", s.fields_used],
+                [
+                  "Fields used",
+                  <div key="f">
+                    <ul className="flex flex-wrap gap-1.5" aria-label={`Fields used from ${s.file}`}>
+                      {s.fields_used.map((f) => (
+                        <li key={f}>
+                          <code className="whitespace-nowrap rounded border border-border bg-bg px-1.5 py-0.5 font-mono text-sm text-ink">
+                            {f}
+                          </code>
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="mt-2 text-[15px] text-muted">{s.fields_note}</p>
+                  </div>,
+                ],
                 ["Licence / use", s.licence],
-                ["Access method", <code key="a" className="break-words text-[15px]">{s.access}</code>],
+                ["Access method", <code key="a" className="text-[15px] [overflow-wrap:anywhere]">{s.access}</code>],
                 ["Limitations", s.limitations, "warn"],
               ]}
             />

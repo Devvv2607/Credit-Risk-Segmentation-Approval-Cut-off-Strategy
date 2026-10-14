@@ -20,7 +20,7 @@ export default function Toc({ items }: { items: { id: string; label: string }[] 
   }, [items]);
   return (
     <nav aria-label="On this page" className="sticky top-16 hidden max-h-[calc(100vh-6rem)] overflow-y-auto xl:block">
-      <p className="overline mb-3">On this page</p>
+      <p className="eyebrow mb-3">On this page</p>
       <ul className="space-y-1 border-l border-border">
         {items.map((i) => (
           <li key={i.id}>
