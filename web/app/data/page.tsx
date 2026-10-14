@@ -5,6 +5,8 @@ import { int } from "@/lib/format";
 
 export const metadata: Metadata = { title: "Data & Sources" };
 
+const KAGGLE_COMPETITION_URL = "https://www.kaggle.com/competitions/home-credit-default-risk";
+
 const DOWNLOADS = [
   ["segments.csv", "Segment payment-difficulty rates, lift and intervals"],
   ["iv_summary.csv", "Information value and selection decision for every candidate feature"],
@@ -36,9 +38,16 @@ export default function DataPage() {
                 ["Publisher", s.publisher],
                 [
                   "URL",
-                  <ExtLink key="u" href={s.url} className="[overflow-wrap:anywhere]">
-                    {s.url.replace(/^https?:\/\//, "")}
-                  </ExtLink>,
+                  <a
+                    key="u"
+                    href={KAGGLE_COMPETITION_URL}
+                    title={KAGGLE_COMPETITION_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent underline decoration-1 underline-offset-[5px] [overflow-wrap:anywhere] hover:decoration-2"
+                  >
+                    Kaggle competition page ↗<span className="sr-only"> (opens in a new tab)</span>
+                  </a>,
                 ],
                 ["Retrieved", s.retrieved],
                 ["Size", `${int(s.rows)} rows × ${s.columns} columns`],
